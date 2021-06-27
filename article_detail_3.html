@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1390PY4PW5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-1390PY4PW5');
+	</script>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- 구글 폰트 -->
+    
+  	<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+	<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+	<!-- 토스트 UI 에디터, CSS 코어 -->
+	<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+	
+    <title>article_detail_3</title>
+    <link rel="icon" href="img/favicon.ico"/>
+    
+    <!-- SEO 태그 -->
+    <link rel="canonical" href="https://blog.baobab612.com" />
+	<meta name="subject" content="바오밥의 웹 기술 블로그"/>
+	<meta name="title" content="바오밥 블로그" />
+	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
+	<meta name="copyright" content="바오밥 블로그" />
+	<meta name="pubdate" content="2021-06-27T22:41:58" />
+	<meta name="lastmod" content="2021-06-27T22:41:58" />
+	<!-- OPENGRAPH -->
+	<meta property="og:site_name" content="바오밥 블로그" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="바오밥의 웹 기술 블로그" />
+	<meta property="og:description" content="웹 프로그램 일지 입니다." />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:image" content="img/seo_banner.jpg" />
+	<meta property="og:image:alt" content="blog.baobab612.com" />
+	<meta property="og:updated_time" content="2021-06-27T22:41:58"/>
+	<meta property="og:pubdate" content="2021-06-27T22:41:58" />
+	<meta property="og:url" content="https://blog.baobab612.com" />
+	<!-- TWITTER -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="바오밥의 웹 기술 블로그" />
+	<meta name="twitter:site" content="@바오밥 블로그" />
+	<meta name="twitter:creator" content="@바오밥 블로그" />
+	<meta name="twitter:image" content="img/seo_banner.jpg">
+	<meta name="twitter:description" content="웹 프로그램 일지 입니다." />
+	<!-- GOOGLE+ -->
+	<meta itemprop="headline" content="바오밥 블로그" />
+	<meta itemprop="name" content="바오밥 블로그" />
+	<meta itemprop="description" content="웹 프로그램 일지 입니다." />
+	<meta itemprop="image" content="img/seo_banner.jpg" />
+    <!-- SEO 태그 -->
+</head>
+
+<body>
+    <div class="body-content con-min-width">
+    	
+        <header class="top-bar con height-100p">
+            <div class="flex flex-ai-c top-menu">
+                <section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
+                	<a href="index.html" class="logo flex flex-ai-c">
+                		<span class="img-box logo_img">
+	                    	<img src="img/logo.png" alt="이미지 첨부" />
+	                    </span>
+	                    <span class="logo__span logo__W">W
+	                    	<span class="logo__span logo__1 logo__hide">eb</span>
+	                    </span>
+	                    
+	                    <span class="logo__span logo__P">P
+	                    	<span class="logo__span logo__2 logo__hide">rogram</span>
+	                    </span>
+	                    
+	                    <span class="logo__span logo__B">B
+	                    	<span class="logo__span logo__3 logo__hide">log</span>
+	                    </span>
+	                    
+                    </a>
+                </section>
+                
+                <div class="flex-grow-1"></div>
+                <!-- 탑바 PC 버전 -->
+                <div class="top-menu__menu top-menu__pc-menu flex height-100p">
+                    <ul class="flex height-100p">
+                    	<li><a href="article_list_java_1.html">Web Programs</a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li></ul></li><li><a href="article_list_mysql_1.html">DataBase</a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li></ul></li><li><a href="article_list_centos_1.html">Server</a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a href="article_list_daily_1.html">Free</a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+                    </ul>
+                </div>
+                
+                <div class="hamburger__cover flex">
+                    <section class="top-bar__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+				</section>
+                </div>  
+            </div>
+            <!-- 탑바 모바일 버전 -->
+            <div class="top-menu__menu top-menu__mobile-menu">
+                <ul class="flex flex-column">
+                	<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+                </ul>
+            </div>
+        </header><main class="detail__main">
+
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex"><div class="detail__article-num">3. </div><div class="detail__article-title">운영체제 기본</div></section><div class="detail__article-regDate">21년 06월 25일</div><div class="detail__article-content">우리가 사용하는 일반적인 운영체제는
+Windows, mac OS 등이 있으며 GUI환경이다.
+Graphical User Interface의 약자이며 그래픽을 이용해
+사용자와 하드웨어 사이에서 중계 역할을 해주는 프로그램이다.
+하지만 그래픽을 이용하지 않고 명령어를 입력하여
+중계 역할을 해주는 CLI환경의 운영체제들도 있다.
+
+<div class="img-box1"> <img src="img/게시물/3/1.PNG" /> </div>
+
+대표적으로 CentOS, Ubuntu, Debian 등이 있고, 굳이 CLI를 쓰는 이유는
+GUI가 CLI보다 더 많은 에너지가 소모되고, 동작속도도 느리다.
+명령으로 동작들을 실행하다보니 GUI보다 실수할 확률이 적어진다.(오클릭 등)
+GUI에서 여러번의 클릭으로 해야할 동작을 CLI에선 <br />
+한 두 줄의 명령어로 줄일 수 있다.
+<br>
+단점은 명령어들을 외워야하고 조금 어렵다는 문제가 있지만
+다행히 대부분의 OS는 UNIX 표준을 지켜 명령어가 비슷하다.
+
+UNIX는 리눅스의 어머니?이고 UNIX에서 파생된 것이 LINUX이다.
+UNIX는 유료이고 리눅스는 무료이다.
+(레드햇은 리눅스 이지만 유료이다.)
+
+Unix에는 hp, AIX, macOS 등이 있다.</div>				
+				</div>
+			</div>
+			
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser"> <img src="img/eraser.png" alt=""></span>
+	                <span class="img-box chalks"><img src="img/chalks.png" alt=""></span>
+				</div>
+			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
+	
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th></td>
+						<th class="sample_width">제목</td>
+						<th>작성자</td>
+						<th>작성일</td>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr onClick=location.href="article_detail_5.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>HTML형식 보낼 때 js,style 주의점</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 25</span>일</td></tr><tr onClick=location.href="article_detail_4.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>이메일 HTML/이미지 보내기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 25</span>일</td></tr><tr class="selected" onClick=location.href="article_detail_3.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>운영체제 기본</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 25</span>일</td></tr><tr onClick=location.href="article_detail_2.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>웹 그라디언트/컬러 코드 사이트</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-24</span>일</td></tr><tr onClick=location.href="article_detail_1.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>AUTO_INCREMENT 초기화</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-22</span>일</td></tr>	
+				</tbody>
+			</table>
+			
+		</div>
+	</section>
+	
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+		    var disqus_config = function (){
+		    	this.page.url = 'https://blog.baobab612.com/article_detail_3.html';
+		    	this.page.identifier = 'article_detail_3.html';
+		    };
+		    (function() { // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		    s.src = 'https://newbaobabblog.disqus.com/embed.js';
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+	
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
+	
+</main>        <footer class="footer__cover flex flex-ai-c">
+
+            
+            <section class="footer__icon">
+                <a href="#">
+                    <span class="icon-git"><i class="fab fa-github-square"></i></span>
+                </a>
+                <a href="#">
+                    <span class="icon-insta"><i class="fab fa-instagram-square"></i></span>
+                </a>
+                <a href="">
+                    <span class="icon-blog"><i class="fab fa-blogger"></i></span>
+                </a>
+            </section>
+
+            <section class="footer__host flex flex-jc-end">
+                <div>
+                    <span>Copyright 2021 Baobab. All Right Reserved</span>
+                    <span>B a o b a b</span>
+                </div>
+            </section>
+
+        </footer>
+
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
