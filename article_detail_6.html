@@ -16,9 +16,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+	<script src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js" defer></script>
+	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+	<!-- 토스트 UI 에디터, CSS 코어 -->
+	<link rel="stylesheet" href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+	<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+	<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js" defer></script>
+	<!-- GSAP 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
@@ -28,48 +37,200 @@
 	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <!-- 구글 폰트 -->
     
-  	<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-	<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-	<!-- 토스트 UI 에디터, CSS 코어 -->
-	<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-	
-    <title>article_detail_6</title>
+    <title>article_detail</title>
     <link rel="icon" href="img/favicon.ico"/>
-    
+    <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
     <!-- SEO 태그 -->
     <link rel="canonical" href="https://blog.baobab612.com" />
-	<meta name="subject" content="바오밥의 웹 기술 블로그"/>
+	<meta name="subject" content="GSAP 슬라이드 만들기"/>
 	<meta name="title" content="바오밥 블로그" />
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="바오밥 블로그" />
-	<meta name="pubdate" content="2021-06-25T15:34:53" />
-	<meta name="lastmod" content="2021-06-25T15:34:53" />
+	<meta name="pubdate" content="2021-07-20T00:13:30" />
+	<meta name="lastmod" content="2021-07-20T00:13:30" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="바오밥 블로그" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="바오밥의 웹 기술 블로그" />
-	<meta property="og:description" content="웹 프로그램 일지 입니다." />
+	<meta property="og:title" content="GSAP 슬라이드 만들기" />
+	<meta property="og:description" content="script typetextxtemplate
+블로그 디자인을 하던 중 슬라이드를 만들 일이 생겼습니다
+swiper 나 slick slider를 사용해도 되지만
+GSAP를 조금 더 연습해보고 싶어졌습니다
+우선 gsap를 추가합니다
+ HTML
+ 제이쿼리 
+tscript srchttpscdnjscloudflarecomajaxlibsjquery360jqueryminjstscript
+ GSAP 
+tscript srchttpscdnjscloudflarecomajaxlibsgsap351gsapminjstscript
+ 폰트어썸 
+link relstylesheet hrefhttpscdnjscloudflarecomajaxlibsfontawesome5152cssallmincss
+
+그리고 내용을 담아줄 박스를 만들어 줍니다
+script
+
+div classviewerdiv
+
+script typetextxtemplate
+codepen
+httpscodepeniohyeseong123embedgOWRdQjdefaulttabhtml2Cresulteditabletrue
+
+제 블로그에 쓰인 스타일과 HTML 입니다
+이제 스크립트를 입혀줍시다
+화살표를 누르면 이동해야겠지요
+박스들은 포지션이 absolute로 지정되었습니다
+css에 화면 크기별 버튼 노출이 설정되어 있습니다
+codepen
+httpscodepeniohyeseong123embedzYwzmGNdefaulttabhtml2Cresulteditabletrue
+
+이동을 하기는 합니다
+이제 부가적인 옵션들을 넣어주겠습니다
+주석을 보고 참고해주세요
+codepen
+httpscodepeniohyeseong123embedxxdryxrdefaulttabhtml2Cresulteditabletrue
+
+
+이제 버튼으로 이동을 잘 하게 됐습니다
+페이징 버튼을 눌러서도 이동을 해야겠지요
+
+codepen
+httpscodepeniohyeseong123embedPomjyKvdefaulttabhtml2Cresulteditabletrue
+
+
+반응형 전체 스크립트 코드는
+httpscodepeniohyeseong123penMWmomdEeditors1010httpscodepeniohyeseong123penMWmomdEeditors1010
+이곳에 있습니다
+script
+
+
+div classviewerdiv
+" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
 	<meta property="og:image:alt" content="blog.baobab612.com" />
-	<meta property="og:updated_time" content="2021-06-25T15:34:53"/>
-	<meta property="og:pubdate" content="2021-06-25T15:34:53" />
+	<meta property="og:updated_time" content="2021-07-20T00:13:30"/>
+	<meta property="og:pubdate" content="2021-07-20T00:13:30" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="바오밥의 웹 기술 블로그" />
+	<meta name="twitter:title" content="GSAP 슬라이드 만들기" />
 	<meta name="twitter:site" content="@바오밥 블로그" />
 	<meta name="twitter:creator" content="@바오밥 블로그" />
 	<meta name="twitter:image" content="img/seo_banner.jpg">
-	<meta name="twitter:description" content="웹 프로그램 일지 입니다." />
+	<meta name="twitter:description" content="script typetextxtemplate
+블로그 디자인을 하던 중 슬라이드를 만들 일이 생겼습니다
+swiper 나 slick slider를 사용해도 되지만
+GSAP를 조금 더 연습해보고 싶어졌습니다
+우선 gsap를 추가합니다
+ HTML
+ 제이쿼리 
+tscript srchttpscdnjscloudflarecomajaxlibsjquery360jqueryminjstscript
+ GSAP 
+tscript srchttpscdnjscloudflarecomajaxlibsgsap351gsapminjstscript
+ 폰트어썸 
+link relstylesheet hrefhttpscdnjscloudflarecomajaxlibsfontawesome5152cssallmincss
+
+그리고 내용을 담아줄 박스를 만들어 줍니다
+script
+
+div classviewerdiv
+
+script typetextxtemplate
+codepen
+httpscodepeniohyeseong123embedgOWRdQjdefaulttabhtml2Cresulteditabletrue
+
+제 블로그에 쓰인 스타일과 HTML 입니다
+이제 스크립트를 입혀줍시다
+화살표를 누르면 이동해야겠지요
+박스들은 포지션이 absolute로 지정되었습니다
+css에 화면 크기별 버튼 노출이 설정되어 있습니다
+codepen
+httpscodepeniohyeseong123embedzYwzmGNdefaulttabhtml2Cresulteditabletrue
+
+이동을 하기는 합니다
+이제 부가적인 옵션들을 넣어주겠습니다
+주석을 보고 참고해주세요
+codepen
+httpscodepeniohyeseong123embedxxdryxrdefaulttabhtml2Cresulteditabletrue
+
+
+이제 버튼으로 이동을 잘 하게 됐습니다
+페이징 버튼을 눌러서도 이동을 해야겠지요
+
+codepen
+httpscodepeniohyeseong123embedPomjyKvdefaulttabhtml2Cresulteditabletrue
+
+
+반응형 전체 스크립트 코드는
+httpscodepeniohyeseong123penMWmomdEeditors1010httpscodepeniohyeseong123penMWmomdEeditors1010
+이곳에 있습니다
+script
+
+
+div classviewerdiv
+" />
 	<!-- GOOGLE+ -->
 	<meta itemprop="headline" content="바오밥 블로그" />
 	<meta itemprop="name" content="바오밥 블로그" />
-	<meta itemprop="description" content="웹 프로그램 일지 입니다." />
+	<meta itemprop="description" content="script typetextxtemplate
+블로그 디자인을 하던 중 슬라이드를 만들 일이 생겼습니다
+swiper 나 slick slider를 사용해도 되지만
+GSAP를 조금 더 연습해보고 싶어졌습니다
+우선 gsap를 추가합니다
+ HTML
+ 제이쿼리 
+tscript srchttpscdnjscloudflarecomajaxlibsjquery360jqueryminjstscript
+ GSAP 
+tscript srchttpscdnjscloudflarecomajaxlibsgsap351gsapminjstscript
+ 폰트어썸 
+link relstylesheet hrefhttpscdnjscloudflarecomajaxlibsfontawesome5152cssallmincss
+
+그리고 내용을 담아줄 박스를 만들어 줍니다
+script
+
+div classviewerdiv
+
+script typetextxtemplate
+codepen
+httpscodepeniohyeseong123embedgOWRdQjdefaulttabhtml2Cresulteditabletrue
+
+제 블로그에 쓰인 스타일과 HTML 입니다
+이제 스크립트를 입혀줍시다
+화살표를 누르면 이동해야겠지요
+박스들은 포지션이 absolute로 지정되었습니다
+css에 화면 크기별 버튼 노출이 설정되어 있습니다
+codepen
+httpscodepeniohyeseong123embedzYwzmGNdefaulttabhtml2Cresulteditabletrue
+
+이동을 하기는 합니다
+이제 부가적인 옵션들을 넣어주겠습니다
+주석을 보고 참고해주세요
+codepen
+httpscodepeniohyeseong123embedxxdryxrdefaulttabhtml2Cresulteditabletrue
+
+
+이제 버튼으로 이동을 잘 하게 됐습니다
+페이징 버튼을 눌러서도 이동을 해야겠지요
+
+codepen
+httpscodepeniohyeseong123embedPomjyKvdefaulttabhtml2Cresulteditabletrue
+
+
+반응형 전체 스크립트 코드는
+httpscodepeniohyeseong123penMWmomdEeditors1010httpscodepeniohyeseong123penMWmomdEeditors1010
+이곳에 있습니다
+script
+
+
+div classviewerdiv
+" />
 	<meta itemprop="image" content="img/seo_banner.jpg" />
     <!-- SEO 태그 -->
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -125,43 +286,68 @@
 		<div class="blackBoard">
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
-					<section class="numAndTitle flex"><div class="detail__article-num">6. </div><div class="detail__article-title">이메일 HTML/이미지 보내기</div></section><div class="detail__article-regDate">21년 06월 25일</div><div class="detail__article-content">업무 중 이메일에 이미지맵이 포함된 HTML 형식을 적용시켜서 보낼 일이 생겼다.
-네이버랑 지메일을 이용했는데 지메일은 조금 까다로웠다.
-# 네이버
-네이버는 우선 이미지를 첨부해주었고,
-<div class="img-box1"><img src="img/게시물/4/1.PNG"></div>
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">6.</div>
+						<div class="detail__article-title">GSAP 슬라이드 만들기</div>
+					</section>
+					<div class="detail__article-regDate">21년07월02일</div>
+					<div class="detail__article-content"><script type="text/x-template">
+블로그 디자인을 하던 중 슬라이드를 만들 일이 생겼습니다.
+swiper 나 slick slider를 사용해도 되지만
+GSAP를 조금 더 연습해보고 싶어졌습니다.
+우선 gsap를 추가합니다.
+``` HTML
+<!-- 제이쿼리 -->
+<t-script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></t-script>
+<!-- GSAP -->
+<t-script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></t-script>
+<!-- 폰트어썸 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+```
+그리고 내용을 담아줄 박스를 만들어 줍니다!
+</script>
 
-우측하단에서 HTML로 이동한다.
-<div class="img-box1"><img src="img/게시물/4/2.PNG"></div>
+<div class="viewer"></div>
 
-그러면 사진과 관련된 코드가 작성되어 있다
-<div class="img-box1"><img src="img/게시물/4/3.PNG"></div>
+<script type="text/x-template">
+```codepen
+https://codepen.io/hyeseong123/embed/gOWRdQj?default-tab=html%2Cresult&editable=true
+```
+제 블로그에 쓰인 스타일과 HTML 입니다!
+이제 스크립트를 입혀줍시다.
+화살표를 누르면 이동해야겠지요
+(박스들은 포지션이 absolute로 지정되었습니다.)
+(css에 화면 크기별 버튼 노출이 설정되어 있습니다.)
+```codepen
+https://codepen.io/hyeseong123/embed/zYwzmGN?default-tab=html%2Cresult&editable=true
+```
+이동을 하기는 합니다!
+이제 부가적인 옵션들을 넣어주겠습니다.
+주석을 보고 참고해주세요
+```codepen
+https://codepen.io/hyeseong123/embed/xxdryxr?default-tab=html%2Cresult&editable=true
+```
 
-나는 이미지맵을 사용해야해서 usemap="이미지맵 ID" 코드를 추가해주었다.
+이제 버튼으로 이동을 잘 하게 됐습니다.
+페이징 버튼을 눌러서도 이동을 해야겠지요?
 
-# Gmail
-지메일도 마찬가지로 이미지부터 첨부해준다.
-<div class="img-box1"><img src="img/게시물/4/4.PNG"></div>
+```codepen
+https://codepen.io/hyeseong123/embed/PomjyKv?default-tab=html%2Cresult&editable=true
+```
 
-메일창 바깥을 한 번 클릭하고 Ctrl + shift + c 를 누른 뒤 이미지를 클릭한다.
-<div class="img-box1"><img src="img/게시물/4/5.PNG"></div>
+반응형 전체 스크립트 코드는
+[https://codepen.io/hyeseong123/pen/MWmomdE?editors=1010](https://codepen.io/hyeseong123/pen/MWmomdE?editors=1010)
+이곳에 있습니다ㅎㅎ
+</script>
 
-사진과 같은 상태에서 클릭해야 한다.
-클릭을 한 뒤 윗줄에는
-<div class="img-box1"><img src="img/게시물/4/6.PNG"></div>
 
-위와 같이 메일 본문이라고 들어간 항목이 있을 것이다.우클릭 뒤 edis as HTML을 클릭하고 HTML 코드를 넣어주고 다른 부분을
-클릭해준다 그러면 지메일 작성창은
-<div class="img-box1"><img src="img/게시물/4/7.PNG"></div>
-
-변경되어 있을 것이다.
-
-코드를 넣어줄 때 삽입 부분은
-<div class="img-box1"><img src="img/게시물/4/8.PNG"></div>
-
-사진의 부분이다.</div>				
+<div class="viewer"></div>
+</div>
+						
 				</div>
 			</div>
+			
+			
 			
 			<div class="blackBoard-bottom">
 				<div class="blackBoard-img flex flex-jc-end">
@@ -186,7 +372,7 @@
 				</thead>
 				
 				<tbody>
-					<tr class="selected" onClick=location.href="article_detail_6.html"><td class="articleList_num">🗒</td><td class="articleList_title">이메일 HTML/이미지 보내기</td><td class="articleList_writer">test2</td><td class="articleList_regDate">21년 06월 25일</td></tr><tr onClick=location.href="article_detail_3.html"><td class="articleList_num">📖</td><td class="articleList_title">운영체제 기본</td><td class="articleList_writer">test2</td><td class="articleList_regDate">2021-06-25일</td></tr>	
+					<tr class="selected" onClick=location.href="article_detail_6.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr><tr onClick=location.href="article_detail_5.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>HTML형식 보낼 때 js,style 주의점</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_4.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>이메일 HTML/이미지 보내기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_3.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>운영체제 기본</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr>	
 				</tbody>
 			</table>
 			
@@ -197,8 +383,8 @@
 		<div id="disqus_thread"></div>
 		<script>
 		    var disqus_config = function (){
-		    	this.page.url = 'https://blog.baobab612.com/article_detail_6.html';
-		    	this.page.identifier = 'article_detail_6.html';
+		    	this.page.url = 'https://${site-domain}/${file-name}';
+		    	this.page.identifier = '${file-name}';
 		    };
 		    (function() { // DON'T EDIT BELOW THIS LINE
 		    var d = document, s = d.createElement('script');
@@ -209,6 +395,12 @@
 		</script>
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	</div>
+	
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
 	
 </main>        <footer class="footer__cover flex flex-ai-c">
 
@@ -236,5 +428,4 @@
 
     </div>
 </body>
-<script src="app.js"></script>
 </html>

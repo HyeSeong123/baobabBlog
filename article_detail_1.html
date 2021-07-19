@@ -16,9 +16,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+	<script src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js" defer></script>
+	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+	<!-- 토스트 UI 에디터, CSS 코어 -->
+	<link rel="stylesheet" href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+	<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+	<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js" defer></script>
+	<!-- GSAP 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
@@ -28,48 +37,116 @@
 	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <!-- 구글 폰트 -->
     
-  	<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-	<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-	<!-- 토스트 UI 에디터, CSS 코어 -->
-	<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-	
-    <title>article_detail_1</title>
+    <title>article_detail</title>
     <link rel="icon" href="img/favicon.ico"/>
-    
+    <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
     <!-- SEO 태그 -->
     <link rel="canonical" href="https://blog.baobab612.com" />
-	<meta name="subject" content="바오밥의 웹 기술 블로그"/>
+	<meta name="subject" content="AUTO_INCREMENT 초기화"/>
 	<meta name="title" content="바오밥 블로그" />
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="바오밥 블로그" />
-	<meta name="pubdate" content="2021-06-27T22:41:58" />
-	<meta name="lastmod" content="2021-06-27T22:41:58" />
+	<meta name="pubdate" content="2021-07-20T00:13:30" />
+	<meta name="lastmod" content="2021-07-20T00:13:30" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="바오밥 블로그" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="바오밥의 웹 기술 블로그" />
-	<meta property="og:description" content="웹 프로그램 일지 입니다." />
+	<meta property="og:title" content="AUTO_INCREMENT 초기화" />
+	<meta property="og:description" content="script typetextxtemplate
+게시물을 테스트 하다가 전부 삭제하게 되면
+AUTOINCREMENT로 지정된 값은 초기화가 안되고 아래와 같이 마지막 값을 유지하게 된다
+
+div classimgbox1
+    img srcimg게시물11PNG 
+div
+
+초기화 방법은
+ALTER TABLE 테이블 명 AUTOINCREMENT  원하는 숫자
+이다
+
+사용 예시
+mysql
+ALTER TABLE article AUTOINCREMENT  3
+
+div classimgbox1
+    img srcimg게시물12PNG 
+div
+
+변경 완료
+script
+
+div classviewerdiv" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
 	<meta property="og:image:alt" content="blog.baobab612.com" />
-	<meta property="og:updated_time" content="2021-06-27T22:41:58"/>
-	<meta property="og:pubdate" content="2021-06-27T22:41:58" />
+	<meta property="og:updated_time" content="2021-07-20T00:13:30"/>
+	<meta property="og:pubdate" content="2021-07-20T00:13:30" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="바오밥의 웹 기술 블로그" />
+	<meta name="twitter:title" content="AUTO_INCREMENT 초기화" />
 	<meta name="twitter:site" content="@바오밥 블로그" />
 	<meta name="twitter:creator" content="@바오밥 블로그" />
 	<meta name="twitter:image" content="img/seo_banner.jpg">
-	<meta name="twitter:description" content="웹 프로그램 일지 입니다." />
+	<meta name="twitter:description" content="script typetextxtemplate
+게시물을 테스트 하다가 전부 삭제하게 되면
+AUTOINCREMENT로 지정된 값은 초기화가 안되고 아래와 같이 마지막 값을 유지하게 된다
+
+div classimgbox1
+    img srcimg게시물11PNG 
+div
+
+초기화 방법은
+ALTER TABLE 테이블 명 AUTOINCREMENT  원하는 숫자
+이다
+
+사용 예시
+mysql
+ALTER TABLE article AUTOINCREMENT  3
+
+div classimgbox1
+    img srcimg게시물12PNG 
+div
+
+변경 완료
+script
+
+div classviewerdiv" />
 	<!-- GOOGLE+ -->
 	<meta itemprop="headline" content="바오밥 블로그" />
 	<meta itemprop="name" content="바오밥 블로그" />
-	<meta itemprop="description" content="웹 프로그램 일지 입니다." />
+	<meta itemprop="description" content="script typetextxtemplate
+게시물을 테스트 하다가 전부 삭제하게 되면
+AUTOINCREMENT로 지정된 값은 초기화가 안되고 아래와 같이 마지막 값을 유지하게 된다
+
+div classimgbox1
+    img srcimg게시물11PNG 
+div
+
+초기화 방법은
+ALTER TABLE 테이블 명 AUTOINCREMENT  원하는 숫자
+이다
+
+사용 예시
+mysql
+ALTER TABLE article AUTOINCREMENT  3
+
+div classimgbox1
+    img srcimg게시물12PNG 
+div
+
+변경 완료
+script
+
+div classviewerdiv" />
 	<meta itemprop="image" content="img/seo_banner.jpg" />
     <!-- SEO 태그 -->
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -125,7 +202,13 @@
 		<div class="blackBoard">
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
-					<section class="numAndTitle flex"><div class="detail__article-num">1. </div><div class="detail__article-title">AUTO_INCREMENT 초기화</div></section><div class="detail__article-regDate">21년 06월 22일</div><div class="detail__article-content">게시물을 테스트 하다가 전부 삭제하게 되면
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">1.</div>
+						<div class="detail__article-title">AUTO_INCREMENT 초기화</div>
+					</section>
+					<div class="detail__article-regDate">21년06월22일</div>
+					<div class="detail__article-content"><script type="text/x-template">
+게시물을 테스트 하다가 전부 삭제하게 되면
 AUTO_INCREMENT로 지정된 값은 초기화가 안되고 아래와 같이 마지막 값을 유지하게 된다.
 
 <div class="img-box1">
@@ -137,16 +220,22 @@ ALTER TABLE [테이블 명] AUTO_INCREMENT = [원하는 숫자];
 이다.
 
 사용 예시
-```
+```mysql
 ALTER TABLE article AUTO_INCREMENT = 3;
 ```
 <div class="img-box1">
     <img src="img/게시물/1/2.PNG" />
 </div>
 
-변경 완료!</div>				
+변경 완료!
+</script>
+
+<div class="viewer"></div></div>
+						
 				</div>
 			</div>
+			
+			
 			
 			<div class="blackBoard-bottom">
 				<div class="blackBoard-img flex flex-jc-end">
@@ -171,7 +260,7 @@ ALTER TABLE article AUTO_INCREMENT = 3;
 				</thead>
 				
 				<tbody>
-					<tr onClick=location.href="article_detail_4.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>이메일 HTML/이미지 보내기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 25</span>일</td></tr><tr onClick=location.href="article_detail_3.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>운영체제 기본</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 25</span>일</td></tr><tr onClick=location.href="article_detail_2.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>웹 그라디언트/컬러 코드 사이트</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 24</span>일</td></tr><tr class="selected" onClick=location.href="article_detail_1.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>AUTO_INCREMENT 초기화</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>21년 06월 22</span>일</td></tr>	
+					<tr onClick=location.href="article_detail_4.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>이메일 HTML/이미지 보내기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_3.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>운영체제 기본</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_2.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>웹 그라디언트/컬러 코드 사이트</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-24일</span></td></tr><tr class="selected" onClick=location.href="article_detail_1.html"><td class="articleList_num">🖋</td><td class="articleList_title"><span>AUTO_INCREMENT 초기화</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-22일</span></td></tr>	
 				</tbody>
 			</table>
 			
@@ -182,8 +271,8 @@ ALTER TABLE article AUTO_INCREMENT = 3;
 		<div id="disqus_thread"></div>
 		<script>
 		    var disqus_config = function (){
-		    	this.page.url = 'https://blog.baobab612.com/article_detail_1.html';
-		    	this.page.identifier = 'article_detail_1.html';
+		    	this.page.url = 'https://${site-domain}/${file-name}';
+		    	this.page.identifier = '${file-name}';
 		    };
 		    (function() { // DON'T EDIT BELOW THIS LINE
 		    var d = document, s = d.createElement('script');
@@ -227,5 +316,4 @@ ALTER TABLE article AUTO_INCREMENT = 3;
 
     </div>
 </body>
-<script src="app.js"></script>
 </html>

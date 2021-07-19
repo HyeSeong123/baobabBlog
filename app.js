@@ -12,8 +12,11 @@ function Article_menuInit(){
 	         if(window.innerWidth > 900){
 	            main.css('padding-top',height-70);
 	            
-	        } else if ( window.innerWidth < 900 ) {
-	            main.css('padding-top',height-50);
+	        } else if ( window.innerWidth < 900 && window.innerWidth >= 363) {
+	            main.css('padding-top',height-80);
+	        }
+			else if ( window.innerWidth < 363) {
+	            main.css('padding-top',height-60);
 	        }
 	         top_hamburger.removeClass('open');
 	         $('.top-menu__menu').removeClass('open');
@@ -134,33 +137,226 @@ function Article__head__init(){
     	});
     }
 }
-
-function ArticleDetail__Body__init() {
-	if ( toastui === undefined ){
-		return;
+var indexP = 1;
+ball = $('.ball');
+function index_ballInit(index){
+	let ballIndex = $('.ball' + index);
+	ball.removeClass('ball-selected');
+	if(indexP == 1){
+		ballIndex.addClass('ball-selected');
 	}
-	
-	const options = {
-		theme: {
-			viewer: {
-				fontSize : 30,
-				fontFamily : 'crayon',
-				color : 'white',
-			},
-		},
-	};
-	
-	let content = document.querySelector('.detail__article-content').innerHTML;
-	var viewer = new toastui.Editor.factory({
-		el : document.querySelector('.detail__article-content'),
-		initialValue : content,
-		viewer : true,
-		
-	});
-	
+	if(indexP == 2){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 3){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 4){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 5){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 6){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 7){
+		ballIndex.addClass('ball-selected');
+	}
+	if(indexP == 8){
+		ballIndex.addClass('ball-selected');
+	}
 }
 
 Article__head__init();
 Article_menuInit();
-ArticleDetail__Body__init();
+index_ballInit(indexP);
 
+var width = $('.list_slide').width();
+var widthMinus = width/0.835 - width;
+var widthMinus2 = width/0.867 - width;
+var width2 = width + widthMinus2;
+	
+width = width + widthMinus;
+
+var repeat = 0;
+var win_width = $(window).width();
+var ball_end = 0;
+if(win_width >= 1000){
+	ball_end = -2;
+}
+if(win_width >= 700 && win_width < 1000){
+	ball_end = -3;
+}
+if(win_width >= 240 && win_width < 700){
+	ball_end = -4;
+}
+$('.left_arrow').click(function(){
+	if(repeat < 0){
+		repeat=  repeat + 1;
+	}
+	indexP = (repeat*-1) + (+1);
+	index_ballInit(indexP);
+	if(repeat == 0){
+		gsap.to('.list_slide',{
+		x: width*(repeat),
+		duration: 0.5
+		});	
+	}
+	if(repeat < 0){
+		gsap.to('.list_slide',{
+		x: width2*(repeat),
+		duration: 0.5
+		});	
+	}
+});
+
+$('.right_arrow').click(function(){
+	if(repeat >= ball_end){
+		repeat = repeat - 1;
+	}
+	indexP = (repeat*-1) + (+1);
+	index_ballInit(indexP);
+	if(repeat == 0){
+		gsap.to('.list_slide',{
+		x: width*(repeat),
+		duration: 0.5
+		});
+	}
+	if(repeat < 0){
+		gsap.to('.list_slide',{
+		x: width2*(repeat),
+		duration: 0.5
+		});
+	}
+	
+});
+$('.ball').click(function(){
+	var index = ball.index(this);
+	
+	indexP = index+1;
+	repeat = index*-1;
+	ball.removeClass('ball-selected');
+	$('.ball' + indexP).addClass('ball-selected');
+	
+	if(repeat == 0){
+		gsap.to('.list_slide',{
+			x: width*(repeat),
+			duration: 0.7
+		});
+	}
+	if(repeat < 0){
+		gsap.to('.list_slide',{
+			x: width2*(repeat),
+			duration: 0.7
+		});
+	}
+});
+function sizeInit(){
+	width = $('.list_slide').width();
+	widthMinus = width/0.83 - width;
+	widthMinus2 = width/0.864 - width;
+	width2 = width + widthMinus2;
+}
+$(window).resize(function(){
+	sizeInit();
+	repeat=0;
+	indexP = 1;
+	index_ballInit(1);
+	win_width = $(window).width();
+	if(win_width >= 1000){
+	ball_end = -2;
+	}
+	if(win_width >= 700 && win_width < 1000){
+		ball_end = -3;
+	}
+	if(win_width >= 240 && win_width < 700){
+		ball_end = -4;
+	}
+	gsap.to('.list_slide',{
+		x: 0,
+		duration: 0.7
+	});
+	
+})
+//유튜브 플러그인 시작
+function youtubePlugin() {
+  toastui.Editor.codeBlockManager.setReplacer('youtube', youtubeId => {
+    // Indentify multiple code blocks
+    const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
+
+    // Avoid sanitizing iframe tag
+    setTimeout(renderYoutube.bind(null, wrapperId, youtubeId), 0);
+
+    return `<div id="${wrapperId}"></div>`;
+  });
+}
+
+function renderYoutube(wrapperId, youtubeId) {
+  const el = document.querySelector(`#${wrapperId}`);
+
+  el.innerHTML = `<div class="toast-ui-youtube-plugin-wrap"><iframe src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+}
+// 유튜브 플러그인 끝
+
+// codepen 플러그인 시작
+function codepenPlugin() {
+  toastui.Editor.codeBlockManager.setReplacer('codepen', url => {
+    const wrapperId = `yt${Math.random().toString(36).substr(2, 10)}`;
+
+    // Avoid sanitizing iframe tag
+    setTimeout(renderCodepen.bind(null, wrapperId, url), 0);
+
+    return `<div id="${wrapperId}"></div>`;
+  });
+}
+
+function renderCodepen(wrapperId, url) {
+  const el = document.querySelector(`#${wrapperId}`);
+  
+  var urlParams = new URLSearchParams(url.split('?')[1]);
+  var height = urlParams.get('height');
+
+  el.innerHTML = `<div class="toast-ui-codepen-plugin-wrap"><iframe height="${height}" scrolling="no" src="${url}" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe></div>`;
+}
+// codepen 플러그인 끝
+
+function ArticleDetail__Body__init() {
+	
+	function Editor__init() {
+	  $('.editor').each(function(index, node) {
+	    var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
+	    
+	    var editor = new toastui.Editor({
+	      el: node,
+	      previewStyle: 'preview',
+	      initialValue: initialValue,
+	      height:600,
+	      plugins: [youtubePlugin, codepenPlugin]
+	    });
+	  });
+	}
+	Editor__init();
+	
+	function EditorViewer__init() {
+		$('.viewer').each(function(index,node){
+			var initialValue = $(node).prev().html().trim().replace(/t-script/gi, 'script');
+			
+			var viewer = new toastui.Editor.factory({
+			el : node,
+			initialValue : initialValue,
+			viewer : true,
+			plugins : [youtubePlugin, codepenPlugin]
+			});	
+		});
+	}
+	EditorViewer__init();
+}
+$('.btn_up_box').click(function(){
+	btnUp_action();
+});
+function btnUp_action(){
+	window.scrollTo(0,0);
+}
+
+ArticleDetail__Body__init();
