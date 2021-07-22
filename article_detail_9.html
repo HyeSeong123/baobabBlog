@@ -53,8 +53,8 @@
 	<meta name="description" content="카카오 지도 API 기능 사용"/>
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="카카오 지도 API 기능 사용" />
-	<meta name="pubdate" content="2021-07-22T16:12:39" />
-	<meta name="lastmod" content="2021-07-22T16:12:39" />
+	<meta name="pubdate" content="2021-07-22T16:16:39" />
+	<meta name="lastmod" content="2021-07-22T16:16:39" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="카카오 지도 API 기능 사용" />
 	<meta property="og:type" content="website" />
@@ -62,8 +62,8 @@
 	<meta property="og:description" content="카카오 지도 API 기능 사용" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
-	<meta property="og:updated_time" content="2021-07-22T16:12:39"/>
-	<meta property="og:pubdate" content="2021-07-22T16:12:39" />
+	<meta property="og:updated_time" content="2021-07-22T16:16:39"/>
+	<meta property="og:pubdate" content="2021-07-22T16:16:39" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -573,7 +573,7 @@ function displayPlaces(places) {
     removeMarker();
     
     for ( var i=0; i<places.length; i++ ) {
-	var inputLatLng = new.kakao.maps.LatLng(places[i].y, places[i].x);
+	var inputLatLng = new kakao.maps.LatLng(places[i].y, places[i].x);
         // 마커를 생성하고 지도에 표시합니다
         var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
             marker = addMarker(placePosition, i), 
