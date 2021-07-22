@@ -53,8 +53,8 @@
 	<meta name="description" content="카카오 지도 API 기능 사용"/>
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="카카오 지도 API 기능 사용" />
-	<meta name="pubdate" content="2021-07-22T16:26:39" />
-	<meta name="lastmod" content="2021-07-22T16:26:39" />
+	<meta name="pubdate" content="2021-07-22T16:35:45" />
+	<meta name="lastmod" content="2021-07-22T16:35:45" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="카카오 지도 API 기능 사용" />
 	<meta property="og:type" content="website" />
@@ -62,8 +62,8 @@
 	<meta property="og:description" content="카카오 지도 API 기능 사용" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
-	<meta property="og:updated_time" content="2021-07-22T16:26:39"/>
-	<meta property="og:pubdate" content="2021-07-22T16:26:39" />
+	<meta property="og:updated_time" content="2021-07-22T16:35:45"/>
+	<meta property="og:pubdate" content="2021-07-22T16:35:45" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -695,11 +695,10 @@ function displayPagination(pagination) {
 // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
 // 인포윈도우에 장소명을 표시합니다
 function displayInfowindow(marker, title, inputLatLng) {
-	console.log(inputLatLng);
     var inputLng = inputLatLng.getLng();
     var inputLat = inputLatLng.getLat();
-    var content = '<div style="padding:5px;z-index:1;">' + title + '</div> <a target="_blank" href="https://map.kakao.com/link/search/' + title + '">지도</a><br>';
-    content += '<a target="_blank" href="https://map.kakao.com/link/to/' + title + '/' +  inputLat + '/' + inputLng + '>길찾기</a>';
+    var content = '<div style="padding:5px;z-index:1;">' + title + '</div> <a target="_blank" href="https://map.kakao.com/link/search/' + title + '">지도</a><br><a target="_blank" href="https://map.kakao.com/link/to/' + title + '/' +  inputLat + '/' + inputLng + '>길찾기</a>';
+    
     infowindow.setContent(content);
     infowindow.open(map, marker);
     
