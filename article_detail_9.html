@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1390PY4PW5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-1390PY4PW5');
+	</script>
+	<!-- 네이버 소유확인 -->
+	<meta name="naver-site-verification" content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+	<script src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js" defer></script>
+	<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+	<!-- 토스트 UI 에디터, CSS 코어 -->
+	<link rel="stylesheet" href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+	<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+	<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js" defer></script>
+	<!-- GSAP 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- 구글 폰트 -->
+    
+    
+    <link rel="icon" href="img/favicon.ico"/>
+    <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+	
+    <!-- SEO 태그 -->
+    <title>게시물_카카오 지도 API 기능 사용</title>
+    <link rel="canonical" href="https://blog.baobab612.com" />
+	<meta name="subject" content="카카오 지도 API 기능 사용"/>
+	<meta name="title" content="카카오 지도 API 기능 사용" />
+	<meta name="description" content="카카오 지도 API 기능 사용"/>
+	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
+	<meta name="copyright" content="카카오 지도 API 기능 사용" />
+	<meta name="pubdate" content="2021-07-22T15:02:24" />
+	<meta name="lastmod" content="2021-07-22T15:02:24" />
+	<!-- OPENGRAPH -->
+	<meta property="og:site_name" content="카카오 지도 API 기능 사용" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="카카오 지도 API 기능 사용" />
+	<meta property="og:description" content="카카오 지도 API 기능 사용" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:image" content="img/seo_banner.jpg" />
+	<meta property="og:updated_time" content="2021-07-22T15:02:24"/>
+	<meta property="og:pubdate" content="2021-07-22T15:02:24" />
+	<meta property="og:url" content="https://blog.baobab612.com" />
+	<!-- TWITTER -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="카카오 지도 API 기능 사용" />
+	<meta name="twitter:site" content="@카카오 지도 API 기능 사용" />
+	<meta name="twitter:creator" content="@카카오 지도 API 기능 사용" />
+	<meta name="twitter:image" content="img/seo_banner.jpg">
+	<meta name="twitter:description" content="카카오 지도 API 기능 사용" />
+	<!-- GOOGLE+ -->
+	<meta itemprop="headline" content="카카오 지도 API 기능 사용" />
+	<meta itemprop="name" content="카카오 지도 API 기능 사용" />
+	<meta itemprop="description" content="카카오 지도 API 기능 사용" />
+	<meta itemprop="image" content="img/seo_banner.jpg" />
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="body-content con-min-width">
+    	
+        <header class="top-bar con height-100p">
+            <div class="flex flex-ai-c top-menu">
+                <section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
+                	<a href="index.html" class="logo flex flex-ai-c">
+                		<span class="img-box logo_img">
+	                    	<img src="img/logo.png" alt="이미지 첨부" />
+	                    </span>
+	                    <span class="logo__span logo__W">W
+	                    	<span class="logo__span logo__1 logo__hide">eb</span>
+	                    </span>
+	                    
+	                    <span class="logo__span logo__P">P
+	                    	<span class="logo__span logo__2 logo__hide">rogram</span>
+	                    </span>
+	                    
+	                    <span class="logo__span logo__B">B
+	                    	<span class="logo__span logo__3 logo__hide">log</span>
+	                    </span>
+	                    
+                    </a>
+                </section>
+                
+                <div class="flex-grow-1"></div>
+                <!-- 탑바 PC 버전 -->
+                <div class="top-menu__menu top-menu__pc-menu flex height-100p">
+                    <ul class="flex height-100p">
+                    	<li><a href="article_list_java_1.html">Web Programs</a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li></ul></li><li><a href="article_list_mysql_1.html">DataBase</a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li></ul></li><li><a href="article_list_centos_1.html">Server</a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a href="article_list_daily_1.html">Free</a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+                    </ul>
+                </div>
+                
+                <div class="hamburger__cover flex">
+                    <section class="top-bar__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+				</section>
+                </div>  
+            </div>
+            <!-- 탑바 모바일 버전 -->
+            <div class="top-menu__menu top-menu__mobile-menu">
+                <ul class="flex flex-column">
+                	<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+                </ul>
+            </div>
+        </header><main class="detail__main">
+
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">9.</div>
+						<div class="detail__article-title">카카오 지도 API 기능 사용</div>
+					</section>
+					<div class="detail__article-regDate">21년07월22일</div>
+					<div class="detail__article-content"><script type="text/x-template">
+[카카오 지도 샘플](https://apis.map.kakao.com/web/sample/)
+카카오 지도 API에는 여러가지 기능이 있습니다.
+저는 검색 결과를 목록으로 표출하고 링크 연결까지 해보겠습니다.
+[키워드로 검색하고 목록으로 표출하기](https://apis.map.kakao.com/web/sample/keywordList/) 에 가셔서 소스를 가져옵니다.
+
+```html
+<style>
+.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+.map_wrap {position:relative;width:100%;height:500px;}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+.bg_white {background:#fff;}
+#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}  
+#menu_wrap .option button {margin-left:5px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+#placesList .item .marker_1 {background-position: 0 -10px;}
+#placesList .item .marker_2 {background-position: 0 -56px;}
+#placesList .item .marker_3 {background-position: 0 -102px}
+#placesList .item .marker_4 {background-position: 0 -148px;}
+#placesList .item .marker_5 {background-position: 0 -194px;}
+#placesList .item .marker_6 {background-position: 0 -240px;}
+#placesList .item .marker_7 {background-position: 0 -286px;}
+#placesList .item .marker_8 {background-position: 0 -332px;}
+#placesList .item .marker_9 {background-position: 0 -378px;}
+#placesList .item .marker_10 {background-position: 0 -423px;}
+#placesList .item .marker_11 {background-position: 0 -470px;}
+#placesList .item .marker_12 {background-position: 0 -516px;}
+#placesList .item .marker_13 {background-position: 0 -562px;}
+#placesList .item .marker_14 {background-position: 0 -608px;}
+#placesList .item .marker_15 {background-position: 0 -654px;}
+#pagination {margin:10px auto;text-align: center;}
+#pagination a {display:inline-block;margin-right:10px;}
+#pagination .on {font-weight: bold; cursor: default;color:#777;}
+</style>
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+    <div id="menu_wrap" class="bg_white">
+        <div class="option">
+            <div>
+                <form onsubmit="searchPlaces(); return false;">
+                    키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                    <button type="submit">검색하기</button> 
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+    </div>
+</div>
+
+<t-script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 사용하세요&libraries=services"></t-script>
+<t-script>
+// 마커를 담을 배열입니다
+var markers = [];
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 장소 검색 객체를 생성합니다
+var ps = new kakao.maps.services.Places();  
+
+// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+// 키워드로 장소를 검색합니다
+searchPlaces();
+
+// 키워드 검색을 요청하는 함수입니다
+function searchPlaces() {
+
+    var keyword = document.getElementById('keyword').value;
+
+    if (!keyword.replace(/^\s+|\s+$/g, '')) {
+        alert('키워드를 입력해주세요!');
+        return false;
+    }
+
+    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+    ps.keywordSearch( keyword, placesSearchCB); 
+}
+
+// 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
+function placesSearchCB(data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        // 정상적으로 검색이 완료됐으면
+        // 검색 목록과 마커를 표출합니다
+        displayPlaces(data);
+
+        // 페이지 번호를 표출합니다
+        displayPagination(pagination);
+
+    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+
+        alert('검색 결과가 존재하지 않습니다.');
+        return;
+
+    } else if (status === kakao.maps.services.Status.ERROR) {
+
+        alert('검색 결과 중 오류가 발생했습니다.');
+        return;
+
+    }
+}
+
+// 검색 결과 목록과 마커를 표출하는 함수입니다
+function displayPlaces(places) {
+
+    var listEl = document.getElementById('placesList'), 
+    menuEl = document.getElementById('menu_wrap'),
+    fragment = document.createDocumentFragment(), 
+    bounds = new kakao.maps.LatLngBounds(), 
+    listStr = '';
+    
+    // 검색 결과 목록에 추가된 항목들을 제거합니다
+    removeAllChildNods(listEl);
+
+    // 지도에 표시되고 있는 마커를 제거합니다
+    removeMarker();
+    
+    for ( var i=0; i<places.length; i++ ) {
+
+        // 마커를 생성하고 지도에 표시합니다
+        var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
+            marker = addMarker(placePosition, i), 
+            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+        // LatLngBounds 객체에 좌표를 추가합니다
+        bounds.extend(placePosition);
+
+        // 마커와 검색결과 항목에 mouseover 했을때
+        // 해당 장소에 인포윈도우에 장소명을 표시합니다
+        // mouseout 했을 때는 인포윈도우를 닫습니다
+        (function(marker, title) {
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                displayInfowindow(marker, title);
+            });
+
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+
+            itemEl.onmouseover =  function () {
+                displayInfowindow(marker, title);
+            };
+
+            itemEl.onmouseout =  function () {
+                infowindow.close();
+            };
+        })(marker, places[i].place_name);
+
+        fragment.appendChild(itemEl);
+    }
+
+    // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다
+    listEl.appendChild(fragment);
+    menuEl.scrollTop = 0;
+
+    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+    map.setBounds(bounds);
+}
+
+// 검색결과 항목을 Element로 반환하는 함수입니다
+function getListItem(index, places) {
+
+    var el = document.createElement('li'),
+    itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
+                '<div class="info">' +
+                '   <h5>' + places.place_name + '</h5>';
+
+    if (places.road_address_name) {
+        itemStr += '    <span>' + places.road_address_name + '</span>' +
+                    '   <span class="jibun gray">' +  places.address_name  + '</span>';
+    } else {
+        itemStr += '    <span>' +  places.address_name  + '</span>'; 
+    }
+                 
+      itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+                '</div>';           
+
+    el.innerHTML = itemStr;
+    el.className = 'item';
+
+    return el;
+}
+
+// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
+function addMarker(position, idx, title) {
+    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+        imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
+        imgOptions =  {
+            spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
+            spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
+            offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
+        },
+        markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
+            marker = new kakao.maps.Marker({
+            position: position, // 마커의 위치
+            image: markerImage 
+        });
+
+    marker.setMap(map); // 지도 위에 마커를 표출합니다
+    markers.push(marker);  // 배열에 생성된 마커를 추가합니다
+
+    return marker;
+}
+
+// 지도 위에 표시되고 있는 마커를 모두 제거합니다
+function removeMarker() {
+    for ( var i = 0; i < markers.length; i++ ) {
+        markers[i].setMap(null);
+    }   
+    markers = [];
+}
+
+// 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
+function displayPagination(pagination) {
+    var paginationEl = document.getElementById('pagination'),
+        fragment = document.createDocumentFragment(),
+        i; 
+
+    // 기존에 추가된 페이지번호를 삭제합니다
+    while (paginationEl.hasChildNodes()) {
+        paginationEl.removeChild (paginationEl.lastChild);
+    }
+
+    for (i=1; i<=pagination.last; i++) {
+        var el = document.createElement('a');
+        el.href = "#";
+        el.innerHTML = i;
+
+        if (i===pagination.current) {
+            el.className = 'on';
+        } else {
+            el.onclick = (function(i) {
+                return function() {
+                    pagination.gotoPage(i);
+                }
+            })(i);
+        }
+
+        fragment.appendChild(el);
+    }
+    paginationEl.appendChild(fragment);
+}
+
+// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
+// 인포윈도우에 장소명을 표시합니다
+function displayInfowindow(marker, title) {
+    var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
+
+    infowindow.setContent(content);
+    infowindow.open(map, marker);
+}
+
+ // 검색결과 목록의 자식 Element를 제거하는 함수입니다
+function removeAllChildNods(el) {   
+    while (el.hasChildNodes()) {
+        el.removeChild (el.lastChild);
+    }
+}
+</t-script>
+```
+이대로 넣으면 문제가 몇 개 있습니다.
+1. 클릭해야 하는데 해당 지점에서 마우스가 벗어나면 상세 창 사라짐
+2. 링크가 없음
+3. 개별 이름이랑 좌표값을 받아와야함
+
+1번의 해결 방법은 스크립트 소스 안을 뒤져봐야 합니다.
+<div class="img-box1"><img src="img/게시물/9/2.PNG"></div>
+
+mouseout이 들어간 addListener 부분을 통째로 없애 주시고
+
+</script>
+
+<div class="viewer"></div>
+
+
+    <style>
+.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+.map_wrap {position:relative;width:100%;height:500px;}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+.bg_white {background:#fff;}
+#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}  
+#menu_wrap .option button {margin-left:5px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+#placesList .item .marker_1 {background-position: 0 -10px;}
+#placesList .item .marker_2 {background-position: 0 -56px;}
+#placesList .item .marker_3 {background-position: 0 -102px}
+#placesList .item .marker_4 {background-position: 0 -148px;}
+#placesList .item .marker_5 {background-position: 0 -194px;}
+#placesList .item .marker_6 {background-position: 0 -240px;}
+#placesList .item .marker_7 {background-position: 0 -286px;}
+#placesList .item .marker_8 {background-position: 0 -332px;}
+#placesList .item .marker_9 {background-position: 0 -378px;}
+#placesList .item .marker_10 {background-position: 0 -423px;}
+#placesList .item .marker_11 {background-position: 0 -470px;}
+#placesList .item .marker_12 {background-position: 0 -516px;}
+#placesList .item .marker_13 {background-position: 0 -562px;}
+#placesList .item .marker_14 {background-position: 0 -608px;}
+#placesList .item .marker_15 {background-position: 0 -654px;}
+#pagination {margin:10px auto;text-align: center;}
+#pagination a {display:inline-block;margin-right:10px;}
+#pagination .on {font-weight: bold; cursor: default;color:#777;}
+</style>
+<div class="map_wrap">
+    <div id="map" style="width:90%;height:100%;position:relative;overflow:hidden;margin-bottom:20px;"></div>
+
+    <div id="menu_wrap" class="bg_white">
+        <div class="option">
+            <div>
+                <form onsubmit="searchPlaces(); return false;">
+                    키워드 : <input type="text" value="쁘띠프랑스" id="keyword" size="15"> 
+                    <button type="submit">검색하기</button> 
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7&libraries=services"></script>
+<script>
+// 마커를 담을 배열입니다
+var markers = [];
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 장소 검색 객체를 생성합니다
+var ps = new kakao.maps.services.Places();  
+
+// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+// 키워드로 장소를 검색합니다
+searchPlaces();
+
+// 키워드 검색을 요청하는 함수입니다
+function searchPlaces() {
+
+    var keyword = document.getElementById('keyword').value;
+
+    if (!keyword.replace(/^\s+|\s+$/g, '')) {
+        alert('키워드를 입력해주세요!');
+        return false;
+    }
+
+    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+    ps.keywordSearch( keyword, placesSearchCB); 
+}
+
+// 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
+function placesSearchCB(data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        // 정상적으로 검색이 완료됐으면
+        // 검색 목록과 마커를 표출합니다
+        displayPlaces(data);
+
+        // 페이지 번호를 표출합니다
+        displayPagination(pagination);
+
+    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+
+        alert('검색 결과가 존재하지 않습니다.');
+        return;
+
+    } else if (status === kakao.maps.services.Status.ERROR) {
+
+        alert('검색 결과 중 오류가 발생했습니다.');
+        return;
+
+    }
+}
+
+// 검색 결과 목록과 마커를 표출하는 함수입니다
+function displayPlaces(places) {
+
+    var listEl = document.getElementById('placesList'), 
+    menuEl = document.getElementById('menu_wrap'),
+    fragment = document.createDocumentFragment(), 
+    bounds = new kakao.maps.LatLngBounds(), 
+    listStr = '';
+    
+    // 검색 결과 목록에 추가된 항목들을 제거합니다
+    removeAllChildNods(listEl);
+
+    // 지도에 표시되고 있는 마커를 제거합니다
+    removeMarker();
+    
+    for ( var i=0; i<places.length; i++ ) {
+
+        // 마커를 생성하고 지도에 표시합니다
+        var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
+            marker = addMarker(placePosition, i), 
+            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+        // LatLngBounds 객체에 좌표를 추가합니다
+        bounds.extend(placePosition);
+
+        // 마커와 검색결과 항목에 mouseover 했을때
+        // 해당 장소에 인포윈도우에 장소명을 표시합니다
+        // mouseout 했을 때는 인포윈도우를 닫습니다
+        (function(marker, title) {
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                displayInfowindow(marker, title);
+            });
+
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+
+            itemEl.onmouseover =  function () {
+                displayInfowindow(marker, title);
+            };
+	    itemEl.click =  function () {
+                displayInfowindow(marker, title);
+            };
+
+        })(marker, places[i].place_name);
+
+        fragment.appendChild(itemEl);
+    }
+
+    // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다
+    listEl.appendChild(fragment);
+    menuEl.scrollTop = 0;
+
+    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+    map.setBounds(bounds);
+}
+
+// 검색결과 항목을 Element로 반환하는 함수입니다
+function getListItem(index, places) {
+
+    var el = document.createElement('li'),
+    itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
+                '<div class="info">' +
+                '   <h5>' + places.place_name + '</h5>';
+
+    if (places.road_address_name) {
+        itemStr += '    <span>' + places.road_address_name + '</span>' +
+                    '   <span class="jibun gray">' +  places.address_name  + '</span>';
+    } else {
+        itemStr += '    <span>' +  places.address_name  + '</span>'; 
+    }
+                 
+      itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+                '</div>';           
+
+    el.innerHTML = itemStr;
+    el.className = 'item';
+
+    return el;
+}
+
+// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
+function addMarker(position, idx, title) {
+    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+        imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
+        imgOptions =  {
+            spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
+            spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
+            offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
+        },
+        markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
+            marker = new kakao.maps.Marker({
+            position: position, // 마커의 위치
+            image: markerImage 
+        });
+
+    marker.setMap(map); // 지도 위에 마커를 표출합니다
+    markers.push(marker);  // 배열에 생성된 마커를 추가합니다
+
+    return marker;
+}
+
+// 지도 위에 표시되고 있는 마커를 모두 제거합니다
+function removeMarker() {
+    for ( var i = 0; i < markers.length; i++ ) {
+        markers[i].setMap(null);
+    }   
+    markers = [];
+}
+
+// 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
+function displayPagination(pagination) {
+    var paginationEl = document.getElementById('pagination'),
+        fragment = document.createDocumentFragment(),
+        i; 
+
+    // 기존에 추가된 페이지번호를 삭제합니다
+    while (paginationEl.hasChildNodes()) {
+        paginationEl.removeChild (paginationEl.lastChild);
+    }
+
+    for (i=1; i<=pagination.last; i++) {
+        var el = document.createElement('a');
+        el.href = "#";
+        el.innerHTML = i;
+
+        if (i===pagination.current) {
+            el.className = 'on';
+        } else {
+            el.onclick = (function(i) {
+                return function() {
+                    pagination.gotoPage(i);
+                }
+            })(i);
+        }
+
+        fragment.appendChild(el);
+    }
+    paginationEl.appendChild(fragment);
+}
+
+// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
+// 인포윈도우에 장소명을 표시합니다
+function displayInfowindow(marker, title) {
+    var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
+
+    infowindow.setContent(content);
+    infowindow.open(map, marker);
+}
+
+ // 검색결과 목록의 자식 Element를 제거하는 함수입니다
+function removeAllChildNods(el) {   
+    while (el.hasChildNodes()) {
+        el.removeChild (el.lastChild);
+    }
+}
+</script></div>
+
+				</div>
+			</div>
+
+
+
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser">
+						<img src="img/eraser.png" alt="">
+					</span>
+					<span class="img-box chalks">
+						<img src="img/chalks.png" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
+
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>
+						</td>
+						<th class="sample_width">제목
+						</td>
+						<th>작성자
+						</td>
+						<th>작성일
+						</td>
+					</tr>
+				</thead>
+
+				<tbody><tr class="selected" onClick=location.href="article_detail_9.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>카카오 지도 API 기능 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_8.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>카카오 지도 API</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_7.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>Linux 경로 이동 명령어</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-20일</span></td></tr><tr onClick=location.href="article_detail_6.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+			        this.page.url = 'https://blog.baobab612.com/article_detail_9.html';
+			        this.page.identifier = 'article_detail_9.html';
+			    };
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://baobabblog210721.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+	</div>
+
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
+
+</main>        <footer class="footer__cover flex flex-ai-c">
+
+            
+            <section class="footer__icon">
+                <a href="https://github.com/HyeSeong123" target="_blank">
+                    <span class="icon-git"><i class="fab fa-github-square"></i></span>
+                </a>
+                <a href="https://www.instagram.com/baobab.0612/" target="_blank">
+                    <span class="icon-insta"><i class="fab fa-instagram-square"></i></span>
+                </a>
+                <a href="https://blog.naver.com/baobab0612" target="_blank">
+                    <span class="icon-blog"><i class="fab fa-blogger"></i></span>
+                </a>
+            </section>
+
+            <section class="footer__host flex flex-jc-end">
+                <div>
+                    <span>Copyright 2021 Baobab. All Right Reserved</span>
+                    <span>B a o b a b</span>
+                </div>
+            </section>
+
+        </footer>
+
+    </div>
+</body>
+</html>
