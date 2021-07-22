@@ -53,8 +53,8 @@
 	<meta name="description" content="카카오 지도 API 기능 사용"/>
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="카카오 지도 API 기능 사용" />
-	<meta name="pubdate" content="2021-07-22T15:27:50" />
-	<meta name="lastmod" content="2021-07-22T15:27:50" />
+	<meta name="pubdate" content="2021-07-22T15:35:54" />
+	<meta name="lastmod" content="2021-07-22T15:35:54" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="카카오 지도 API 기능 사용" />
 	<meta property="og:type" content="website" />
@@ -62,8 +62,8 @@
 	<meta property="og:description" content="카카오 지도 API 기능 사용" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
-	<meta property="og:updated_time" content="2021-07-22T15:27:50"/>
-	<meta property="og:pubdate" content="2021-07-22T15:27:50" />
+	<meta property="og:updated_time" content="2021-07-22T15:35:54"/>
+	<meta property="og:pubdate" content="2021-07-22T15:35:54" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -151,7 +151,7 @@
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
 .map_wrap {position:relative;width:100%;height:500px;}
-#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:400px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
 #menu_wrap .option{text-align: center;}
@@ -431,8 +431,9 @@ function removeAllChildNods(el) {
 1번의 해결 방법은 스크립트 소스 안을 뒤져봐야 합니다.
 <div class="img-box1"><img src="img/게시물/9/2.PNG"></div>
 
-mouseout이 들어간 addListener 부분을 통째로 없애 주시고
-
+mouseout이 들어간 addListener 부분을 통째로 없애 주시세요!
+그러면 이제 계속 창이 떠 있겠죠?
+링크를 삽입해 줍시다.
 </script>
 
 <div class="viewer"></div>
@@ -476,8 +477,8 @@ mouseout이 들어간 addListener 부분을 통째로 없애 주시고
 #pagination a {display:inline-block;margin-right:10px;}
 #pagination .on {font-weight: bold; cursor: default;color:#777;}
 </style>
-<div class="map_wrap">
-    <div id="map" style="width:90%;height:100%;position:relative;overflow:hidden;margin-bottom:20px;"></div>
+<div class="map_wrap" style="margin-bottom:20px;">
+    <div id="map" style="width:90%;height:100%;position:relative;overflow:hidden;"></div>
 
     <div id="menu_wrap" class="bg_white">
         <div class="option">
@@ -592,9 +593,6 @@ function displayPlaces(places) {
             itemEl.onmouseover =  function () {
                 displayInfowindow(marker, title);
             };
-	    itemEl.click =  function () {
-                displayInfowindow(marker, title);
-            };
 
         })(marker, places[i].place_name);
 
@@ -697,7 +695,7 @@ function displayPagination(pagination) {
 // 인포윈도우에 장소명을 표시합니다
 function displayInfowindow(marker, title) {
     var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
-
+	content += '<a href="https://map.kakao.com/link/search/' + title + '"지도</a>';
     infowindow.setContent(content);
     infowindow.open(map, marker);
 }
