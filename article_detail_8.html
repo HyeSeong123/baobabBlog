@@ -46,20 +46,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
 	
     <!-- SEO 태그 -->
-    <title>게시물_이메일 HTML/이미지 보내기</title>
+    <title>게시물_카카오 지도 API</title>
     <link rel="canonical" href="https://blog.baobab612.com" />
-	<meta name="subject" content="이메일 HTML/이미지 보내기"/>
-	<meta name="title" content="이메일 HTML/이미지 보내기" />
-	<meta name="description" content="이메일 HTML이미지 보내기"/>
+	<meta name="subject" content="카카오 지도 API"/>
+	<meta name="title" content="카카오 지도 API" />
+	<meta name="description" content="카카오 지도 API"/>
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-	<meta name="copyright" content="이메일 HTML/이미지 보내기" />
+	<meta name="copyright" content="카카오 지도 API" />
 	<meta name="pubdate" content="2021-07-22T14:18:43" />
 	<meta name="lastmod" content="2021-07-22T14:18:43" />
 	<!-- OPENGRAPH -->
-	<meta property="og:site_name" content="이메일 HTML/이미지 보내기" />
+	<meta property="og:site_name" content="카카오 지도 API" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="이메일 HTML/이미지 보내기" />
-	<meta property="og:description" content="이메일 HTML이미지 보내기" />
+	<meta property="og:title" content="카카오 지도 API" />
+	<meta property="og:description" content="카카오 지도 API" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
 	<meta property="og:updated_time" content="2021-07-22T14:18:43"/>
@@ -67,15 +67,15 @@
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="이메일 HTML/이미지 보내기" />
-	<meta name="twitter:site" content="@이메일 HTML/이미지 보내기" />
-	<meta name="twitter:creator" content="@이메일 HTML/이미지 보내기" />
+	<meta name="twitter:title" content="카카오 지도 API" />
+	<meta name="twitter:site" content="@카카오 지도 API" />
+	<meta name="twitter:creator" content="@카카오 지도 API" />
 	<meta name="twitter:image" content="img/seo_banner.jpg">
-	<meta name="twitter:description" content="이메일 HTML이미지 보내기" />
+	<meta name="twitter:description" content="카카오 지도 API" />
 	<!-- GOOGLE+ -->
-	<meta itemprop="headline" content="이메일 HTML/이미지 보내기" />
-	<meta itemprop="name" content="이메일 HTML/이미지 보내기" />
-	<meta itemprop="description" content="이메일 HTML이미지 보내기" />
+	<meta itemprop="headline" content="카카오 지도 API" />
+	<meta itemprop="name" content="카카오 지도 API" />
+	<meta itemprop="description" content="카카오 지도 API" />
 	<meta itemprop="image" content="img/seo_banner.jpg" />
     
     <link rel="stylesheet" href="main.css">
@@ -136,49 +136,68 @@
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
 					<section class="numAndTitle flex">
-						<div class="detail__article-num">4.</div>
-						<div class="detail__article-title">이메일 HTML/이미지 보내기</div>
+						<div class="detail__article-num">8.</div>
+						<div class="detail__article-title">카카오 지도 API</div>
 					</section>
-					<div class="detail__article-regDate">21년06월25일</div>
+					<div class="detail__article-regDate">21년07월22일</div>
 					<div class="detail__article-content"><script type="text/x-template">
-업무 중 이메일에 이미지맵이 포함된 HTML 형식을 적용시켜서 보낼 일이 생겼다.
-네이버랑 지메일을 이용했는데 지메일은 조금 까다로웠다.
-# 네이버
-네이버는 우선 이미지를 첨부해주었고,
-<div class="img-box1"><img src="img/게시물/4/1.PNG"></div>
+카카오 맵 API 사용 과정 입니다.
+우선 [카카오Developers](https://developers.kakao.com/) 에 접속합니다.
+그리고 내 애플리케이션을 누릅니다.
+<div class="img-box1"><img src="img/게시물/8/2.PNG"></div>
+<p>애플리케이션 추가를 누릅니다.</p>
+<div class="img-box1"><img src="img/게시물/8/3.PNG"></div>
+<p>저는 블로그 이름을 따 baobabTest라고 하겠습니다.</p>
+<div class="img-box1"><img src="img/게시물/8/4.PNG"></div>
+<p>생성된 앱을 클릭해줍니다.</p>
+<div class="img-box1"><img src="img/게시물/8/5.PNG"></div>
+<p>
+자바스크립트 키를 메모해 준 뒤,
+플랫폼을 클릭하여 Web에 사이트를 추가해줍니다.
+저는 제 블로그를 추가했습니다.
+</p>
+<div class="img-box1"><img src="img/게시물/8/6.PNG"></div>
+<p>이제 지도를 만들어봅시다.
+우선 기본적인 지도 입니다.
+카카오 관련내용 스크립트를 추가해줍니다.</p>
 
-우측하단에서 HTML로 이동한다.
-<div class="img-box1"><img src="img/게시물/4/2.PNG"></div>
+```html
+<t-script src=""//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 사용하세요><t-script>
+```
+그리고 밑에는 
+```html
+<!-- 지도를 표시할 div 입니다 -->
+<div id="map" style="width:100%;height:350px;"></div>
+<t-script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
 
-그러면 사진과 관련된 코드가 작성되어 있다
-<div class="img-box1"><img src="img/게시물/4/3.PNG"></div>
-
-나는 이미지맵을 사용해야해서 usemap="이미지맵 ID" 코드를 추가해주었다.
-
-# Gmail
-지메일도 마찬가지로 이미지부터 첨부해준다.
-<div class="img-box1"><img src="img/게시물/4/4.PNG"></div>
-
-메일창 바깥을 한 번 클릭하고 Ctrl + shift + c 를 누른 뒤 이미지를 클릭한다.
-<div class="img-box1"><img src="img/게시물/4/5.PNG"></div>
-
-사진과 같은 상태에서 클릭해야 한다.
-클릭을 한 뒤 윗줄에는
-<div class="img-box1"><img src="img/게시물/4/6.PNG"></div>
-
-위와 같이 메일 본문이라고 들어간 항목이 있을 것이다.우클릭 뒤 edis as HTML을 클릭하고 HTML 코드를 넣어주고 다른 부분을
-클릭해준다 그러면 지메일 작성창은
-<div class="img-box1"><img src="img/게시물/4/7.PNG"></div>
-
-변경되어 있을 것이다.
-
-코드를 넣어줄 때 삽입 부분은
-<div class="img-box1"><img src="img/게시물/4/8.PNG"></div>
-
-사진의 부분이다.
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+</t-script>
+```
 </script>
 
-<div class="viewer"></div></div>
+<div class="viewer"></div>
+
+
+<!-- 지도를 표시할 div 입니다 -->
+<div id="map" style="width:100%;height:350px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+</script></div>
 
 				</div>
 			</div>
@@ -215,7 +234,7 @@
 					</tr>
 				</thead>
 
-				<tbody><tr onClick=location.href="article_detail_7.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>Linux 경로 이동 명령어</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-20일</span></td></tr><tr onClick=location.href="article_detail_6.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr><tr onClick=location.href="article_detail_5.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>HTML형식 보낼 때 js,style 주의점</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr class="selected" onClick=location.href="article_detail_4.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>이메일 HTML/이미지 보내기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_3.html"><td class="articleList_num">🖋</td><td class="articleList_title"><span>운영체제 기본</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr><tr onClick=location.href="article_detail_2.html"><td class="articleList_num">📕</td><td class="articleList_title"><span>웹 그라디언트/컬러 코드 사이트</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-24일</span></td></tr><tr onClick=location.href="article_detail_1.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>AUTO_INCREMENT 초기화</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-22일</span></td></tr>
+				<tbody><tr class="selected" onClick=location.href="article_detail_8.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>카카오 지도 API</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_7.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>Linux 경로 이동 명령어</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-20일</span></td></tr><tr onClick=location.href="article_detail_6.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr><tr onClick=location.href="article_detail_5.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>HTML형식 보낼 때 js,style 주의점</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr>
 				</tbody>
 			</table>
 
@@ -226,8 +245,8 @@
 		<div id="disqus_thread"></div>
 		<script>
 				var disqus_config = function () {
-			        this.page.url = 'https://blog.baobab612.com/article_detail_4.html';
-			        this.page.identifier = 'article_detail_4.html';
+			        this.page.url = 'https://blog.baobab612.com/article_detail_8.html';
+			        this.page.identifier = 'article_detail_8.html';
 			    };
 			(function() { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
