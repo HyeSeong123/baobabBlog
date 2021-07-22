@@ -53,8 +53,8 @@
 	<meta name="description" content="카카오 지도 API 기능 사용"/>
 	<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
 	<meta name="copyright" content="카카오 지도 API 기능 사용" />
-	<meta name="pubdate" content="2021-07-22T16:50:15" />
-	<meta name="lastmod" content="2021-07-22T16:50:15" />
+	<meta name="pubdate" content="2021-07-22T17:02:19" />
+	<meta name="lastmod" content="2021-07-22T17:02:19" />
 	<!-- OPENGRAPH -->
 	<meta property="og:site_name" content="카카오 지도 API 기능 사용" />
 	<meta property="og:type" content="website" />
@@ -62,8 +62,8 @@
 	<meta property="og:description" content="카카오 지도 API 기능 사용" />
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="img/seo_banner.jpg" />
-	<meta property="og:updated_time" content="2021-07-22T16:50:15"/>
-	<meta property="og:pubdate" content="2021-07-22T16:50:15" />
+	<meta property="og:updated_time" content="2021-07-22T17:02:19"/>
+	<meta property="og:pubdate" content="2021-07-22T17:02:19" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -430,10 +430,19 @@ function removeAllChildNods(el) {
 
 1번의 해결 방법은 스크립트 소스 안을 뒤져봐야 합니다.
 <div class="img-box1"><img src="img/게시물/9/2.PNG"></div>
+mouseout이 들어간 addListener 부분을 통째로 없애 주세요!
+그러면 이제 벗어나도 계속 창이 떠 있겠죠?
 
-mouseout이 들어간 addListener 부분을 통째로 없애 주시세요!
-그러면 이제 계속 창이 떠 있겠죠?
-링크를 삽입해 줍시다.
+2. 우선 링크를 만들어야 합니다.
+<div class="img-box1"><img src="img/게시물/9/3.PNG"></div>
+사진처럼 content += 을 이용해 태그를 더 만들어주세요
+그리고
+<div class="img-box1"><img src="img/게시물/9/1.PNG"></div>
+[kakao 지도 가이드](https://apis.map.kakao.com/web/guide/) 설명대로 링크를 걸어줍니다.
+위도 경도 빼는 방법을 몰라서 저는 inputLatLng 변수를 새로 만들어 사용했습니다.
+<div class="img-box1"><img src="img/게시물/9/4.PNG"></div>
+그리고 위도랑 경도를 사진과 같이 따로 추출해서 하나는 search/title
+또 다른 하나는 link/to/title,위도,경도를 넣어 줬습니다.
 </script>
 
 <div class="viewer"></div>
@@ -698,7 +707,7 @@ function displayInfowindow(marker, title, inputLatLng) {
     var inputLng = inputLatLng.getLng();
     var inputLat = inputLatLng.getLat();
     var content = '<div style="padding:5px;z-index:1;">' + title + '</div> <a target="_blank" href="https://map.kakao.com/link/search/' + title + '">지도</a> <br>';
-    content += '<a href="https://map.kakao.com/link/to/' + title + ',' + inputLat +',' + inputLng + '">길 찾기</a>';
+    content += '<a target="_blank" href="https://map.kakao.com/link/to/' + title + ',' + inputLat +',' + inputLng + '">길 찾기</a>';
     
     infowindow.setContent(content);
     infowindow.open(map, marker);
