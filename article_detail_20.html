@@ -18,33 +18,33 @@
 	<!-- 네이버 소유확인 -->
 	<meta name="naver-site-verification" content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
 	
-	<title>카카오 지도 API-바오밥 블로그</title>
+	<title>컴퓨터활용능력 1급 - 5-바오밥 블로그</title>
 	
     <meta charset="UTF-8">
     
      <!-- SEO 태그 -->
     <link rel="canonical" href="https://blog.baobab612.com" />
     <meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-	<meta name="description" content="카카오 지도 API"/>
-	<meta name="classification" content="카카오 지도 API"/>
+	<meta name="description" content="컴퓨터활용능력 1급  5"/>
+	<meta name="classification" content="컴퓨터활용능력 1급  5"/>
 	
 	<!-- OPENGRAPH -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="카카오 지도 API-바오밥 블로그" />
-	<meta property="og:description" content="카카오 지도 API" />
+	<meta property="og:title" content="컴퓨터활용능력 1급 - 5-바오밥 블로그" />
+	<meta property="og:description" content="컴퓨터활용능력 1급  5" />
 	<meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="카카오 지도 API" />
-	<meta name="twitter:site" content="@카카오 지도 API" />
-	<meta name="twitter:creator" content="@카카오 지도 API" />
+	<meta name="twitter:title" content="컴퓨터활용능력 1급 - 5" />
+	<meta name="twitter:site" content="@컴퓨터활용능력 1급 - 5" />
+	<meta name="twitter:creator" content="@컴퓨터활용능력 1급 - 5" />
 	<meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
-	<meta name="twitter:description" content="카카오 지도 API" />
+	<meta name="twitter:description" content="컴퓨터활용능력 1급  5" />
 	<!-- GOOGLE+ -->
-	<meta itemprop="headline" content="카카오 지도 API-바오밥 블로그" />
-	<meta itemprop="name" content="카카오 지도 API" />
-	<meta itemprop="description" content="카카오 지도 API" />
+	<meta itemprop="headline" content="컴퓨터활용능력 1급 - 5-바오밥 블로그" />
+	<meta itemprop="name" content="컴퓨터활용능력 1급 - 5" />
+	<meta itemprop="description" content="컴퓨터활용능력 1급  5" />
 	<meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 	
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
@@ -134,71 +134,76 @@
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
 					<section class="numAndTitle flex">
-						<div class="detail__article-num">8.</div>
-						<div class="detail__article-title">카카오 지도 API</div>
+						<div class="detail__article-num">20.</div>
+						<div class="detail__article-title">컴퓨터활용능력 1급 - 5</div>
 					</section>
-					<div class="detail__article-regDate">21년07월22일</div>
+					<div class="detail__article-regDate">21년08월05일</div>
 					<div class="detail__article-content"><script type="text/x-template">
-카카오 맵 API 사용 과정 입니다.
-우선 [카카오Developers](https://developers.kakao.com/) 에 접속합니다.
-그리고 내 애플리케이션을 누릅니다.
-<div class="img-box1"><img src="img/게시물/8/2.PNG"></div>
-<p>애플리케이션 추가를 누릅니다.</p>
-<div class="img-box1"><img src="img/게시물/8/3.PNG"></div>
-<p>저는 블로그 이름을 따 baobabTest라고 하겠습니다.</p>
-<div class="img-box1"><img src="img/게시물/8/4.PNG"></div>
-<p>생성된 앱을 클릭해줍니다.</p>
-<div class="img-box1"><img src="img/게시물/8/5.PNG"></div>
-<p>
-자바스크립트 키를 메모해 준 뒤,
-플랫폼을 클릭하여 Web에 사이트를 추가해줍니다.
-저는 제 블로그를 추가했습니다.
-</p>
-<div class="img-box1"><img src="img/게시물/8/6.PNG"></div>
-<p>이제 지도를 만들어봅시다.
-우선 기본적인 지도 입니다.
-카카오 관련내용 스크립트를 추가해줍니다.</p>
-
-```html
-<t-script src=""//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 사용하세요><t-script>
-```
-그리고 밑에는 
-```html
-<!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:100%;height:350px;"></div>
-<t-script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-</t-script>
-실제 실행화면 입니다.
-[카카오 지도 샘플](https://apis.map.kakao.com/web/sample/)
-를 참조 했습니다.
-```
+# 레지스트리
+- 컴퓨터에 설치된 모든 하드웨어와 소프트웨어의 실행 정보를 한 군데에 모아 관리하는 계층적인 데이터베이스
+- 레지스트리는 각 사용자의 프로필, IRQ, I/O 주소, DMA 등과 같은 하드웨어 자원, 설치된 프로그램 및
+  속성 정보 같은 소프트웨어 자원을 관리한다.
+- 레지스트리 정보는 Windows가 작동하는 동안 지속적으로 참조된다.
+- 내용은 기계어로 되어 있어 일반 문서 편집기로 확인할 수 없으며, 수정하려면 REGEDIT 같은 레지스트리 편집 앱을 사용해야 한다.
+- 레지스트리 관련 내용은 C:\Windows\System32\config 폴더에 여러 개의 파일로 저장된다.
+- 레지스트리 파일은 보안, 앱, 시스템 등의 관련 파일로 구성되어 있다.
+# 네트워크 기능
+## 클라이언트
+    - 네트워크의 다른 컴퓨터나 서버에 연결하여 파일/프린터 등의 공유 자원을 사용할 수 있게 해주는 소프트웨어
+## 프로토콜
+    - 서로 다른 컴퓨터 간에 정보 교환을 가능하게 하는 통신규약
+    - 네트워크에 있는 컴퓨터가 서로 정보를 공유하려면 동일한 프로토콜을 사용해야 함
+## 서비스
+    - 내 컴퓨터에 설치된 파일,프린터 등의 자원을 다른 컴퓨터에서 공유할 수 있도록 하는 소프트웽어
+    - Qos 패킷 스케줄러 : 흐름 속도 및 우선순위 서비스를 포함하여 네트워크 트래픽 제어를 제공함
+## 어댑터
+    - 컴퓨터를 네트워크에 물리적으로 연결하는 하드웨어 장치
+# 네트워크 및 인터넷
+## 연결 속성 변경
+    - 네트워크 프로필 : 네트워크를 다른 컴퓨터에서 내 컴퓨터에 프린터 및 파일 등을 공유할 수 있도록 허용 여부를 설정함
+## 네트워크 설정 변경
+    - 어댑터 옵션 변경 : 네트워크 어댑터의 연결 설정을 변경할 수 있는 제어판의 네트워크 연결 창이 실행됨
+    - 공유 옵션 : 제어판의 고급 공유 설정 창이 실행됨
+    - 네트워크 문제 해결사 : 네트워크 문제를 진단/해결하는 Windows 네트워크 진단 마법사가 실행됨
+## 네트워크 속성 보기
+    - 네트워크 이름, 설명, 물리적 주소(MAC)등의 네트워크 정보를 표시함
+## Windows 방화벽
+    - 방화벽 및 네트워크 보호 창이 실행됨
+## 네트워크 및 공유 센터
+    - 네트워크 및 공유 센터 창이 실행됨
+## 네트워크 초기화
+    - 네트워크 어댑터를 제거한 후 다시 설치하고 네트워킹 구성 요소가 기본값으로 설정함
+# TCP/IP의 구성 요소
+    - IPv4 : IPv4 주소, 서브넷 마스크, 기본 게이트웨이, DNS 서버 주소
+    - IPv6 : IPv6 주소, 서브넷 접두사 길이, 기본 게이트웨이, DNS 서버 주소
+## TCP/IP 속성
+    ### IP 주소
+        - 인터넷에 연결된 호스트 컴퓨터의 유일한 주소로 네트워크 주소와 호스트 주소로 구성됨
+        - IPv4 주소는 32비트 주소를 8비트씩 마침표로 구분
+        - IPv6 주소는 128비트를 16비트씩 콜론으로 구분
+    ### 서브넷 접두사 길이
+        - IPv6 주소의 네트워크 주소와 호스트 주소를 구별 하기 위해 IPv6 수신인에게 헝용하는 서브넷 마스크 부분의 길이를 비트로 표현한 것
+    ### 서브넷 마스크
+        - IPv4 주소의 네트우어크 주소와 호스트 주소를 구별하기 위해 수신인에게 허용하는 32비트 주소
+        - IP 주소와 결합하여 사용자 컴퓨터가 속한 네트워크를 나타냄
+    ### 게이트 웨이
+        - 다른 네트워크와의 데이터 교환을 위한 출입구 역할을 하는 장치, LAN에서 다른 네트워크에
+          데이터를 보내거나 받아들이는 역할ㅇ을 하는 장치를 지정함
+        - 네트워크 사이에서 IP 패킷을 라우팅하거나 전달할 수 있는 여러 갱의 실제 TCP/IP 네트워크에 연결된 장치
+        - 서로 다른 전송 프로토콜이나 IPX 및 IP와 같은 데이터 형식 간의 변환을 담당
+    ### DNS 서버 주소
+        - 문자 형태로 된 도메인 네임을 숫자로된 IP 주소로 변환해 주는 서버가 있는 곳의 IP 주소를 지정함
+    ### IPconfig
+        - 명령 프롬프트 명령어. 입력 시 현재 컴퓨터의 MAC주소, IP주소, 서브넷 마스크, 게이트웨이를 표시
+    ### Net view
+        - 특정 컴퓨터에 공유된 데이터와 Printer를 표시
+    ### Tracert
+        - 상대방 컴퓨터까지 연결되는 경로를 IP로 표시해주는 명령어
+        - IP 주소, 목적지까지 거치는 경로의 수, 각 구간 사이의 데이터 왕복 속도 등을 표시해 줌
+        - 네트워크 속도가 느려지거나 특정 사이트가 열리지 않ㅇ을 때 무엇이 문제인지 표시해 줌
 </script>
 
-<div class="viewer"></div>
-
-
-<!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:90%;height:350px;margin-bottom:20px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-</script></div>
+<div class="viewer"></div></div>
 
 				</div>
 			</div>
@@ -235,7 +240,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 					</tr>
 				</thead>
 
-				<tbody><tr onClick=location.href="article_detail_11.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 1</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-28일</span></td></tr><tr onClick=location.href="article_detail_10.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>컴퓨터활용능력 1급 필기 2015회 오답노트</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-24일</span></td></tr><tr onClick=location.href="article_detail_9.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>카카오 지도 API 라이브러리 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr class="selected" onClick=location.href="article_detail_8.html"><td class="articleList_num">🖋</td><td class="articleList_title"><span>카카오 지도 API</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_7.html"><td class="articleList_num">📕</td><td class="articleList_title"><span>Linux 경로 이동 명령어</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-20일</span></td></tr><tr onClick=location.href="article_detail_6.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr><tr onClick=location.href="article_detail_5.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>HTML형식 보낼 때 js,style 주의점</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-06-25일</span></td></tr>
+				<tbody><tr onClick=location.href="article_detail_21.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>카페24 Tomcat Jsp 호스팅 아이피 차단</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-06일</span></td></tr><tr class="selected" onClick=location.href="article_detail_20.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 5</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-05일</span></td></tr><tr onClick=location.href="article_detail_19.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 4</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-03일</span></td></tr><tr onClick=location.href="article_detail_18.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 3</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-03일</span></td></tr>
 				</tbody>
 			</table>
 
@@ -246,8 +251,8 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 		<div id="disqus_thread"></div>
 		<script>
 				var disqus_config = function () {
-			        this.page.url = 'https://blog.baobab612.com/article_detail_8.html';
-			        this.page.identifier = 'article_detail_8.html';
+			        this.page.url = 'https://blog.baobab612.com/article_detail_20.html';
+			        this.page.identifier = 'article_detail_20.html';
 			    };
 			(function() { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
