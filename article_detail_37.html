@@ -18,33 +18,33 @@
 	<!-- 네이버 소유확인 -->
 	<meta name="naver-site-verification" content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
 	
-	<title>GSAP 슬라이드 만들기-바오밥 블로그</title>
+	<title>오라클 Sequence 사용-바오밥 블로그</title>
 	
     <meta charset="UTF-8">
     
      <!-- SEO 태그 -->
     <link rel="canonical" href="https://blog.baobab612.com" />
     <meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-	<meta name="description" content="GSAP 슬라이드 만들기"/>
-	<meta name="classification" content="GSAP 슬라이드 만들기"/>
+	<meta name="description" content="오라클 Sequence 사용"/>
+	<meta name="classification" content="오라클 Sequence 사용"/>
 	
 	<!-- OPENGRAPH -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="GSAP 슬라이드 만들기-바오밥 블로그" />
-	<meta property="og:description" content="GSAP 슬라이드 만들기" />
+	<meta property="og:title" content="오라클 Sequence 사용-바오밥 블로그" />
+	<meta property="og:description" content="오라클 Sequence 사용" />
 	<meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 	<meta property="og:url" content="https://blog.baobab612.com" />
 	<!-- TWITTER -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="GSAP 슬라이드 만들기" />
-	<meta name="twitter:site" content="@GSAP 슬라이드 만들기" />
-	<meta name="twitter:creator" content="@GSAP 슬라이드 만들기" />
+	<meta name="twitter:title" content="오라클 Sequence 사용" />
+	<meta name="twitter:site" content="@오라클 Sequence 사용" />
+	<meta name="twitter:creator" content="@오라클 Sequence 사용" />
 	<meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
-	<meta name="twitter:description" content="GSAP 슬라이드 만들기" />
+	<meta name="twitter:description" content="오라클 Sequence 사용" />
 	<!-- GOOGLE+ -->
-	<meta itemprop="headline" content="GSAP 슬라이드 만들기-바오밥 블로그" />
-	<meta itemprop="name" content="GSAP 슬라이드 만들기" />
-	<meta itemprop="description" content="GSAP 슬라이드 만들기" />
+	<meta itemprop="headline" content="오라클 Sequence 사용-바오밥 블로그" />
+	<meta itemprop="name" content="오라클 Sequence 사용" />
+	<meta itemprop="description" content="오라클 Sequence 사용" />
 	<meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 	
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
@@ -134,54 +134,41 @@
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
 					<section class="numAndTitle flex">
-						<div class="detail__article-num">6.</div>
-						<div class="detail__article-title">GSAP 슬라이드 만들기</div>
+						<div class="detail__article-num">37.</div>
+						<div class="detail__article-title">오라클 Sequence 사용</div>
 					</section>
-					<div class="detail__article-regDate">21년07월02일</div>
-					<div class="detail__article-content"><script type="text/x-template">
-블로그 디자인을 하던 중 슬라이드를 만들 일이 생겼습니다.
-swiper 나 slick slider를 사용해도 되지만
-GSAP를 조금 더 연습해보고 싶어졌습니다.
+					<div class="detail__article-regDate">21년08월23일</div>
+					<div class="detail__article-content"><script type="x-template">
+오라클 DB에는 AUTO_INCREMENT가 없어서 한참 헤맸다.
+비슷한 기능을 하는걸 찾았는데
+Sequence이다. mysql은 생성 시 자동 증가 시킬 수 있는데 오라클은 생성 시 마다
+고유 ID값에 대한 Sequence를 만들어줘야해서 조금 귀찮다.
 
-내용을 담아줄 박스를 만들어 줍니다!
+사용 방법
+<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">CREATE</span>&nbsp;SEQUENCE&nbsp;article</div><div style="padding:0 6px; white-space:pre; line-height:130%">INCREMENT&nbsp;<span style="color:#ff3399">BY</span>&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;&nbsp;(생성&nbsp;시&nbsp;증가할&nbsp;값&nbsp;1=&nbsp;1,2,3,4&nbsp;or&nbsp;2=&nbsp;2,4,6,8,10)*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">START&nbsp;WITH&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;(생성할&nbsp;첫번째&nbsp;번호)*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">MAXVALUE&nbsp;<span style="color:#004fc8">100</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;10의&nbsp;27승&nbsp;(최대&nbsp;값)&nbsp;&nbsp;*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">MINVALUE&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;(최소&nbsp;값)&nbsp;*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">NOCYCLE&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;NOCYCLE&nbsp;(최대/최소&nbsp;값&nbsp;도달&nbsp;시&nbsp;반복&nbsp;여부)&nbsp;*/</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+
+<div class="img-box1"> <img src="img/게시물/37/1.PNG"></div>
+
+<p>
+테스트 할 테이블을 생성한다.
+숫자만 받을거라 number 사용!
+오라클은 int 말고 number를 쓰는거같다.
+</p>
+
+<div class="img-box1"> <img src="img/게시물/37/2.PNG"></div>
+<p>시퀀스를 생성한다.</p>
+
+<div class="img-box1"> <img src="img/게시물/37/3.PNG"></div>
+<p>
+값을 넣으면
+</p>
+<div class="img-box1"> <img src="img/게시물/37/4.PNG"></div>
+<p>
+잘 적용이 돼 있다!
+</p>
 </script>
 
-<div class="viewer"></div>
-
-<script type="text/x-template">
-```codepen
-https://codepen.io/hyeseong123/embed/gOWRdQj?default-tab=html%2Cresult&editable=true
-```
-제 블로그에 쓰인 스타일과 HTML 입니다!
-이제 스크립트를 입혀줍시다.
-화살표를 누르면 이동해야겠지요
-(박스들은 포지션이 absolute로 지정되었습니다.)
-(css에 화면 크기별 버튼 노출이 설정되어 있습니다.)
-```codepen
-https://codepen.io/hyeseong123/embed/zYwzmGN?default-tab=html%2Cresult&editable=true
-```
-이동을 하기는 합니다!
-이제 부가적인 옵션들을 넣어주겠습니다.
-주석을 보고 참고해주세요
-```codepen
-https://codepen.io/hyeseong123/embed/xxdryxr?default-tab=html%2Cresult&editable=true
-```
-
-이제 버튼으로 이동을 잘 하게 됐습니다.
-페이징 버튼을 눌러서도 이동을 해야겠지요?
-
-```codepen
-https://codepen.io/hyeseong123/embed/PomjyKv?default-tab=html%2Cresult&editable=true
-```
-
-반응형 전체 스크립트 코드는
-[https://codepen.io/hyeseong123/pen/MWmomdE?editors=1010](https://codepen.io/hyeseong123/pen/MWmomdE?editors=1010)
-이곳에 있습니다ㅎㅎ
-</script>
-
-
-<div class="viewer"></div>
-</div>
+<div class="viewer"></div></div>
 
 				</div>
 			</div>
@@ -218,7 +205,7 @@ https://codepen.io/hyeseong123/embed/PomjyKv?default-tab=html%2Cresult&editable=
 					</tr>
 				</thead>
 
-				<tbody><tr onClick=location.href="article_detail_28.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>자바스크립트 검색 기능 구현</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-10일</span></td></tr><tr onClick=location.href="article_detail_9.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>카카오 지도 API 라이브러리 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_8.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>카카오 지도 API</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr class="selected" onClick=location.href="article_detail_6.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr>
+				<tbody><tr class="selected" onClick=location.href="article_detail_37.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>오라클 Sequence 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-23일</span></td></tr>
 				</tbody>
 			</table>
 
@@ -229,8 +216,8 @@ https://codepen.io/hyeseong123/embed/PomjyKv?default-tab=html%2Cresult&editable=
 		<div id="disqus_thread"></div>
 		<script>
 				var disqus_config = function () {
-			        this.page.url = 'https://blog.baobab612.com/article_detail_6.html';
-			        this.page.identifier = 'article_detail_6.html';
+			        this.page.url = 'https://blog.baobab612.com/article_detail_37.html';
+			        this.page.identifier = 'article_detail_37.html';
 			    };
 			(function() { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
