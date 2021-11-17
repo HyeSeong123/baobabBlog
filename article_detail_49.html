@@ -25,33 +25,33 @@
 <meta name="naver-site-verification"
 	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
 
-<title>오라클 Sequence 사용-바오밥 블로그</title>
+<title>오라클 CLOB 타입에 INSERT 하기-바오밥 블로그</title>
 
 <meta charset="UTF-8">
 
 <!-- SEO 태그 -->
 <link rel="canonical" href="https://blog.baobab612.com" />
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-<meta name="description" content="오라클 Sequence 사용" />
-<meta name="classification" content="오라클 Sequence 사용" />
+<meta name="description" content="오라클 CLOB 타입에 INSERT 하기" />
+<meta name="classification" content="오라클 CLOB 타입에 INSERT 하기" />
 
 <!-- OPENGRAPH -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="오라클 Sequence 사용-바오밥 블로그" />
-<meta property="og:description" content="오라클 Sequence 사용" />
+<meta property="og:title" content="오라클 CLOB 타입에 INSERT 하기-바오밥 블로그" />
+<meta property="og:description" content="오라클 CLOB 타입에 INSERT 하기" />
 <meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 <meta property="og:url" content="https://blog.baobab612.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="오라클 Sequence 사용" />
-<meta name="twitter:site" content="@오라클 Sequence 사용" />
-<meta name="twitter:creator" content="@오라클 Sequence 사용" />
+<meta name="twitter:title" content="오라클 CLOB 타입에 INSERT 하기" />
+<meta name="twitter:site" content="@오라클 CLOB 타입에 INSERT 하기" />
+<meta name="twitter:creator" content="@오라클 CLOB 타입에 INSERT 하기" />
 <meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
-<meta name="twitter:description" content="오라클 Sequence 사용" />
+<meta name="twitter:description" content="오라클 CLOB 타입에 INSERT 하기" />
 <!-- GOOGLE+ -->
-<meta itemprop="headline" content="오라클 Sequence 사용-바오밥 블로그" />
-<meta itemprop="name" content="오라클 Sequence 사용" />
-<meta itemprop="description" content="오라클 Sequence 사용" />
+<meta itemprop="headline" content="오라클 CLOB 타입에 INSERT 하기-바오밥 블로그" />
+<meta itemprop="name" content="오라클 CLOB 타입에 INSERT 하기" />
+<meta itemprop="description" content="오라클 CLOB 타입에 INSERT 하기" />
 <meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 
 <meta name="viewport"
@@ -163,38 +163,20 @@
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
 					<section class="numAndTitle flex">
-						<div class="detail__article-num">37.</div>
-						<div class="detail__article-title">오라클 Sequence 사용</div>
+						<div class="detail__article-num">49.</div>
+						<div class="detail__article-title">오라클 CLOB 타입에 INSERT 하기</div>
 					</section>
-					<div class="detail__article-regDate">21년08월23일</div>
+					<div class="detail__article-regDate">21년11월17일</div>
 					<div class="detail__article-content"><script type="x-template">
-오라클 DB에는 AUTO_INCREMENT가 없어서 한참 헤맸다.
-비슷한 기능을 하는걸 찾았는데
-Sequence이다. mysql은 생성 시 자동 증가 시킬 수 있는데 오라클은 생성 시 마다
-고유 ID값에 대한 Sequence를 만들어줘야해서 조금 귀찮다.
+데이터 이관 작업을 하던 중 CLOB 타입으로 된 테이블이 있었다
+업체에서 INSERT 하라고 준 파일을 받아보니 30000글자 이상이어서
+그냥 INSERT하려니까 에러가 떴다. 구글링 해본 결과 4000글자 안쪽에서 TO_CLOB을 이용해 이어줘야 한다고 했다.
 
-사용 방법
-<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">CREATE</span>&nbsp;SEQUENCE&nbsp;article</div><div style="padding:0 6px; white-space:pre; line-height:130%">INCREMENT&nbsp;<span style="color:#ff3399">BY</span>&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;&nbsp;(생성&nbsp;시&nbsp;증가할&nbsp;값&nbsp;1=&nbsp;1,2,3,4&nbsp;or&nbsp;2=&nbsp;2,4,6,8,10)*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">START&nbsp;WITH&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;(생성할&nbsp;첫번째&nbsp;번호)*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">MAXVALUE&nbsp;<span style="color:#004fc8">100</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;10의&nbsp;27승&nbsp;(최대&nbsp;값)&nbsp;&nbsp;*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">MINVALUE&nbsp;<span style="color:#004fc8">1</span>&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;1&nbsp;(최소&nbsp;값)&nbsp;*/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">NOCYCLE&nbsp;<span style="color:#999999">/*&nbsp;[생략가능]&nbsp;--&nbsp;기본&nbsp;값&nbsp;NOCYCLE&nbsp;(최대/최소&nbsp;값&nbsp;도달&nbsp;시&nbsp;반복&nbsp;여부)&nbsp;*/</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+사용 예시
 
-<div class="img-box1"> <img src="img/게시물/37/1.PNG"></div>
+<div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">INSERT</span>&nbsp;<span style="color:#ff3399">INTO</span>&nbsp;TESTTABLE</div><div style="padding:0 6px; white-space:pre; line-height:130%">(SEQ,&nbsp;TITLE,&nbsp;CONTENT)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">VALUES</span>(<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#ffd500">'테스트&nbsp;테이블'</span>,&nbsp;TO_CLOB(<span style="color:#ffd500">'대충&nbsp;3400글자'</span>)&nbsp;<span style="color:#f0f0f0"></span><span style="color:#4be6fa">|</span><span style="color:#f0f0f0"></span><span style="color:#4be6fa">|</span>&nbsp;TO_CLOB(<span style="color:#ffd500">'대충&nbsp;3400글자'</span>)&nbsp;<span style="color:#f0f0f0"></span><span style="color:#4be6fa">|</span><span style="color:#f0f0f0"></span><span style="color:#4be6fa">|</span>&nbsp;TO_CLOB(<span style="color:#ffd500">'대충&nbsp;3400글자'</span>))</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
 
-<p>
-테스트 할 테이블을 생성한다.
-숫자만 받을거라 number 사용!
-오라클은 int 말고 number를 쓰는거같다.
-</p>
 
-<div class="img-box1"> <img src="img/게시물/37/2.PNG"></div>
-<p>시퀀스를 생성한다.</p>
-
-<div class="img-box1"> <img src="img/게시물/37/3.PNG"></div>
-<p>
-값을 넣으면
-</p>
-<div class="img-box1"> <img src="img/게시물/37/4.PNG"></div>
-<p>
-잘 적용이 돼 있다!
-</p>
 </script>
 
 <div class="viewer"></div></div>
@@ -234,7 +216,7 @@ Sequence이다. mysql은 생성 시 자동 증가 시킬 수 있는데 오라클
 					</tr>
 				</thead>
 
-				<tbody><tr onClick=location.href="article_detail_49.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>오라클 CLOB 타입에 INSERT 하기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-17일</span></td></tr><tr onClick=location.href="article_detail_48.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>오라클 대체변수 입력 기능 끄기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-17일</span></td></tr><tr class="selected" onClick=location.href="article_detail_37.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>오라클 Sequence 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-23일</span></td></tr>
+				<tbody><tr class="selected" onClick=location.href="article_detail_49.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>오라클 CLOB 타입에 INSERT 하기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-17일</span></td></tr><tr onClick=location.href="article_detail_48.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>오라클 대체변수 입력 기능 끄기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-17일</span></td></tr><tr onClick=location.href="article_detail_37.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>오라클 Sequence 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-23일</span></td></tr>
 				</tbody>
 			</table>
 
@@ -245,8 +227,8 @@ Sequence이다. mysql은 생성 시 자동 증가 시킬 수 있는데 오라클
 		<div id="disqus_thread"></div>
 		<script>
 				var disqus_config = function () {
-			        this.page.url = 'https://blog.baobab612.com/article_detail_37.html';
-			        this.page.identifier = 'article_detail_37.html';
+			        this.page.url = 'https://blog.baobab612.com/article_detail_49.html';
+			        this.page.identifier = 'article_detail_49.html';
 			    };
 			(function() { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
