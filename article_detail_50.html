@@ -25,33 +25,33 @@
 <meta name="naver-site-verification"
 	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
 
-<title>article_list_HC</title>
+<title>자바스크립트 var, let, const-바오밥 블로그</title>
 
 <meta charset="UTF-8">
 
 <!-- SEO 태그 -->
 <link rel="canonical" href="https://blog.baobab612.com" />
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-<meta name="description" content="웹 프로그램 일지 입니다." />
-<meta name="classification" content="웹 프로그램 일지 입니다." />
+<meta name="description" content="자바스크립트 var let const" />
+<meta name="classification" content="자바스크립트 var let const" />
 
 <!-- OPENGRAPH -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="article_list_HC" />
-<meta property="og:description" content="웹 프로그램 일지 입니다." />
+<meta property="og:title" content="자바스크립트 var, let, const-바오밥 블로그" />
+<meta property="og:description" content="자바스크립트 var let const" />
 <meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 <meta property="og:url" content="https://blog.baobab612.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="바오밥의 웹 기술 블로그" />
-<meta name="twitter:site" content="@바오밥 블로그" />
-<meta name="twitter:creator" content="@바오밥 블로그" />
+<meta name="twitter:title" content="자바스크립트 var, let, const" />
+<meta name="twitter:site" content="@자바스크립트 var, let, const" />
+<meta name="twitter:creator" content="@자바스크립트 var, let, const" />
 <meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
-<meta name="twitter:description" content="웹 프로그램 일지 입니다." />
+<meta name="twitter:description" content="자바스크립트 var let const" />
 <!-- GOOGLE+ -->
-<meta itemprop="headline" content="article_list_HC" />
-<meta itemprop="name" content="바오밥 블로그" />
-<meta itemprop="description" content="웹 프로그램 일지 입니다." />
+<meta itemprop="headline" content="자바스크립트 var, let, const-바오밥 블로그" />
+<meta itemprop="name" content="자바스크립트 var, let, const" />
+<meta itemprop="description" content="자바스크립트 var let const" />
 <meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 
 <meta name="viewport"
@@ -108,7 +108,7 @@
 
 <body>
 	<div class="body-content con-min-width">
-		<div class="list__banner"><div class="height-100p flex flex-ai-c"><strong><p>HTML/CSS</p></strong></div></div>
+		
 		<header class="top-bar con height-100p">
 			<div class="flex flex-ai-c top-menu">
 				<section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
@@ -156,144 +156,116 @@
 					<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
 				</ul>
 			</div>
-		</header><script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		</header><main class="detail__main">
 
-<main>
-	<div v-cloak id="article-list-wrap">
-		<section class="article-list-topInner">
-			<div class="search">
-				<form onsubmit="return false">
-					<input @input="searchKeywordInputed" class="searchInput" type="text" placeholder="검색어를 입력하세요" :value="searchKeyword">
-					<button></button>
-				</form>
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">50.</div>
+						<div class="detail__article-title">자바스크립트 var, let, const</div>
+					</section>
+					<div class="detail__article-regDate">21년11월17일</div>
+					<div class="detail__article-content"><script type="x-template">
+자바스크립트에서 변수 선언 시 var, const, let을 주로 사용한다.
+찾아보긴 했는데 내용의 반 이상을 이해하지 못했다.
+## var
+- 예전 버전부터 존재했고 문제가 조금 있다.
+- 선언 > 초기화 > 할당 의 단계에 걸쳐서 변수가 생성되는데 var은 선언,초기화 > 할당이 동시에 이루어진다.
+  - <div class="img-box1"> <img src="img/게시물/50/1.PNG"></div>
+  - 한 번 더 선언했는데 에러가 나지 않고 재할당 된 마지막 값이 출력된다.
+  - <div class="img-box1"> <img src="img/게시물/50/2.PNG"></div>
+  - 선언 전 a란 변수가 존재하지 않을 때 호출했을 때 에러가 아닌 undefined라고 나타난다.
+- 테스트 시 유연한 코딩을 할 수 있지만, 양이 많아졌을 때 오류를 파악하기 힘들어진다.
+
+## let
+- 재할당이 가능하지만 재선언은 불가능하다.
+	- <div class="img-box1"> <img src="img/게시물/50/4.PNG"></div>
+- 선언 전 호출 했을 때 에러가 뜬다.
+	- <div class="img-box1"> <img src="img/게시물/50/3.PNG"></div>
+- 재할당이 가능하다.
+	- <div class="img-box1"> <img src="img/게시물/50/5.PNG"></div>
+
+## const
+- 재선언, 재할당 모두 불가능하다.
+
+## 결과
+- 기본적으로 const를 사용하는게 좋으며, 재할당이 필요한 경우 let을 사용하기.
+</script>
+
+<div class="viewer"></div></div>
+
+				</div>
 			</div>
-		</section>
 
-		<section class="article-list-box">
-			<div class="list-ad list-ad-left">
-				<!-- 반응형 왼쪽 광고 -->
-				<ins class="adsbygoogle" style="display: block"
-					data-ad-client="ca-pub-6509950454554885" data-ad-slot="1169392388"
-					data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser">
+						<img src="img/eraser.png" alt="">
+					</span>
+					<span class="img-box chalks">
+						<img src="img/chalks.png" alt="">
+					</span>
+				</div>
 			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
 
-			<div v-for="article in filtered"><a :href="'article_detail_' + article.num + '.html'" class="article-list flex"><div class="article-num"><span class="article-1">{{article.count}}</span></div><div class="article-writerAndTitle"><span class="article-title">{{article.title}}[{{article.replyCount}}]</span><span class="article-writer">{{article.writer}}</span></div><div class="article-inform flex-column"><span>{{article.regDate}}</span> <span class="article-like"> Likes : {{article.like}}</span> <span class="article-view"> Views : {{article.hitsCount}}</span> </div></a></div>
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>
+						</td>
+						<th class="sample_width">제목
+						</td>
+						<th>작성자
+						</td>
+						<th>작성일
+						</td>
+					</tr>
+				</thead>
 
-			<div class="list-ad list-ad-right">
-				<!-- 반응형 오른쪽 -->
-				<ins class="adsbygoogle" style="display: block"
-					data-ad-client="ca-pub-6509950454554885" data-ad-slot="3412412347"
-					data-ad-format="auto" data-full-width-responsive="true"></ins>
-			</div>
-		</section>
+				<tbody><tr class="selected" onClick=location.href="article_detail_50.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>자바스크립트 var, let, const</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-17일</span></td></tr><tr onClick=location.href="article_detail_28.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>자바스크립트 검색 기능 구현</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-10일</span></td></tr><tr onClick=location.href="article_detail_9.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>카카오 지도 API 라이브러리 사용</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_8.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>카카오 지도 API</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-22일</span></td></tr><tr onClick=location.href="article_detail_6.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>GSAP 슬라이드 만들기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-07-02일</span></td></tr>
+				</tbody>
+			</table>
 
+		</div>
+	</section>
+
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+			        this.page.url = 'https://blog.baobab612.com/article_detail_50.html';
+			        this.page.identifier = 'article_detail_50.html';
+			    };
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://baobabblog210721.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
 	</div>
-</main>
-<script>
-		    var height = $('.list__banner').innerHeight();
-		    if(window.innerWidth > 900){
-	            $('main').css('padding-top',height-50);
-	        } else if ( window.innerWidth < 900 && window.innerWidth > 330 ) {
-	            $('main').css('padding-top',height-30);
-	        } else if ( window.innerWidth < 330 && window.innerWidth > 300) {
-		        $('main').css('padding-top',height-90);
-		    } else if ( window.innerWidth < 300 && window.innerWidth > 250) {
-		        $('main').css('padding-top',height-150);
-		    }
-		    $(window).resize(function(){
-		        height = $('.list__banner').innerHeight();
-		        if(window.innerWidth > 900){
-		            $('main').css('padding-top',height-50);
-		        } else if ( window.innerWidth < 900 && window.innerWidth > 330 ) {
-		            $('main').css('padding-top',height-30);
-		        } else if ( window.innerWidth < 330 && window.innerWidth > 300) {
-			        $('main').css('padding-top',height-90);
-			    } else if ( window.innerWidth < 300 && window.innerWidth > 250) {
-			        $('main').css('padding-top',height-150);
-			    }
-		         
-		    })
-	</script>
-	
-	<script>
-	const articleList = [];
-	var currentUrl = window.location.href;
-	var newUrl;
-	var newUrl2;
-	
-	console.log("currentUrl= " + currentUrl);
-	if( currentUrl.includes('baobab612')){
-		newUrl = currentUrl.replace("https://blog.baobab612.com/","");
-		newUrl2 = newUrl.split("_")[0] + "_" + newUrl.split("_")[1] + "_" + newUrl.split("_")[2] + ".json";
-		
-	} else {
-		newUrl = currentUrl.replace("file:///C:/sts-4.11.0.RELEASE-workspace/baobabText/site/","");
-		newUrl2 = newUrl.split("_")[0] + "_" + currentUrl.split("_")[1] + "_" + currentUrl.split("_")[2] + ".json";
-		newUrl2 = "https://blog.baobab612.com/" + newUrl2;
-	}
-	
-	console.log("newUrl= " + newUrl);
-	console.log("newUrl2= " + newUrl2);
-	
-	$.get(
-	  newUrl2,
-	  {},
-	  function (data) {
-	    data.forEach((row, index) => {
-	      const article = {
-	        count: index+1,
-	        num: row.num,
-	        regDate: row.fRegDate,
-	        writer: row.extra__writer,
-	        title: row.title,
-	        like: row.like,
-	        hitsCount: row.hitsCount,
-	        replyCount: row.replyCount
-	      };
-	      articleList.push(article);
-	    });
-	    isActive : true
-	  },
-	  'json'
-	);
 
-	const articleListBoxVue = new Vue({
-	  el: "#article-list-wrap",
-	  data: {
-	    articleList: articleList,
-	    searchKeyword: ''
-	  },
-	  methods: {
-	    searchKeywordInputed: _.debounce(function (e) {
-	      this.searchKeyword = e.target.value;
-	    }, 500)
-	  },
-	  computed: {
-	    filterKey: function () {
-	      return this.searchKeyword.toLowerCase();
-	    },
-	    filtered: function () {
-	      if (this.filterKey.length == 0) {
-	        return this.articleList;
-	      }
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
 
-	      return this.articleList.filter((row) => {
-	        const keys = ["title", "writer", "regDate"];
-
-	        const match = keys.some((key) => {
-	          if (row[key].toLowerCase().indexOf(this.filterKey) > -1) {
-	            return true;
-	          }
-	        });
-	        return match;
-	      });
-	    }
-	  }
-	});
-	</script>>
-	
-</div>        <footer class="footer__cover flex flex-ai-c">
+</main>        <footer class="footer__cover flex flex-ai-c">
 
             <!--  구글 애널리틱스 -->
 	
