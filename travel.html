@@ -123,7 +123,7 @@
 			}
 		.travel_table{
 			font-family: 'MinSans-Medium';
-			margin-top : 20px;
+			margin : 20px 0;
 		}
 		.travel_table table{
 			border : none;
@@ -156,6 +156,14 @@
 		.travel_table table td a:hover {
 			color : black;
 		}
+
+		#map {
+			margin : 0 auto;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom : 100px;
+		}
+
 		@media (max-width : 900px){
 			.travel_table {
 				overflow: scroll;
@@ -256,8 +264,19 @@
 			</tbody>
 		</table>
 	</div>
-    
-	
+
+	<div id="map" style="width:90%; height : 600px"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ef1b15701b35bb37eb349c18db9a5c30"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+
     <script>
 	    $(window).on('load', function () {
 	    	$('.adsbygoogle').each(function () {
