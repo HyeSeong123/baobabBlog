@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=G-1390PY4PW5"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-1390PY4PW5');
+</script>
+<!--  구글 애널리틱스 -->
+<script async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6509950454554885"
+	crossorigin="anonymous"></script>
+
+<!-- 구글 서치콘솔 -->
+
+<!-- 네이버 소유확인 -->
+<meta name="naver-site-verification"
+	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
+
+<title>전자정부프레임워크 콘솔창에 sql 결과 띄우기-바오밥 블로그</title>
+
+<meta charset="UTF-8">
+
+<!-- SEO 태그 -->
+<link rel="canonical" href="https://blog.baobab612.com" />
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
+<meta name="description" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta name="classification" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+
+<!-- OPENGRAPH -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기-바오밥 블로그" />
+<meta property="og:description" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+<meta property="og:url" content="https://blog.baobab612.com" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta name="twitter:site" content="@전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta name="twitter:creator" content="@전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
+<meta name="twitter:description" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기-바오밥 블로그" />
+<meta itemprop="name" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta itemprop="description" content="전자정부프레임워크 콘솔창에 sql 결과 띄우기" />
+<meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script
+	src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js"
+	defer></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet"
+	href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+	src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js"
+	defer></script>
+<!-- GSAP 플러그인 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+	rel="stylesheet">
+<!-- 구글 폰트 -->
+
+<link rel="icon" href="https://blog.baobab612.com/img/favicon.ico" />
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<link rel="stylesheet" href="main.css">
+<script src="app.js" defer></script>
+</head>
+
+<body>
+	<div class="body-content con-min-width">
+		
+		<header class="top-bar con height-100p">
+			<div class="flex flex-ai-c top-menu">
+				<section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
+					<a href="index.html" class="logo flex flex-ai-c">
+						<span class="img-box logo_img">
+							<img src="img/logo.png" alt="이미지 첨부" />
+						</span>
+						<span class="logo__span logo__W">
+							W
+							<span class="logo__span logo__1 logo__hide">eb</span>
+						</span>
+
+						<span class="logo__span logo__P">
+							P
+							<span class="logo__span logo__2 logo__hide">rogram</span>
+						</span>
+
+						<span class="logo__span logo__B">
+							B
+							<span class="logo__span logo__3 logo__hide">log</span>
+						</span>
+
+					</a>
+				</section>
+
+				<div class="flex-grow-1"></div>
+				<!-- 탑바 PC 버전 -->
+				<div class="top-menu__menu top-menu__pc-menu flex height-100p">
+					<ul class="flex height-100p">
+						<li><a href="article_list_java_1.html">Web Programs</a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a href="article_list_mysql_1.html">DataBase</a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a href="article_list_centos_1.html">Server</a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a href="article_list_daily_1.html">Free</a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+					</ul>
+				</div>
+
+				<div class="hamburger__cover flex">
+					<section class="top-bar__hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</section>
+				</div>
+			</div>
+			<!-- 탑바 모바일 버전 -->
+			<div class="top-menu__menu top-menu__mobile-menu">
+				<ul class="flex flex-column">
+					<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+				</ul>
+			</div>
+		</header><main class="detail__main">
+
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">51.</div>
+						<div class="detail__article-title">전자정부프레임워크 콘솔창에 sql 결과 띄우기</div>
+					</section>
+					<div class="detail__article-regDate">21년11월18일</div>
+					<div class="detail__article-content"><script type="x-template">
+개인 프로젝트를 진행하는데 sql 결과값이 나타나지 않아서 불편하다.
+콘솔 창에 sql 결과 값을 나타내보겠습니다! 지금은
+- <div class="img-box1"> <img src="img/게시물/51/1.PNG"></div>
+이렇게 sql문과 값의 개수만 가져옵니다.
+
+# 1. pom.xml에 dependency 추가하기
+- 1-1. <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">dependency</span><span style="color:#f0f0f0">&gt;</span>&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">groupId</span><span style="color:#f0f0f0">&gt;</span>org.lazyluke<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">groupId</span><span style="color:#f0f0f0">&gt;</span>&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">artifactId</span><span style="color:#f0f0f0">&gt;</span>log4jdbc-remix<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">artifactId</span><span style="color:#f0f0f0">&gt;</span>&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">version</span><span style="color:#f0f0f0">&gt;</span>0.2.7<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">version</span><span style="color:#f0f0f0">&gt;</span>&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">dependency</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+- 1-2. <div class="img-box1"> <img src="img/게시물/51/2.PNG"></div>
+	- 전자정부 프레임워크에서 기본 생성 시킨 사진의 코드를 주석처리 합니다. (단축기 ctrl + shift + c)
+# 2 . log4j2.xml 파일에 수정하기
+- 2-1.
+	- <div class="img-box1"> <img src="img/게시물/51/3.PNG"></div>
+- 2-2.
+	- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div><div style="line-height:130%">45</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">?xml</span>&nbsp;<span style="color:#a8ff58">version</span>=<span style="color:#ffd500">"1.0"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">encoding</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58">?</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Configuration</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Appenders</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Console</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">target</span>=<span style="color:#ffd500">"SYSTEM_OUT"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">PatternLayout</span>&nbsp;<span style="color:#a8ff58">pattern</span>=<span style="color:#ffd500">"%d&nbsp;%5p&nbsp;[%c]&nbsp;%m%n"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Console</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Appenders</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Loggers</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"java.sql"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"DEBUG"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"egovframework"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"DEBUG"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;log&nbsp;SQL&nbsp;with&nbsp;timing&nbsp;information,&nbsp;post&nbsp;execution&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"jdbc"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"OFF"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"org.apache.commons.digester"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"ERROR"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"jdbc.sqlonly"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"DEBUG"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"jdbc.resultsettable"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"DEBUG"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"org.springframework"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"INFO"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Logger</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"org.springframework.web"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"INFO"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">additivity</span>=<span style="color:#ffd500">"false"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Logger</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">Root</span>&nbsp;<span style="color:#a8ff58">level</span>=<span style="color:#ffd500">"DEBUG"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">AppenderRef</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"console"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Root</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Loggers</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">Configuration</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+	- 위의 코드로 사용하시면 편합니다.
+# 3. context-datasource.xml 수정
+- 3-1. <div class="img-box1"> <img src="img/게시물/51/4.PNG"></div>
+	- 기존 설정을 수정해야합니다.
+- 3-2.
+	- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">bean</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"dataSource_main"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"org.apache.commons.dbcp.BasicDataSource"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">destroy-method</span>=<span style="color:#ffd500">"close"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"driverClassName"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"com.mysql.jdbc.Driver"</span><span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"url"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"jdbc:mysql://127.0.0.1:3306/test1"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"username"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"유저&nbsp;ID"</span><span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"password"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"유저&nbsp;PW"</span><span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">bean</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">bean</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"dataSource"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"net.sf.log4jdbc.Log4jdbcProxyDataSource"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">constructor-arg</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"dataSource_main"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"logFormatter"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">bean</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"net.sf.log4jdbc.tools.Log4JdbcCustomFormatter"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"loggingType"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"MULTI_LINE"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">property</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"sqlPrefix"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"\n"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">/</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">bean</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">property</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">bean</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+	- 위 처럼 추가 해줍니다.
+# 4. context-mapper.xml & context-transaction.xml 수정
+- 4-1.
+	- 3번의 context-datasource에서 bead id가 수정되었다면.
+		- <div class="img-box1"> <img src="img/게시물/51/5.PNG"></div>
+	- context-mapper와 transaction에서도 ref 항목이 수정되어야 한다.
+		- <div class="img-box1"> <img src="img/게시물/51/6.PNG"></div>
+		- <div class="img-box1"> <img src="img/게시물/51/7.PNG"></div>
+
+## 참고
+- dataSource 즉, class="net.sf.log4jdbc.Log4jdbcProxyDataSource" 의 id를 4번의 ref에 넣어야한다.
+
+## 결과
+- <div class="img-box1"> <img src="img/게시물/51/8.PNG"></div>
+</script>
+
+<div class="viewer"></div></div>
+
+				</div>
+			</div>
+
+
+
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser">
+						<img src="img/eraser.png" alt="">
+					</span>
+					<span class="img-box chalks">
+						<img src="img/chalks.png" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
+
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>
+						</td>
+						<th class="sample_width">제목
+						</td>
+						<th>작성자
+						</td>
+						<th>작성일
+						</td>
+					</tr>
+				</thead>
+
+				<tbody><tr onClick=location.href="article_detail_53.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>로컬프로젝트 외부로 공유하기(전자정부)</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-12-23일</span></td></tr><tr class="selected" onClick=location.href="article_detail_51.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>전자정부프레임워크 콘솔창에 sql 결과 띄우기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-18일</span></td></tr><tr onClick=location.href="article_detail_46.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-15일</span></td></tr><tr onClick=location.href="article_detail_45.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 DB 연동 (mysql) 1편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-14일</span></td></tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+			        this.page.url = 'https://blog.baobab612.com/article_detail_51.html';
+			        this.page.identifier = 'article_detail_51.html';
+			    };
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://baobabblog210721.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+	</div>
+
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
+
+</main>        <footer class="footer__cover flex flex-ai-c">
+
+            <!--  구글 애널리틱스 -->
+	
+            <section class="footer__icon">
+                <a href="https://github.com/HyeSeong123" target="_blank">
+                    <span class="icon-git"><i class="fab fa-github-square"></i></span>
+                </a>
+                <a href="https://www.instagram.com/baobab.0612/" target="_blank">
+                    <span class="icon-insta"><i class="fab fa-instagram-square"></i></span>
+                </a>
+                <a href="https://blog.naver.com/baobab0612" target="_blank">
+                    <span class="icon-blog"><i class="fab fa-blogger"></i></span>
+                </a>
+            </section>
+
+            <section class="footer__host flex flex-jc-end">
+                <div>
+                    <span>Copyright 2021 Baobab. All Right Reserved</span>
+                    <span>B a o b a b</span>
+                </div>
+            </section>
+
+        </footer>
+    </div>
+    
+    <script>
+	    $(window).on('load', function () {
+	    	$('.adsbygoogle').each(function () {
+	   			(adsbygoogle = window.adsbygoogle || []).push({});
+	    	});
+	    });
+	</script>
+</body>
+</html>

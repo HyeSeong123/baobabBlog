@@ -19,6 +19,8 @@
 	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6509950454554885"
 	crossorigin="anonymous"></script>
 
+<!-- 구글 서치콘솔 -->
+
 <!-- 네이버 소유확인 -->
 <meta name="naver-site-verification"
 	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
@@ -155,8 +157,7 @@
 				</ul>
 			</div>
 		</header><script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 <main>
 	<div v-cloak id="article-list-wrap">
 		<section class="article-list-topInner">
@@ -215,13 +216,26 @@
 	</script>
 	
 	<script>
+	
 	const articleList = [];
 	var currentUrl = window.location.href;
+	var newUrl;
+	var newUrl2;
+	
 	console.log("currentUrl= " + currentUrl);
-	var newUrl = currentUrl.replace("https://blog.baobab612.com/","");
+	if( currentUrl.includes('baobab612')){
+		newUrl = currentUrl.replace("https://blog.baobab612.com/","");
+		newUrl2 = newUrl.split("_")[0] + "_" + newUrl.split("_")[1] + "_" + newUrl.split("_")[2] + ".json";
+		
+	} else {
+		newUrl = currentUrl.replace("file:///C:/sts-4.11.0.RELEASE-workspace/baobabText/site/","");
+		newUrl2 = newUrl.split("_")[0] + "_" + currentUrl.split("_")[1] + "_" + currentUrl.split("_")[2] + ".json";
+		newUrl2 = "https://blog.baobab612.com/" + newUrl2;
+	}
+	
 	console.log("newUrl= " + newUrl);
-	var newUrl2 = newUrl.split("_")[0] + "_" + newUrl.split("_")[1] + "_" + newUrl.split("_")[2] + ".json";
 	console.log("newUrl2= " + newUrl2);
+	
 	$.get(
 	  newUrl2,
 	  {},
@@ -278,6 +292,7 @@
 	  }
 	});
 	</script>
+	
 </div>        <footer class="footer__cover flex flex-ai-c">
 
             <!--  구글 애널리틱스 -->
