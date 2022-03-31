@@ -81,6 +81,7 @@
 	<link rel="icon" href="https://blog.baobab612.com/img/favicon.ico" />
 	<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
 
 	<link rel="stylesheet" href="main.css">
@@ -104,45 +105,105 @@
 			font-style: normal;
 		}
 
-		.travel_table {
-			font-family: 'MinSans-Medium';
-			margin-top: 20px;
-			margin-bottom: 80px;
+		@font-face {
+			font-family: 'Hana_handwriting';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Hana_handwriting.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
 		}
 
-		.travel_table table {
+		body {
+			background: #4B79A1;
+			/* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #283E51, #4B79A1);
+			/* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #283E51, #4B79A1);
+			/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+
+		.first_box,
+		.second_box,
+		.third_box {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.first_day_title,
+		.second_day_title,
+		.third_day_title {
+			position: relative;
+		}
+
+		.first_day_title span,
+		.second_day_title span,
+		.third_day_title span {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #edbc28;
+			font-family: 'MinSans-Medium';
+			font-size: 17px;
+			display: none;
+			cursor: pointer;
+		}
+
+		.btn_prev {
+			left: 5%;
+		}
+
+		.btn_next {
+			right: 5%;
+		}
+
+		.btn_prev.active,
+		.btn_next.active {
+			display: block !important;
+		}
+
+		.first_box h2,
+		.second_box h2,
+		.third_box h2 {
+			color: #edbc28;
+			text-align: center;
+		}
+
+		table {
 			border: none;
 			border-collapse: collapse;
 			border-spacing: 0;
-			width: 90%;
+			width: 100%;
 			min-width: 800px;
 			margin: 0 auto;
 		}
 
-		.travel_table table th {
-			width: 25%;
+		table th {
+			width: 20%;
 			font-size: 20px;
-			background-color: #b7e899;
+
 		}
 
-		.travel_table table td {
-			font-size: 16px;
+		table td {
+			font-size: 17px;
+			font-family: 'MinSans-Medium';
+			height: 75px;
 		}
 
-		.travel_table table th,
-		.travel_table table td {
-			border: 1px solid black;
+		table th,
+		table td {
+			border: none !important;
+			color: #edbc28 !important;
 		}
 
-		.travel_table table td a {
-			font-family: 'YanoljaYacheR';
-			font-size: 20px;
-			color: #4287f5;
-			transition: color 0.3s;
+		summary::marker {
+			font-size: 0;
 		}
 
-		.travel_table table td a:hover {
-			color: black;
+		summary {
+			font-family: 'Hana_handwriting';
+			cursor: pointer;
+			font-size: 25px;
+			color: #6cb2e0;
+			display: inline-block;
 		}
 
 		.map {
@@ -193,8 +254,14 @@
 			z-index: 99;
 		}
 
+		.first_box,
+		.second_box,
+		.third_box {
+			display: none;
+		}
+
 		@media (max-width : 900px) {
-			.travel_table {
+			.first_box {
 				overflow: scroll;
 			}
 
@@ -226,165 +293,509 @@
 		}
 	</style>
 
+	<div class="first_box">
+		<div class="first_day_title">
+			<span class="btn_prev">이전날</span>
+			<h2>첫 날 계획</h2>
+			<span class="btn_next">다음날</span>
+		</div>
+
+		<div class="first_day_content">
+			<table>
+				<thead>
+					<tr>
+						<th>시간</th>
+						<th>위치</th>
+						<th>내용</th>
+						<th>링크</th>
+						<th>비용</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>15 : 00 ~ 15 : 20</td>
+						<td>대전역</td>
+						<td>만나서 짐 싣고 화장실 다녀오기</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>14 : 20 ~ 18 : 30</td>
+						<td>고속도로</td>
+						<td>숙소로 이동<br />중간 휴게소 방문하여 식사<br />(예상 소요 시간 3시간)</td>
+						<td></td>
+						<td>75,000(주유, 톨비, 식비)</td>
+					</tr>
+
+					<tr>
+						<td>18 : 00 ~ 19 : 00</td>
+						<td>헤이븐 호텔</td>
+						<td>짐 풀고 휴식</td>
+						<td></td>
+						<td>15,000(간식)</td>
+					</tr>
+
+					<tr>
+						<td>19 : 00 ~ 21 : 00</td>
+						<td>이사부 크루즈</td>
+						<td>크루즈타고 한바퀴</td>
+						<td><a target="_blank" href="http://www.gcruise.kr/m/main/main.php">이사부 크루즈</a></td>
+						<td>50,000(탑승비)</td>
+					</tr>
+
+					<tr>
+						<td>21 : 00 ~ 22 : 00</td>
+						<td>낭만 포차거리</td>
+						<td>숙소에 주차 후 낭만 포차거리 산책</td>
+						<td></td>
+						<td>15,000(간식)</td>
+					</tr>
+
+					<tr>
+						<td>22 : 00 ~ 23 : 00</td>
+						<td>하멜등대</td>
+						<td>하멜 등대 산책 후 숙소로 귀가</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+
+		<details>
+			<summary onclick="map1Open();">지도보기</summary>
+			<div class="homeInfor map">
+				<div id="map1" style="width:100%; height : 800px; margin-top : 20px"></div>
+			</div>
+			</summary>
+		</details>
+	</div>
+
+	<div class="second_box">
+		<div class="second_day_title">
+			<span class="btn_prev">이전날</span>
+			<h2>두번째 날 계획</h2>
+			<span class="btn_next">다음날</span>
+		</div>
+
+		<div class="second_day_content">
+			<table>
+				<thead>
+					<tr>
+						<th>시간</th>
+						<th>위치</th>
+						<th>내용</th>
+						<th>링크</th>
+						<th>비용</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>~ 10 : 00</td>
+						<td>헤이븐 호텔</td>
+						<td>자유 시간 & 간단 식사</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>10 : 00 ~ 18 : 30</td>
+						<td>고속도로</td>
+						<td>숙소로 이동<br />중간 휴게소 방문하여 식사<br />(예상 소요 시간 3시간)</td>
+						<td></td>
+						<td>75,000(주유, 톨비, 식비)</td>
+					</tr>
+
+					<tr>
+						<td>18 : 00 ~ 19 : 00</td>
+						<td>헤이븐 호텔</td>
+						<td>짐 풀고 휴식</td>
+						<td></td>
+						<td>15,000(간식)</td>
+					</tr>
+
+					<tr>
+						<td>19 : 00 ~ 21 : 00</td>
+						<td>이사부 크루즈</td>
+						<td>크루즈타고 한바퀴</td>
+						<td><a href="http://www.gcruise.kr/m/main/main.php">이사부 크루즈</a></td>
+						<td>50,000(탑승비)</td>
+					</tr>
+
+					<tr>
+						<td>21 : 00 ~ 22 : 00</td>
+						<td>낭만 포차거리</td>
+						<td>숙소에 주차 후 낭만 포차거리 산책</td>
+						<td></td>
+						<td>15,000(간식)</td>
+					</tr>
+
+					<tr>
+						<td>22 : 00 ~ 23 : 00</td>
+						<td>하멜등대</td>
+						<td>하멜 등대 산책 후 숙소로 귀가</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+
+		<details>
+			<summary onclick="map2Open();">지도보기</summary>
+			<div class="homeInfor map">
+				<div id="map2" style="width:100%; height : 800px; margin-top : 20px"></div>
+			</div>
+			</summary>
+		</details>
+	</div>
+
+	<script>
+		let firstBox = $('.first_box');
+		let secondBox = $('.second_box');
+		let thirdBox = $('.third_box');
+		let firstBtnNext = $('.first_box .btn_next');
+		let secondBtnPrev = $('.second_box .btn_prev');
+		let secondBtnNext = $('.second_box .btn_next');
+		let thirdBtnPrev = $('.third_box .btn_prev');
+		let thirdBtnNext = $('.third_box .btn_next');
+
+		firstBox.css('display', 'block');
+		firstBtnNext.addClass('active');
+
+		firstBtnNext.click(function () {
+			firstBox.hide();
+			secondBox.show();
+			firstBtnNext.removeClass('active');
+			secondBtnPrev.addClass('active');
+			secondBtnNext.addClass('active');
+		});
+
+	</script>
+
+
+
+
+
+	<!-- 지도 1 -->
 	<!-- 블로그 : ee5332d70baa69d01e44d4afcf3bd3f7
 		 로컬 : ef1b15701b35bb37eb349c18db9a5c30
 	-->
 
-	<div class="homeInfor map">
-		<h1>첫째날</h1>
-
-		<div id="map" style="width:100%; height : 800px"></div>
-	</div>
 	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ef1b15701b35bb37eb349c18db9a5c30"></script>
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
 	<script>
-		var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
-			MARKER_HEIGHT = 36, // 기본, 클릭 마커의 높이
-			OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
-			OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
-			OVER_MARKER_WIDTH = 38, // 오버 마커의 너비
-			OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
-			OVER_OFFSET_X = 12, // 오버 마커의 기준 X좌표
-			OVER_OFFSET_Y = 42, // 오버 마커의 기준 Y좌표
-			SPRITE_MARKER_URL = '/img/marker_normal.png', // 스프라이트 마커 이미지 URL
-			SPRITE_WIDTH = 624, // 스프라이트 이미지 너비
-			SPRITE_HEIGHT = 928, // 스프라이트 이미지 높이
-			SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
+		function map1Open() {
+			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
+				MARKER_HEIGHT = 36, // 기본, 클릭 마커의 높이
+				OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
+				OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
+				OVER_MARKER_WIDTH = 38, // 오버 마커의 너비
+				OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
+				OVER_OFFSET_X = 12, // 오버 마커의 기준 X좌표
+				OVER_OFFSET_Y = 42, // 오버 마커의 기준 Y좌표
+				SPRITE_MARKER_URL = '/img/marker_normal.png', // 스프라이트 마커 이미지 URL
+				SPRITE_WIDTH = 624, // 스프라이트 이미지 너비
+				SPRITE_HEIGHT = 928, // 스프라이트 이미지 높이
+				SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
 
-		var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, 클릭 마커의 크기
-			markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
-			overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
-			overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
-			spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
+			var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, 클릭 마커의 크기
+				markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
+				overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
+				overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
+				spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
 
-		// 마커를 표시할 위치와 title 객체 배열입니다 
-		var positions = [
-			{
-				title: '우리 숙소',
-				content: '<div class ="label"><span class="left"></span><span class="center">우리 숙소</span><span class="right"></span></div>',
-				latlng: new kakao.maps.LatLng(34.7319596, 127.7491099)
-			},
-			{
-				title: '크루즈 선착장',
-				content: '<div class ="label"><span class="left"></span><span class="center">크루즈 선착장</span><span class="right"></span></div>',
-				latlng: new kakao.maps.LatLng(34.7298614, 127.7369175)
-			},
-			{
-				title: '포차거리',
-				content: '<div class ="label"><span class="left"></span><span class="center">포차거리</span><span class="right"></span></div>',
-				latlng: new kakao.maps.LatLng(34.7363372, 127.749122)
-			},
-			{
-				title: '하멜등대',
-				content: '<div class ="label"><span class="left"></span><span class="center">하멜등대</span><span class="right"></span></div>',
-				latlng: new kakao.maps.LatLng(34.7364295, 127.7470455)
-			},
-		], selectedMarker = null; // 클릭한 마커를 담을 변수;
-
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(34.7364295, 127.7470455),
-			level: 5
-		};
-
-		var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
-
-		var gapX = 0;
-		for (var i = 0, len = positions.length; i < len; i++) {
-			gapX = (MARKER_WIDTH + SPRITE_GAP), // 스프라이트 이미지에서 마커로 사용할 이미지 X좌표 간격 값
-			originY = (MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 기본, 클릭 마커로 사용할 Y좌표 값
-			overOriginY = (OVER_MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 오버 마커로 사용할 Y좌표 값
-			normalOrigin = new kakao.maps.Point(0, originY), // 스프라이트 이미지에서 기본 마커로 사용할 영역의 좌상단 좌표
-			clickOrigin = new kakao.maps.Point(gapX * 2, originY), // 스프라이트 이미지에서 마우스오버 마커로 사용할 영역의 좌상단 좌표
-			overOrigin = new kakao.maps.Point(gapX * 6, overOriginY); // 스프라이트 이미지에서 클릭 마커로 사용할 영역의 좌상단 좌표
-
-			var content = positions[i].content;
-			// 커스텀 오버레이가 표시될 위치입니다 
-			var position = positions[i].latlng;
-
-			// 커스텀 오버레이를 생성합니다
-			var customOverlay = new kakao.maps.CustomOverlay({
-				position: position,
-				content: content
-			});
-			// 커스텀 오버레이를 지도에 표시합니다
-			customOverlay.setMap(map);
-
-			// 마커를 생성하고 지도위에 표시합니다
-			addMarker(position, normalOrigin, overOrigin, clickOrigin);
-		}
-
-		// 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
-		function addMarker(position, normalOrigin, overOrigin, clickOrigin) {
-
-			// 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
-			var normalImage = createMarkerImage(markerSize, markerOffset, normalOrigin),
-				overImage = createMarkerImage(overMarkerSize, overMarkerOffset, overOrigin),
-				clickImage = createMarkerImage(markerSize, markerOffset, clickOrigin);
-
-			// 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
-			var marker = new kakao.maps.Marker({
-				map: map,
-				position: position,
-				image: normalImage
-			});
-
-			// 마커 객체에 마커아이디와 마커의 기본 이미지를 추가합니다
-			marker.normalImage = normalImage;
-
-			// 마커에 mouseover 이벤트를 등록합니다
-			kakao.maps.event.addListener(marker, 'mouseover', function () {
-
-				// 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
-				// 마커의 이미지를 오버 이미지로 변경합니다
-				if (!selectedMarker || selectedMarker !== marker) {
-					marker.setImage(overImage);
-				}
-			});
-
-			// 마커에 mouseout 이벤트를 등록합니다
-			kakao.maps.event.addListener(marker, 'mouseout', function () {
-
-				// 클릭된 마커가 없고, mouseout된 마커가 클릭된 마커가 아니면
-				// 마커의 이미지를 기본 이미지로 변경합니다
-				if (!selectedMarker || selectedMarker !== marker) {
-					marker.setImage(normalImage);
-				}
-			});
-
-			// 마커에 click 이벤트를 등록합니다
-			kakao.maps.event.addListener(marker, 'click', function () {
-
-				// 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
-				// 마커의 이미지를 클릭 이미지로 변경합니다
-				if (!selectedMarker || selectedMarker !== marker) {
-
-					// 클릭된 마커 객체가 null이 아니면
-					// 클릭된 마커의 이미지를 기본 이미지로 변경하고
-					!!selectedMarker && selectedMarker.setImage(selectedMarker.normalImage);
-
-					// 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
-					marker.setImage(clickImage);
-				}
-
-				// 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
-				selectedMarker = marker;
-			});
-		}
-
-		// MakrerImage 객체를 생성하여 반환하는 함수입니다
-		function createMarkerImage(markerSize, offset, spriteOrigin) {
-			var markerImage = new kakao.maps.MarkerImage(
-				SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
-				markerSize, // 마커의 크기
+			// 마커를 표시할 위치와 title 객체 배열입니다 
+			var positions = [
 				{
-					offset: offset, // 마커 이미지에서의 기준 좌표
-					spriteOrigin: spriteOrigin, // 스트라이프 이미지 중 사용할 영역의 좌상단 좌표
-					spriteSize: spriteImageSize // 스프라이트 이미지의 크기
-				}
-			);
+					title: '우리 숙소',
+					content: '<div class ="label"><span class="left"></span><span class="center">우리 숙소</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7319596, 127.7491099)
+				},
+				{
+					title: '크루즈 선착장',
+					content: '<div class ="label"><span class="left"></span><span class="center">크루즈 선착장</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7298614, 127.7369175)
+				},
+				{
+					title: '포차거리',
+					content: '<div class ="label"><span class="left"></span><span class="center">포차거리</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7363372, 127.749122)
+				},
+				{
+					title: '하멜등대',
+					content: '<div class ="label"><span class="left"></span><span class="center">하멜등대</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7364295, 127.7470455)
+				},
+			], selectedMarker = null; // 클릭한 마커를 담을 변수;
 
-			return markerImage;
+			var container = document.getElementById('map1');
+			var options = {
+				center: new kakao.maps.LatLng(34.7364295, 127.7470455),
+				level: 5
+			};
+
+			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+
+			var gapX = 0;
+			for (var i = 0, len = positions.length; i < len; i++) {
+				gapX = (MARKER_WIDTH + SPRITE_GAP), // 스프라이트 이미지에서 마커로 사용할 이미지 X좌표 간격 값
+					originY = (MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 기본, 클릭 마커로 사용할 Y좌표 값
+					overOriginY = (OVER_MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 오버 마커로 사용할 Y좌표 값
+					normalOrigin = new kakao.maps.Point(0, originY), // 스프라이트 이미지에서 기본 마커로 사용할 영역의 좌상단 좌표
+					clickOrigin = new kakao.maps.Point(gapX * 2, originY), // 스프라이트 이미지에서 마우스오버 마커로 사용할 영역의 좌상단 좌표
+					overOrigin = new kakao.maps.Point(gapX * 6, overOriginY); // 스프라이트 이미지에서 클릭 마커로 사용할 영역의 좌상단 좌표
+
+				var content = positions[i].content;
+				// 커스텀 오버레이가 표시될 위치입니다 
+				var position = positions[i].latlng;
+
+				// 커스텀 오버레이를 생성합니다
+				var customOverlay = new kakao.maps.CustomOverlay({
+					position: position,
+					content: content
+				});
+				// 커스텀 오버레이를 지도에 표시합니다
+				customOverlay.setMap(map);
+
+				// 마커를 생성하고 지도위에 표시합니다
+				addMarker(position, normalOrigin, overOrigin, clickOrigin);
+			}
+
+			// 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
+			function addMarker(position, normalOrigin, overOrigin, clickOrigin) {
+
+				// 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
+				var normalImage = createMarkerImage(markerSize, markerOffset, normalOrigin),
+					overImage = createMarkerImage(overMarkerSize, overMarkerOffset, overOrigin),
+					clickImage = createMarkerImage(markerSize, markerOffset, clickOrigin);
+
+				// 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
+				var marker = new kakao.maps.Marker({
+					map: map,
+					position: position,
+					image: normalImage
+				});
+
+				// 마커 객체에 마커아이디와 마커의 기본 이미지를 추가합니다
+				marker.normalImage = normalImage;
+
+				// 마커에 mouseover 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseover', function () {
+
+					// 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 오버 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(overImage);
+					}
+				});
+
+				// 마커에 mouseout 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseout', function () {
+
+					// 클릭된 마커가 없고, mouseout된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 기본 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(normalImage);
+					}
+				});
+
+				// 마커에 click 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'click', function () {
+
+					// 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 클릭 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+
+						// 클릭된 마커 객체가 null이 아니면
+						// 클릭된 마커의 이미지를 기본 이미지로 변경하고
+						!!selectedMarker && selectedMarker.setImage(selectedMarker.normalImage);
+
+						// 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
+						marker.setImage(clickImage);
+					}
+
+					// 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
+					selectedMarker = marker;
+				});
+			}
+
+			// MakrerImage 객체를 생성하여 반환하는 함수입니다
+			function createMarkerImage(markerSize, offset, spriteOrigin) {
+				var markerImage = new kakao.maps.MarkerImage(
+					SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+					markerSize, // 마커의 크기
+					{
+						offset: offset, // 마커 이미지에서의 기준 좌표
+						spriteOrigin: spriteOrigin, // 스트라이프 이미지 중 사용할 영역의 좌상단 좌표
+						spriteSize: spriteImageSize // 스프라이트 이미지의 크기
+					}
+				);
+
+				return markerImage;
+			}
+		}
+	</script>
+
+
+	<!-- 지도 2 -->
+	<script>
+		function map2Open() {
+			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
+				MARKER_HEIGHT = 36, // 기본, 클릭 마커의 높이
+				OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
+				OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
+				OVER_MARKER_WIDTH = 38, // 오버 마커의 너비
+				OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
+				OVER_OFFSET_X = 12, // 오버 마커의 기준 X좌표
+				OVER_OFFSET_Y = 42, // 오버 마커의 기준 Y좌표
+				SPRITE_MARKER_URL = '/img/marker_normal.png', // 스프라이트 마커 이미지 URL
+				SPRITE_WIDTH = 624, // 스프라이트 이미지 너비
+				SPRITE_HEIGHT = 928, // 스프라이트 이미지 높이
+				SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
+
+			var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, 클릭 마커의 크기
+				markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
+				overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
+				overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
+				spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
+
+			// 마커를 표시할 위치와 title 객체 배열입니다 
+			var positions = [
+				{
+					title: '우리 숙소',
+					content: '<div class ="label"><span class="left"></span><span class="center">우리 숙소</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7319596, 127.7491099)
+				},
+				{
+					title: '오동도',
+					content: '<div class ="label"><span class="left"></span><span class="center">오동도</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7446658, 127.7664977)
+				},
+				{
+					title: '포차거리',
+					content: '<div class ="label"><span class="left"></span><span class="center">포차거리</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7363372, 127.749122)
+				},
+				{
+					title: '하멜등대',
+					content: '<div class ="label"><span class="left"></span><span class="center">하멜등대</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7364295, 127.7470455)
+				},
+			], selectedMarker = null; // 클릭한 마커를 담을 변수;
+
+			var container = document.getElementById('map2');
+			var options = {
+				center: new kakao.maps.LatLng(34.7364295, 127.7470455),
+				level: 5
+			};
+
+			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+
+			var gapX = 0;
+			for (var i = 0, len = positions.length; i < len; i++) {
+				gapX = (MARKER_WIDTH + SPRITE_GAP), // 스프라이트 이미지에서 마커로 사용할 이미지 X좌표 간격 값
+					originY = (MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 기본, 클릭 마커로 사용할 Y좌표 값
+					overOriginY = (OVER_MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 오버 마커로 사용할 Y좌표 값
+					normalOrigin = new kakao.maps.Point(0, originY), // 스프라이트 이미지에서 기본 마커로 사용할 영역의 좌상단 좌표
+					clickOrigin = new kakao.maps.Point(gapX * 2, originY), // 스프라이트 이미지에서 마우스오버 마커로 사용할 영역의 좌상단 좌표
+					overOrigin = new kakao.maps.Point(gapX * 6, overOriginY); // 스프라이트 이미지에서 클릭 마커로 사용할 영역의 좌상단 좌표
+
+				var content = positions[i].content;
+				// 커스텀 오버레이가 표시될 위치입니다 
+				var position = positions[i].latlng;
+
+				// 커스텀 오버레이를 생성합니다
+				var customOverlay = new kakao.maps.CustomOverlay({
+					position: position,
+					content: content
+				});
+				// 커스텀 오버레이를 지도에 표시합니다
+				customOverlay.setMap(map);
+
+				// 마커를 생성하고 지도위에 표시합니다
+				addMarker(position, normalOrigin, overOrigin, clickOrigin);
+			}
+
+			// 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
+			function addMarker(position, normalOrigin, overOrigin, clickOrigin) {
+
+				// 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
+				var normalImage = createMarkerImage(markerSize, markerOffset, normalOrigin),
+					overImage = createMarkerImage(overMarkerSize, overMarkerOffset, overOrigin),
+					clickImage = createMarkerImage(markerSize, markerOffset, clickOrigin);
+
+				// 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
+				var marker = new kakao.maps.Marker({
+					map: map,
+					position: position,
+					image: normalImage
+				});
+
+				// 마커 객체에 마커아이디와 마커의 기본 이미지를 추가합니다
+				marker.normalImage = normalImage;
+
+				// 마커에 mouseover 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseover', function () {
+
+					// 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 오버 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(overImage);
+					}
+				});
+
+				// 마커에 mouseout 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseout', function () {
+
+					// 클릭된 마커가 없고, mouseout된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 기본 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(normalImage);
+					}
+				});
+
+				// 마커에 click 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'click', function () {
+
+					// 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 클릭 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+
+						// 클릭된 마커 객체가 null이 아니면
+						// 클릭된 마커의 이미지를 기본 이미지로 변경하고
+						!!selectedMarker && selectedMarker.setImage(selectedMarker.normalImage);
+
+						// 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
+						marker.setImage(clickImage);
+					}
+
+					// 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
+					selectedMarker = marker;
+				});
+			}
+
+			// MakrerImage 객체를 생성하여 반환하는 함수입니다
+			function createMarkerImage(markerSize, offset, spriteOrigin) {
+				var markerImage = new kakao.maps.MarkerImage(
+					SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+					markerSize, // 마커의 크기
+					{
+						offset: offset, // 마커 이미지에서의 기준 좌표
+						spriteOrigin: spriteOrigin, // 스트라이프 이미지 중 사용할 영역의 좌상단 좌표
+						spriteSize: spriteImageSize // 스프라이트 이미지의 크기
+					}
+				);
+
+				return markerImage;
+			}
 		}
 	</script>
 
