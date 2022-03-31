@@ -510,82 +510,54 @@
 				<tbody>
 					<tr>
 						<td>~ 10 : 00</td>
-						<td>헤이븐 호텔</td>
-						<td>자유 시간 & 간단 식사</td>
+						<td>앙코르 호텔</td>
+						<td>자유 시간 및 갈 준비</td>
+						<td></td>
+						<td>61,000</td>
+					</tr>
+
+					<tr>
+						<td>10 : 00 ~ 10 : 15</td>
+						<td>이순신 광장</td>
+						<td>이순신 광장 주차</td>
 						<td></td>
 						<td></td>
 					</tr>
 
 					<tr>
-						<td>10 : 00 ~ 12 : 30</td>
-						<td>오동도</td>
-						<td>차 타고 오동도 출발. 산책 및 사진 찍기</td>
-						<td></td>
-						<td></td>
+						<td>10 : 15 ~ 11 : 30</td>
+						<td>이순신 광장</td>
+						<td>아침 겸 점심 식사</td>
+						<td>
+							<a target="_blank" href="https://blog.naver.com/csn324/222672680078">블로그1</a>
+							<div></div>
+							<a target="_blank" href="https://blog.naver.com/msckmoon/222618038872">블로그2</a>
+						</td>
+						<td>20,000(식사)</td>
 					</tr>
 
 					<tr>
-						<td>12 : 30 ~ 14 : 30</td>
-						<td>녹테마레</td>
-						<td>차 타고 녹테마레 이동<br />1~2층 전시관 전시 후 3층 카페에서 휴식</td>
-						<td><a target="_blank" href="https://noctemare.com/">녹테마레(링크)</a> </td>
-						<td>30,000(인터넷 예약가 15,000)<br /> + <br /> 14,000(음료)</td>
-					</tr>
-
-					<tr>
-						<td>14 : 30 ~ 16 : 30</td>
-						<td>향일암</td>
-						<td>향일암 산책 및 카페 방문</td>
+						<td>11 : 30 ~ 13 : 00</td>
+						<td>천사벽화마을</td>
+						<td>천사벽화마을 산책</td>
 						<td></td>
 						<td>5,000(1인 입장료 2,500)<br />10000(카페)</td>
 					</tr>
 
 					<tr>
-						<td>16 : 30 ~ 17 : 00</td>
-						<td>만성리검은모래해변</td>
-						<td>바다구경</td>
+						<td>13 : 00 ~ 13 : 40</td>
+						<td>이순신 광장</td>
+						<td>기념품 구경 <br/> <strong>인기</strong> <br/> 갓버터 도나스, 이순신 수제버거, <br/> 여수당, 여수 딸기모찌</td>
 						<td></td>
-						<td></td>
+						<td>25,000</td>
 					</tr>
 
 					<tr>
-						<td>17 : 00 ~ 17 : 30</td>
-						<td>여수시 수정동 33-1</td>
-						<td>저녁식사 하기 위한 주차</td>
+						<td>13 : 40 ~ 17 : 40</td>
+						<td>집으로</td>
+						<td>집으로~</td>
 						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>17 : 30 ~ 19 : 00</td>
-						<td>종포25시</td>
-						<td>저녁 식사</td>
-						<td></td>
-						<td>45,000 ~ 70,000 (저녁)</td>
-					</tr>
-
-					<tr>
-						<td>19 : 30 ~ 20 : 30</td>
-						<td>앙코르 호텔</td>
-						<td>숙소에서 휴식</td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>20 : 30 ~ 21 : 30</td>
-						<td>소호 동동다리</td>
-						<td>산책</td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td>21 : 30 ~ </td>
-						<td>짐 싸고 휴식</td>
-						<td>휴식</td>
-						<td></td>
-						<td></td>
+						<td>70,000 (톨비, 주유 등)</td>
 					</tr>
 
 				</tbody>
@@ -594,13 +566,23 @@
 
 
 		<details>
-			<summary onclick="map2Open();">지도보기</summary>
+			<summary onclick="map3Open();">지도보기</summary>
 			<div class="homeInfor map">
 				<div id="map3" style="width:100%; height : 800px; margin-top : 20px"></div>
 			</div>
 			</summary>
 		</details>
+
+		<details>
+			<summary onclick="map4Open();">이순신 광장 맛집 지도보기</summary>
+			<div class="homeInfor map">
+				<div id="map4" style="width:100%; height : 800px; margin-top : 20px"></div>
+			</div>
+			</summary>
+		</details>
 	</div>
+
+	
 
 
 	<script>
@@ -660,8 +642,8 @@
 	-->
 
 	<!-- 지도 1 -->
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
+	
 	<script>
 		function map1Open() {
 			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
@@ -1017,7 +999,6 @@
 
 
 	<!-- 지도 3 -->
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ef1b15701b35bb37eb349c18db9a5c30"></script>
 	<script>
 		function map3Open() {
 			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
@@ -1044,29 +1025,222 @@
 				{
 					title: '우리 숙소',
 					content: '<div class ="label"><span class="left"></span><span class="center">우리 숙소</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7319596, 127.7491099)
+					latlng: new kakao.maps.LatLng(34.7576877, 127.6633591)
 				},
 				{
-					title: '크루즈 선착장',
-					content: '<div class ="label"><span class="left"></span><span class="center">크루즈 선착장</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7298614, 127.7369175)
+					title: '이순신 광장',
+					content: '<div class ="label"><span class="left"></span><span class="center">이순신 광장</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7393891, 127.7359802)
 				},
 				{
-					title: '포차거리',
-					content: '<div class ="label"><span class="left"></span><span class="center">포차거리</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7363372, 127.749122)
-				},
-				{
-					title: '하멜등대',
-					content: '<div class ="label"><span class="left"></span><span class="center">하멜등대</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7364295, 127.7470455)
-				},
+					title: '천사 벽화 마을',
+					content: '<div class ="label"><span class="left"></span><span class="center">천사벽화마을</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7389715, 127.7411669)
+				}
 			], selectedMarker = null; // 클릭한 마커를 담을 변수;
 
 			var container = document.getElementById('map3');
 			var options = {
-				center: new kakao.maps.LatLng(34.7364295, 127.7470455),
-				level: 5
+				center: new kakao.maps.LatLng(34.754552, 127.702753),
+				level: 7
+			};
+
+			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+
+			var gapX = 0;
+			for (var i = 0, len = positions.length; i < len; i++) {
+				gapX = (MARKER_WIDTH + SPRITE_GAP), // 스프라이트 이미지에서 마커로 사용할 이미지 X좌표 간격 값
+					originY = (MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 기본, 클릭 마커로 사용할 Y좌표 값
+					overOriginY = (OVER_MARKER_HEIGHT + SPRITE_GAP) * i, // 스프라이트 이미지에서 오버 마커로 사용할 Y좌표 값
+					normalOrigin = new kakao.maps.Point(0, originY), // 스프라이트 이미지에서 기본 마커로 사용할 영역의 좌상단 좌표
+					clickOrigin = new kakao.maps.Point(gapX * 2, originY), // 스프라이트 이미지에서 마우스오버 마커로 사용할 영역의 좌상단 좌표
+					overOrigin = new kakao.maps.Point(gapX * 6, overOriginY); // 스프라이트 이미지에서 클릭 마커로 사용할 영역의 좌상단 좌표
+
+				var content = positions[i].content;
+				// 커스텀 오버레이가 표시될 위치입니다 
+				var position = positions[i].latlng;
+
+				// 커스텀 오버레이를 생성합니다
+				var customOverlay = new kakao.maps.CustomOverlay({
+					position: position,
+					content: content
+				});
+				// 커스텀 오버레이를 지도에 표시합니다
+				customOverlay.setMap(map);
+
+				// 마커를 생성하고 지도위에 표시합니다
+				addMarker(position, normalOrigin, overOrigin, clickOrigin);
+			}
+
+			// 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
+			function addMarker(position, normalOrigin, overOrigin, clickOrigin) {
+
+				// 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
+				var normalImage = createMarkerImage(markerSize, markerOffset, normalOrigin),
+					overImage = createMarkerImage(overMarkerSize, overMarkerOffset, overOrigin),
+					clickImage = createMarkerImage(markerSize, markerOffset, clickOrigin);
+
+				// 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
+				var marker = new kakao.maps.Marker({
+					map: map,
+					position: position,
+					image: normalImage
+				});
+
+				// 마커 객체에 마커아이디와 마커의 기본 이미지를 추가합니다
+				marker.normalImage = normalImage;
+
+				// 마커에 mouseover 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseover', function () {
+
+					// 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 오버 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(overImage);
+					}
+				});
+
+				// 마커에 mouseout 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'mouseout', function () {
+
+					// 클릭된 마커가 없고, mouseout된 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 기본 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+						marker.setImage(normalImage);
+					}
+				});
+
+				// 마커에 click 이벤트를 등록합니다
+				kakao.maps.event.addListener(marker, 'click', function () {
+
+					// 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
+					// 마커의 이미지를 클릭 이미지로 변경합니다
+					if (!selectedMarker || selectedMarker !== marker) {
+
+						// 클릭된 마커 객체가 null이 아니면
+						// 클릭된 마커의 이미지를 기본 이미지로 변경하고
+						!!selectedMarker && selectedMarker.setImage(selectedMarker.normalImage);
+
+						// 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
+						marker.setImage(clickImage);
+					}
+
+					// 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
+					selectedMarker = marker;
+				});
+			}
+
+			// MakrerImage 객체를 생성하여 반환하는 함수입니다
+			function createMarkerImage(markerSize, offset, spriteOrigin) {
+				var markerImage = new kakao.maps.MarkerImage(
+					SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+					markerSize, // 마커의 크기
+					{
+						offset: offset, // 마커 이미지에서의 기준 좌표
+						spriteOrigin: spriteOrigin, // 스트라이프 이미지 중 사용할 영역의 좌상단 좌표
+						spriteSize: spriteImageSize // 스프라이트 이미지의 크기
+					}
+				);
+
+				return markerImage;
+			}
+			function searchAddrFromCoords(coords, callback) {
+				// 좌표로 행정동 주소 정보를 요청합니다
+				geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+			}
+
+			function searchDetailAddrFromCoords(coords, callback) {
+				// 좌표로 법정동 상세 주소 정보를 요청합니다
+				geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+			}
+
+			// 지도 좌측상단에 지도 중심좌표에 대한 주소정보를 표출하는 함수입니다
+			function displayCenterInfo(result, status) {
+				if (status === kakao.maps.services.Status.OK) {
+					var infoDiv = document.getElementById('centerAddr');
+
+					for (var i = 0; i < result.length; i++) {
+						// 행정동의 region_type 값은 'H' 이므로
+						if (result[i].region_type === 'H') {
+							infoDiv.innerHTML = result[i].address_name;
+							break;
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- 지도 4 -->
+	<script>
+		function map4Open() {
+			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
+				MARKER_HEIGHT = 36, // 기본, 클릭 마커의 높이
+				OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
+				OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
+				OVER_MARKER_WIDTH = 38, // 오버 마커의 너비
+				OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
+				OVER_OFFSET_X = 12, // 오버 마커의 기준 X좌표
+				OVER_OFFSET_Y = 42, // 오버 마커의 기준 Y좌표
+				SPRITE_MARKER_URL = '/img/marker_normal.png', // 스프라이트 마커 이미지 URL
+				SPRITE_WIDTH = 624, // 스프라이트 이미지 너비
+				SPRITE_HEIGHT = 928, // 스프라이트 이미지 높이
+				SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
+
+			var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, 클릭 마커의 크기
+				markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
+				overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
+				overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y), // 오버 마커의 기준 좌표
+				spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
+
+			// 마커를 표시할 위치와 title 객체 배열입니다 
+			var positions = [
+				{
+					title: '이순신 광장',
+					content: '<div class ="label"><span class="left"></span><span class="center">이순신 광장</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7393891, 127.7359802)
+				},
+				{
+					title: '이순신 수제버거',
+					content: '<div class ="label"><span class="left"></span><span class="center">이순신 수제버거</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7402681, 127.7356831)
+				},
+				{
+					title: '행복 파스타',
+					content: '<div class ="label"><span class="left"></span><span class="center">행복 파스타</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7403414, 127.735411)
+				},
+				{
+					title: '바다 김밥',
+					content: '<div class ="label"><span class="left"></span><span class="center">바다 김밥</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7407798, 127.7359742)
+				},
+				{
+					title: '갓버터 도나스',
+					content: '<div class ="label"><span class="left"></span><span class="center">갓버터 도나스</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7409582, 127.7359212)
+				},
+				{
+					title: '여수당',
+					content: '<div class ="label"><span class="left"></span><span class="center">여수당</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7398987, 127.7353938)
+				},
+				{
+					title: '딸기 모찌',
+					content: '<div class ="label"><span class="left"></span><span class="center">딸기 모찌</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7398981, 127.7351426)
+				},
+				{
+					title: '호떡당',
+					content: '<div class ="label"><span class="left"></span><span class="center">갓버터 도나스</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7404166, 127.7360223)
+				}
+			], selectedMarker = null; // 클릭한 마커를 담을 변수;
+
+			var container = document.getElementById('map4');
+			var options = {
+				center: new kakao.maps.LatLng(34.7401691, 127.7359802),
+				level: 2
 			};
 
 			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
