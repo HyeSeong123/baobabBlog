@@ -489,14 +489,13 @@
 		</details>
 	</div>
 
-	<div class="second_box">
-		<div class="second_day_title">
+	<div class="third_box">
+		<div class="third_day_title">
 			<span class="btn_prev">이전날</span>
 			<h2>세번째 날 계획</h2>
-			<span class="btn_next">다음날</span>
 		</div>
 
-		<div class="second_day_content">
+		<div class="third_day_content">
 			<table>
 				<thead>
 					<tr>
@@ -632,6 +631,23 @@
 			secondBtnPrev.removeClass('active');
 			secondBtnNext.removeClass('active');
 		});
+
+		secondBtnNext.click(function () {
+			secondBox.hide();
+			thirdBox.show();
+			secondBtnNext.removeClass('active');
+			thirdBtnPrev.addClass('active');
+			thirdBtnNext.addClass('active');
+		});
+
+		thirdBtnPrev.click(function () {
+			thirdBox.hide();
+			secondBox.show();
+			secondBtnPrev.addClass('active');
+			secondBtnNext.addClass('active');
+			thirdBtnPrev.removeClass('active');
+		});
+
 	</script>
 
 
@@ -645,7 +661,7 @@
 
 	<!-- 지도 1 -->
 	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ef1b15701b35bb37eb349c18db9a5c30"></script>
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee5332d70baa69d01e44d4afcf3bd3f7"></script>
 	<script>
 		function map1Open() {
 			var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
