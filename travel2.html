@@ -341,7 +341,7 @@
 						<td>19 : 00 ~ 21 : 00</td>
 						<td>이사부 크루즈</td>
 						<td>크루즈타고 한바퀴</td>
-						<td><a target="_blank" href="http://www.gcruise.kr/m/main/main.php">이사부 크루즈</a></td>
+						<td><a target="_blank" href="http://www.gcruise.kr/m/main/main.php">이사부 크루즈(링크)</a></td>
 						<td>50,000(탑승비)</td>
 					</tr>
 
@@ -358,7 +358,7 @@
 						<td>하멜등대</td>
 						<td>하멜 등대 산책 후 숙소로 귀가</td>
 						<td></td>
-						<td></td>
+						<td>10,000(다음날 아침 구매)</td>
 					</tr>
 
 				</tbody>
@@ -404,43 +404,51 @@
 					</tr>
 
 					<tr>
-						<td>10 : 00 ~ 18 : 30</td>
-						<td>고속도로</td>
-						<td>숙소로 이동<br />중간 휴게소 방문하여 식사<br />(예상 소요 시간 3시간)</td>
+						<td>10 : 00 ~ 12 : 30</td>
+						<td>오동도</td>
+						<td>차 타고 오동도 출발. 산책 및 사진 찍기</td>
 						<td></td>
-						<td>75,000(주유, 톨비, 식비)</td>
+						<td></td>
 					</tr>
 
 					<tr>
-						<td>18 : 00 ~ 19 : 00</td>
-						<td>헤이븐 호텔</td>
-						<td>짐 풀고 휴식</td>
-						<td></td>
-						<td>15,000(간식)</td>
+						<td>12 : 30 ~ 14 : 30</td>
+						<td>녹테마레</td>
+						<td>차 타고 녹테마레 이동<br/>1~2층 전시관 전시 후 3층 카페에서 휴식</td>
+						<td><a target="_blank" href="https://noctemare.com/">녹테마레(링크)</a> </td>
+						<td>30,000(인터넷 예약가 15,000)<br/> + <br/> 14,000(음료)</td>
 					</tr>
 
 					<tr>
-						<td>19 : 00 ~ 21 : 00</td>
-						<td>이사부 크루즈</td>
-						<td>크루즈타고 한바퀴</td>
-						<td><a href="http://www.gcruise.kr/m/main/main.php">이사부 크루즈</a></td>
-						<td>50,000(탑승비)</td>
+						<td>14 : 30 ~ 16 : 30</td>
+						<td>향일암</td>
+						<td>향일암 산책 및 카페 방문</td>
+						<td></td>
+						<td>5,000(1인 입장료 2,500)<br/>10000(카페)</td>
 					</tr>
 
 					<tr>
-						<td>21 : 00 ~ 22 : 00</td>
-						<td>낭만 포차거리</td>
-						<td>숙소에 주차 후 낭만 포차거리 산책</td>
+						<td>16 : 30 ~ 17 : 00</td>
+						<td>만성리검은모래해변</td>
+						<td>바다구경</td>
 						<td></td>
-						<td>15,000(간식)</td>
+						<td></td>
 					</tr>
 
 					<tr>
-						<td>22 : 00 ~ 23 : 00</td>
-						<td>하멜등대</td>
-						<td>하멜 등대 산책 후 숙소로 귀가</td>
+						<td>17 : 00 ~ 17 : 30</td>
+						<td>여수시 수정동 33-1</td>
+						<td>저녁식사 하기 위한 주차</td>
 						<td></td>
 						<td></td>
+					</tr>
+
+					<tr>
+						<td>17 : 30 ~ 19 : 00</td>
+						<td>종포25시</td>
+						<td>저녁 식사</td>
+						<td></td>
+						<td>45,000 ~ 70,000 (저녁)</td>
 					</tr>
 
 				</tbody>
@@ -478,6 +486,13 @@
 			secondBtnNext.addClass('active');
 		});
 
+		secondBtnPrev.click(function (){
+			secondBox.hide();
+			firstBox.show();
+			firstBtnNext.addClass('active');
+			secondBtnPrev.removeClass('active');
+			secondBtnNext.removeClass('active');
+		});
 	</script>
 
 
@@ -670,31 +685,46 @@
 			// 마커를 표시할 위치와 title 객체 배열입니다 
 			var positions = [
 				{
-					title: '우리 숙소',
-					content: '<div class ="label"><span class="left"></span><span class="center">우리 숙소</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7319596, 127.7491099)
-				},
-				{
 					title: '오동도',
 					content: '<div class ="label"><span class="left"></span><span class="center">오동도</span><span class="right"></span></div>',
 					latlng: new kakao.maps.LatLng(34.7446658, 127.7664977)
 				},
 				{
-					title: '포차거리',
-					content: '<div class ="label"><span class="left"></span><span class="center">포차거리</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7363372, 127.749122)
+					title: '녹테마레',
+					content: '<div class ="label"><span class="left"></span><span class="center">녹테마레</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7745576, 127.7259999)
 				},
 				{
-					title: '하멜등대',
-					content: '<div class ="label"><span class="left"></span><span class="center">하멜등대</span><span class="right"></span></div>',
-					latlng: new kakao.maps.LatLng(34.7364295, 127.7470455)
+					title: '향일암',
+					content: '<div class ="label"><span class="left"></span><span class="center">향일암</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.5916198, 127.8039319)
+				},
+				{
+					title: '만성리 검은모래 해변',
+					content: '<div class ="label"><span class="left"></span><span class="center">만성리 검은모래 해변</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7773837, 127.7448878)
+				},
+				{
+					title: '주차장',
+					content: '<div class ="label"><span class="left"></span><span class="center">주차장</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7383434, 127.7537781)
+				},
+				{
+					title: '종포 25시',
+					content: '<div class ="label"><span class="left"></span><span class="center">종포 25시</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7374231, 127.7416209)
+				},
+				{
+					title: '2일차 숙소',
+					content: '<div class ="label"><span class="left"></span><span class="center">2일차 숙소</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.7576877, 127.6633591)
 				},
 			], selectedMarker = null; // 클릭한 마커를 담을 변수;
 
 			var container = document.getElementById('map2');
 			var options = {
-				center: new kakao.maps.LatLng(34.7364295, 127.7470455),
-				level: 5
+				center: new kakao.maps.LatLng(34.7585653, 127.7348095),
+				level: 6
 			};
 
 			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
