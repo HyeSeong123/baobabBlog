@@ -450,7 +450,23 @@
 						<td></td>
 						<td>45,000 ~ 70,000 (저녁)</td>
 					</tr>
+					
+					<tr>
+						<td>19 : 30 ~ 20 : 30</td>
+						<td>소호 동동다리</td>
+						<td>산책</td>
+						<td></td>
+						<td></td>
+					</tr>
 
+					<tr>
+						<td>20 : 30 ~ </td>
+						<td>앙코르 호텔</td>
+						<td>숙소에서 휴식</td>
+						<td></td>
+						<td></td>
+					</tr>
+					
 				</tbody>
 			</table>
 		</div>
@@ -715,6 +731,11 @@
 					latlng: new kakao.maps.LatLng(34.7374231, 127.7416209)
 				},
 				{
+					title: '소호 동동다리',
+					content: '<div class ="label"><span class="left"></span><span class="center">소호 동동다리</span><span class="right"></span></div>',
+					latlng: new kakao.maps.LatLng(34.744659, 127.6529293)
+				},
+				{
 					title: '2일차 숙소',
 					content: '<div class ="label"><span class="left"></span><span class="center">2일차 숙소</span><span class="right"></span></div>',
 					latlng: new kakao.maps.LatLng(34.7576877, 127.6633591)
@@ -724,7 +745,7 @@
 			var container = document.getElementById('map2');
 			var options = {
 				center: new kakao.maps.LatLng(34.7585653, 127.7348095),
-				level: 6
+				level: 7
 			};
 
 			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
