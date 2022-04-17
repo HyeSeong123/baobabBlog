@@ -25,33 +25,33 @@
 <meta name="naver-site-verification"
 	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
 
-<title>MVC 패턴-바오밥 블로그</title>
+<title>스프링(Spring) 구동 순서-바오밥 블로그</title>
 
 <meta charset="UTF-8">
 
 <!-- SEO 태그 -->
 <link rel="canonical" href="https://blog.baobab612.com" />
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
-<meta name="description" content="MVC 패턴" />
-<meta name="classification" content="MVC 패턴" />
+<meta name="description" content="스프링Spring 구동 순서" />
+<meta name="classification" content="스프링Spring 구동 순서" />
 
 <!-- OPENGRAPH -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MVC 패턴-바오밥 블로그" />
-<meta property="og:description" content="MVC 패턴" />
+<meta property="og:title" content="스프링(Spring) 구동 순서-바오밥 블로그" />
+<meta property="og:description" content="스프링Spring 구동 순서" />
 <meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 <meta property="og:url" content="https://blog.baobab612.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="MVC 패턴" />
-<meta name="twitter:site" content="@MVC 패턴" />
-<meta name="twitter:creator" content="@MVC 패턴" />
+<meta name="twitter:title" content="스프링(Spring) 구동 순서" />
+<meta name="twitter:site" content="@스프링(Spring) 구동 순서" />
+<meta name="twitter:creator" content="@스프링(Spring) 구동 순서" />
 <meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
-<meta name="twitter:description" content="MVC 패턴" />
+<meta name="twitter:description" content="스프링Spring 구동 순서" />
 <!-- GOOGLE+ -->
-<meta itemprop="headline" content="MVC 패턴-바오밥 블로그" />
-<meta itemprop="name" content="MVC 패턴" />
-<meta itemprop="description" content="MVC 패턴" />
+<meta itemprop="headline" content="스프링(Spring) 구동 순서-바오밥 블로그" />
+<meta itemprop="name" content="스프링(Spring) 구동 순서" />
+<meta itemprop="description" content="스프링Spring 구동 순서" />
 <meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
 
 <meta name="viewport"
@@ -163,35 +163,94 @@
 			<div class="blackBoard-outLine">
 				<div class="blackBoard-inner flex flex-column">
 					<section class="numAndTitle flex">
-						<div class="detail__article-num">52.</div>
-						<div class="detail__article-title">MVC 패턴</div>
+						<div class="detail__article-num">59.</div>
+						<div class="detail__article-title">스프링(Spring) 구동 순서</div>
 					</section>
-					<div class="detail__article-regDate">21년12월06일</div>
+					<div class="detail__article-regDate">22년04월08일</div>
 					<div class="detail__article-content"><script type="x-template">
-# MVC 구조란
-- Model, View, Controller 의 약자이다.
-  크게 세 부분으로 나누는 이유는 사이트가 커질수록 특정 기준으로 분리, 모듈화해서 규칙을 만드는게 관리가 쉽기 때문이다.
+전자정부 프레임워크 프로젝트를 하던 중 구동원리와 순서부터 알아야되겠다고 생각되어 쓰는 글 입니다.
 
-## - Controller
-Model의 데이터를 View에 연결해서 사용자가 요청한 데이터를 보여주거나 요청한 기능이 이루어지게 안내해주는 부분이다.
+## 1. 웹이 실행되면 Tomcat(WAS)에 의해 web.xml이 로딩 된다.
+### web.xml이란
+- DD(Deployment Descriptor)라고 불리며, Web Application의 설정파일이다.
+- 크게 DispatcherServlet, ContextLoaderListener,Filter 설정을 하게 된다.
+#### DispathcerServlet
+- 클라이언트의 요청을 처리한다.
+- 순서
+1. 클라이언트의 요청을 처리해줄 컨트롤러를 찾는다.
+2. 컨트롤러를 실행시킨다.
+3. 클라이언트에 보여질 View를 찾는다.
+4. 응답 데이터와 View를 클라이언트에게 전달한다.
+- 요청을 처리할 컨트롤러를 찾는 일은 Handler Mapping라는 객체가 처리한다.
+이 객체는 클라이언트의 요청 경로를 이용해 컨트롤러를 검색 후, DispatcherServlet에 리턴한다.
+컨트롤러를 실행시키는 일은 Handler Adapter라는 객체가 한다.
+- @Controller 어노테이션을 이용해 구현한 컨트롤러 뿐만 아니라, Controller 인터페이스를 구현한
+컨트롤러, 특수 목적으로 사용되는 HttpRequestHandler 인터페이스를 구현한 클래스를 동일한
+방식으로 실행할 수 있게 만들어졌다.
+- Controller가 실행되면 개발자가 구현한 비즈니스 로직을 거쳐 응답 데이터가 추출된다.
+실행된 Controller는 리턴할 데이터와 View를 Handler Adapter에게 리턴한다.
+- Handler Adapter는 데이터와 view를 ModelAndView 형태로 DispatcherServlet에게 리턴한다.
+view는 viewResolver 객체를 설정하여 prefix,suffix를 참조하여
+controller에서 리턴한 view 이름을 찾아 dispatcher Servlet에게 리턴한다.
+- 최종적으로 viewResolver가 리턴한 View 객체에 응답 데이터를 넣어 클라이언트에게 리턴한다.
 
-## - View
-- 프로그래밍된 부분들을 시각적으로 나타나게 해주는 부분이다.
+#### ContextLoaderListener
+- 모든 서블릿이 공통적으로 가져야할 설정들 즉, Servlet Context 단위가 아닌
+Application 단위 설정을 ContextLoaderListener 객체가 처리한다.
+- ContextLoaderListener 클래스는 ServletContextListener 인터페이스를 구현하고 있으며,
+ApplicationContext를 생성하는 역할을 수행한다.
+- ContextLoaderListener 클래스느 Servlet의 생명주기를 관리해준다.
+- Servlet을 사용하는 시점에 서블릿 컨텍스트에 ApplicationContext를 등록, Servlet이 종료되는 시점에 ApplicationContext를 삭제한다.
+#### Filter
+- 스프링 시큐리티 필터가 적용 됐다면, 인가 및 인증 처리를 먼저 처리하고 인코딩 필터가 적용되어 있다면
+클라이언트의 요청데이터를 인코딩하는 작업이 처리된 후 Dispatcher Serlvet에게 필터링 된 데이터가 전달된다. 
 
-## - Model
-- 데이터에 관련된 부분이다. DB에 저장하거나 불러오기 수정하기 등에 관련된 부분들이 Model 파트에서 이루어진다.
+## 2. web.xml에 등록되어 있는 ContextLoaderListener 생성
+- 서블릿 컨테이너가 파일을 읽어서 구동될 때, ContextLoaderListener이 자동으로 메모리에 생성된다.
 
-내가 본 영상에서는
-Model = 식료품창고를 관리하고 음식을 요리하는 주방장
-View = 주방장이 내온 음식을 보기좋게 플레이팅하는 직원
-Controller = 주문도 받고 서빙도 하는 매니저 라고 비유했다.
+## 3. 생성된 ContextLoaderListener는 root-context.xml을 로딩한다.
+- ContextLoaderListener 객체는 src/main/resources 소스 폴더에 있는 applicationContext.xml 파일을 로딩하여
+스프링 컨테이너를 구동하는데 이를 Root 컨테이너라고 한다.
+- 원래 ContextLoaderListener가 WEB-INF 밑에 있는 파일을 먼저 로딩하도록 됐으나 유지보수 상의 관계로
+src/main/resources 에 파일을 넣어 놓는 경우가 많다. 때문에 src/main/resources에 있는 파일을 가져다
+로딩시키려면 web.xml에 -param으로 설정해서 사용한다.
 
-이렇게 구조가 짜이고 나면 코딩하는데에 수월해지겠지만 구조를 짜는데 상당한 시간이 걸린다.
-그래서 MVC 구조가 기본적으로 설치된 MVC 프레임워크란것을 제공한다.
-Java에는 Spring 프레임워크와 Spring boot 프레임워크가 많이 사용되며,
-PHP는 라라벨 프레임워크가 많이 사용된다.
+## 4. root-context.xml에 등록되어 있는 Spring Container가 구동
+- root-context.xml에는 주로 view 자원을 제외한 공통 bean을 설정한다. (web 관련 bean 제외)
+- 예시로 spring properties 파일을 로컬과 서버용으로 구분지을 때 property value를 설정해준다.
+(주로 DataSource, repository 설정을 주로한다)
+#### root-context란
+- view와 관련되지 않은 객체를 정의한다.
+- Service, Repository(DAO), DB등 비즈니스 로직과 관련된 설정을 해준다.
 
-<a href="https://www.youtube.com/watch?v=AERY1ZGoYc8" target="_blank">얄팍한 코딩사전 - MVC 웹프레임워크가 뭔가요?</a>부분을 보고 공부했다.
+## 5. 클라이언트로부터 웹 애플리케이션 요청이 옴
+- (최초의 클라이언트 요청에 의해 DispathcerSerlet 생성)
+
+## 6. DispatcherServlet이 생성됨
+- DispathcerServlet 객체는 WEB-INF/config 폴더에 있는 servlet-context.xml 파일을 로딩하여
+두번째 스프링 컨테이너를 구동한다. 이 두 번째 스프링 컨테이너가 Controller 객체를 메모리에 생성한다.
+- DispatcherServlet은 FrontController의 역할을 수행. 클라이언트로부터 요청 온 메시지를 분석하여
+알맞은 Controller에 전달하고 응답 받아 요청에 따른 응답을 어떻게 할지 정한다.
+
+## 7. DispatcherServlet은 servlet-context.xml을 Loading
+
+## 8. 두번째 Spring Container 구동되며, 응답에 맞는 Controller들이 동작한다.
+<br/><br/>
+# 정리
+## 1. 클라이언트가 요청을 보낸다.
+## 2. 클라이언트의 요청을 DispatcherServlet이 가로챈다
+## 3. 가로챈 요청을 HandlerMapping에게 보내 해당 요청을 처리할 Controller를 찾는다
+## 4. 실제 요청을 정리 한다.
+## 5. ViewResolver를 통해 view 화면을 찾는다.
+## 6. 찾은 view 화면을 View로 보내면 이 결과를 다시 DispatcherServlet에 보내고, <br/> dispatcherServlet은 클라이언트에게 결과를 전송한다.
+
+<br/>
+
+자료 참조 :
+<a href="https://devpad.tistory.com/24" target="_blank">개발새발-Spring MVC 프로젝트의 기본 구조와 실행 순서</a>
+<a href="https://yoo-hyeok.tistory.com/139" target="_blank">유혁의 개발 스토리 - Spring Framework 구동순서 완벽정리</a>
+<a href="https://javannspring.tistory.com/231" target="_blank">JiGyeong's study room - Spring Framework 실행순서</a>
+<a href="https://tlatmsrud.tistory.com/35" target="_blank">영암사는 승경이네 - web.xml 이란?</a>
 </script>
 
 <div class="viewer"></div></div>
@@ -231,7 +290,7 @@ PHP는 라라벨 프레임워크가 많이 사용된다.
 					</tr>
 				</thead>
 
-				<tbody><tr onClick=location.href="article_detail_61.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>HTTP란</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2022-04-17일</span></td></tr><tr class="selected" onClick=location.href="article_detail_52.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>MVC 패턴</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-12-06일</span></td></tr><tr onClick=location.href="article_detail_29.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 11</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-10일</span></td></tr><tr onClick=location.href="article_detail_27.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 10</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-09일</span></td></tr><tr onClick=location.href="article_detail_25.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 9</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-08일</span></td></tr>
+				<tbody><tr class="selected" onClick=location.href="article_detail_59.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>스프링(Spring) 구동 순서</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2022-04-08일</span></td></tr><tr onClick=location.href="article_detail_53.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>로컬프로젝트 외부로 공유하기(전자정부)</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-12-23일</span></td></tr><tr onClick=location.href="article_detail_51.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>전자정부프레임워크 콘솔창에 sql 결과 띄우기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-18일</span></td></tr>
 				</tbody>
 			</table>
 
@@ -242,8 +301,8 @@ PHP는 라라벨 프레임워크가 많이 사용된다.
 		<div id="disqus_thread"></div>
 		<script>
 				var disqus_config = function () {
-			        this.page.url = 'https://blog.baobab612.com/article_detail_52.html';
-			        this.page.identifier = 'article_detail_52.html';
+			        this.page.url = 'https://blog.baobab612.com/article_detail_59.html';
+			        this.page.identifier = 'article_detail_59.html';
 			    };
 			(function() { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
