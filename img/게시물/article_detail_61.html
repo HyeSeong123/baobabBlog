@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=G-1390PY4PW5"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-1390PY4PW5');
+</script>
+<!--  구글 애널리틱스 -->
+<script async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6509950454554885"
+	crossorigin="anonymous"></script>
+
+<!-- 구글 서치콘솔 -->
+
+<!-- 네이버 소유확인 -->
+<meta name="naver-site-verification"
+	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
+
+<title>HTTP란-바오밥 블로그</title>
+
+<meta charset="UTF-8">
+
+<!-- SEO 태그 -->
+<link rel="canonical" href="https://blog.baobab612.com" />
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
+<meta name="description" content="HTTP란" />
+<meta name="classification" content="HTTP란" />
+
+<!-- OPENGRAPH -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="HTTP란-바오밥 블로그" />
+<meta property="og:description" content="HTTP란" />
+<meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+<meta property="og:url" content="https://blog.baobab612.com" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="HTTP란" />
+<meta name="twitter:site" content="@HTTP란" />
+<meta name="twitter:creator" content="@HTTP란" />
+<meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
+<meta name="twitter:description" content="HTTP란" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="HTTP란-바오밥 블로그" />
+<meta itemprop="name" content="HTTP란" />
+<meta itemprop="description" content="HTTP란" />
+<meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script
+	src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js"
+	defer></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet"
+	href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+	src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js"
+	defer></script>
+<!-- GSAP 플러그인 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+	rel="stylesheet">
+<!-- 구글 폰트 -->
+
+<link rel="icon" href="https://blog.baobab612.com/img/favicon.ico" />
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<link rel="stylesheet" href="main.css">
+<script src="app.js" defer></script>
+</head>
+
+<body>
+	<div class="body-content con-min-width">
+		
+		<header class="top-bar con height-100p">
+			<div class="flex flex-ai-c top-menu">
+				<section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
+					<a href="index.html" class="logo flex flex-ai-c">
+						<span class="img-box logo_img">
+							<img src="img/logo.png" alt="이미지 첨부" />
+						</span>
+						<span class="logo__span logo__W">
+							W
+							<span class="logo__span logo__1 logo__hide">eb</span>
+						</span>
+
+						<span class="logo__span logo__P">
+							P
+							<span class="logo__span logo__2 logo__hide">rogram</span>
+						</span>
+
+						<span class="logo__span logo__B">
+							B
+							<span class="logo__span logo__3 logo__hide">log</span>
+						</span>
+
+					</a>
+				</section>
+
+				<div class="flex-grow-1"></div>
+				<!-- 탑바 PC 버전 -->
+				<div class="top-menu__menu top-menu__pc-menu flex height-100p">
+					<ul class="flex height-100p">
+						<li><a href="article_list_java_1.html">Web Programs</a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a href="article_list_mysql_1.html">DataBase</a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a href="article_list_centos_1.html">Server</a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a href="article_list_daily_1.html">Free</a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+					</ul>
+				</div>
+
+				<div class="hamburger__cover flex">
+					<section class="top-bar__hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</section>
+				</div>
+			</div>
+			<!-- 탑바 모바일 버전 -->
+			<div class="top-menu__menu top-menu__mobile-menu">
+				<ul class="flex flex-column">
+					<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+				</ul>
+			</div>
+		</header><main class="detail__main">
+
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">61.</div>
+						<div class="detail__article-title">HTTP란</div>
+					</section>
+					<div class="detail__article-regDate">22년04월17일</div>
+					<div class="detail__article-content"><script type="x-template">
+# HTTP란
+## HTTP란 Hyper Text Transfer Protocol의 약자로 하이퍼 텍스트를 전송하는 프로토콜이다.
+- HTML을 웹 브라우저에 전송하기 위해 HTTP라는 프로토콜을 발명하였다.
+<br/>
+## HTTP의 특징
+- 간단하다. : 사람이 읽을 수 있도록 간단하게 고안되었다. HTTP/2에서 더 복잡해지긴 했지만,
+여전히 HTTP 메시지를 프레임별로 캡슐화하여 간결함을 유지하였다.
+- 확장이 가능하다 : 클라이언트와 서버가 새로운 헤더의 시맨틱에 대해서 합의한다면,
+언제든지 새로운 기능을 추가할 수 있다.
+- 요청/응답 : 클라이언트 쪽에서 Request를 보내고 서버로부터 Response를 받는다.
+- 무상태 : HTTP는 상태를 저장하지 않는다. 즉, 통신간의 연결 상태 처리나, 정보를 저장할 필요가 없기 때문에,
+서버 디자인이 간단해진다. 만약 저장이 필요한 경우에는 쿠키나 세션을 활용해 저장할 수 있다.
+- 비연결성 : HTTP는 클라이언트와 서버가 한 번 연결을 맺은 후, 서버가 응답을 마치면
+맺었던 연결을 끊어버리는 성질을 말한다. 이러한 특징의 장점은 컴퓨터마다 매번 연결을 유지할
+필요가 없기 때문에 리소르를 줄일 수 있어 더 많은 연결을 그때그때 수행할 수 있다는 장점이 있다.
+하지만 연결 해제를 매번 해주어야해서 이에 대한 오버헤드가 일어난다는 단점이 있다.
+<br/>
+# HTTP 요청 메서드
+- GET : 특정 리소스를 받기 위한 요청이다. 리소스의 생성, 수정 및 삭제 등에 사용해서는 안된다.
+- POST : 리소스를 생성하거나 컨트롤러를 실행하는데 사용한다.
+- PUT : 변경 가능한 리소스를 업데이트할 때 사용되며, 항상 리소스 식별 정보를 포함해야 한다.
+- DELETE : 특정 리소스를 제거할 때 사용된다
+(보통 Request body가 아닌 URI 경로에 제거하려는 리소스의 ID를 전달한다.)
+- HEAD : 클라이언트가 본문 없이 리소스에 대한 헤더만 검색하는 경우 사용한다.
+(보통 클라이언트가 서버에 리소스가 있는 지 확인하거나 메타 데이터를 읽으려는 때만 GET 대신 사용한다.)
+- OPTIONS : 클라이언트가 서버의 리소스에 대해 수행 가능한 동작을 알아보기 위해 사용한다.
+(보통 서버는 이 리소스에 대해 사용할 수 있는 HTTP 요청 메서드를 포함하는 Allow 헤더를 반환한다. CORS에 사용)
+<br/>
+# 1. Request
+- Request는 서버에서 데이터를 처리 또는 가져오기 위한 메세지이다.
+- 메세지는 크게 세 부분으로 구성되어 있다.
+## Start Line
+- 요청의 첫번 째 줄이며, 시작 줄도 세 부분으로 구성되어 있다.
+	- HTTP Method(메서드) : 해당 요청이 의도한 액션을 정의하는 부분. GTT, POST, DELETE가 주로 쓰임.
+	- Request Target : request가 전송되는 목표 url
+	- HTTP version : 사용되는 HTTP의 버전. 보통 1.1이 쓰임
+- ex) GET/login HTTP/1.1
+(GET 메서드로 login 이라는 요청 타겟에 HTTP 1.1 버전으로 요청을 보냄)
+## 2. Header
+- 해당 요청에 대한 메타 데이터를 담고 있는 부분.
+	- key : value 값으로 되어있다. 자주 사용되는 Header의 정보는 아래와 같다.
+	- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">Headers:{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Host&nbsp;:&nbsp;요청하려는&nbsp;서버&nbsp;호스트&nbsp;이름과&nbsp;포트번호</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;User-agent&nbsp;:&nbsp;클라이언트&nbsp;프로그램&nbsp;정보.&nbsp;이&nbsp;정보를&nbsp;통해&nbsp;서버는&nbsp;클라이언트&nbsp;프로그램(브라우저)에&nbsp;맞는&nbsp;최적의&nbsp;데이터를&nbsp;보내줄&nbsp;수&nbsp;있다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Referer&nbsp;:&nbsp;바로&nbsp;직전에&nbsp;머물렀던&nbsp;웹&nbsp;링크&nbsp;주소&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Accept&nbsp;:&nbsp;클라이언트가&nbsp;처리&nbsp;가능한&nbsp;미디어&nbsp;타입&nbsp;종류&nbsp;나열</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;If-Modified-Since&nbsp;:&nbsp;여기에&nbsp;쓰여진&nbsp;시간&nbsp;이후로&nbsp;변경된&nbsp;리소스&nbsp;취득.&nbsp;페이지가&nbsp;수정되었으면&nbsp;최신&nbsp;페이지로&nbsp;교체한다.&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Authorization&nbsp;:&nbsp;인증&nbsp;토큰을&nbsp;서버로&nbsp;보낼&nbsp;때&nbsp;쓰이는&nbsp;Header&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Origin&nbsp;:&nbsp;서버로&nbsp;Post&nbsp;요청을&nbsp;보낼&nbsp;때&nbsp;요청이&nbsp;어느&nbsp;주소에&nbsp;시작되었는지&nbsp;나타내는&nbsp;값.&nbsp;이&nbsp;값으로&nbsp;요청을&nbsp;보낸&nbsp;주소와&nbsp;받는&nbsp;주소가&nbsp;다르면&nbsp;CORS(Cross-Origin&nbsp;Resource&nbsp;Sharing)&nbsp;에러가&nbsp;발생한다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Cookie&nbsp;:&nbsp;쿠키&nbsp;값이&nbsp;key-value로&nbsp;표현된다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+## 3. Body
+- 해당 요청의 실제 내용. 보통 POST 메서드가 사용된다.
+<br/>
+
+# Response
+- 요청과 마찬가지로 메세지이다. HTTP 규약에 따른 응답의 구조도 크게 3부분으로 나뉜다.
+## 1. Start Line
+- 응답의 상태 줄. 응답은 요청에 대한 처리 상태를 클라이언트에게 알려주면서 시작한다.
+	- HTTP version : 요청과 동일
+	- Status Code : 응답 메세지의 상태 코드
+	- Status Text : 응답 메세지의 상태를 간략하게 설명해주는 텍스트
+- ex) HTTP/1.1 404 Not Found
+- ex) HTTP/1.1 200 SUCCESS
+## 2. Headers
+- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">Headers:{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;:&nbsp;301,&nbsp;302&nbsp;상태코드일&nbsp;때만&nbsp;볼&nbsp;수&nbsp;있는&nbsp;Header로&nbsp;서버의&nbsp;응답이&nbsp;다른&nbsp;곳에&nbsp;있다고&nbsp;알려주면서&nbsp;해당&nbsp;위치(URI)를&nbsp;지정합니다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Server&nbsp;:&nbsp;웹&nbsp;서버의&nbsp;종류</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Age&nbsp;:&nbsp;max-age&nbsp;시간내에서&nbsp;얼마나&nbsp;흘렀는지&nbsp;초&nbsp;단위로&nbsp;알려주는&nbsp;값</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Referrer-policy&nbsp;:&nbsp;서버&nbsp;referrer&nbsp;정책을&nbsp;알려주는&nbsp;값&nbsp;ex)&nbsp;origin,&nbsp;no-referrer,&nbsp;unsafe-url</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;WWW-Authenticate&nbsp;:&nbsp;사용자&nbsp;인증이&nbsp;필요한&nbsp;자원을&nbsp;요구할&nbsp;시&nbsp;,&nbsp;서버가&nbsp;제공하는&nbsp;인증&nbsp;방식</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Proxy-Authenticate&nbsp;:&nbsp;요청한&nbsp;서버가&nbsp;프록시&nbsp;서버인&nbsp;경우&nbsp;유저&nbsp;인증을&nbsp;위한&nbsp;값</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+## 3. Body
+- 요청의 Body와 일반적으로 동일.
+## 공통 Header
+- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">Headers:{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;:&nbsp;현재시간</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Cache-Control&nbsp;:&nbsp;캐시&nbsp;제어</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;no-store&nbsp;:&nbsp;캐시를&nbsp;저장하지&nbsp;않겠다</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;no-cache&nbsp;:&nbsp;모든&nbsp;캐시를&nbsp;쓰기&nbsp;전에&nbsp;서버에&nbsp;해당&nbsp;캐시를&nbsp;사용해도&nbsp;되는지&nbsp;확인하겠다</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;must-revalidate&nbsp;:&nbsp;만료된&nbsp;캐시만&nbsp;서버에&nbsp;확인하겠다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;public&nbsp;:&nbsp;공유&nbsp;캐시에&nbsp;저장해도&nbsp;된다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;private&nbsp;:&nbsp;'브라우저'&nbsp;같은&nbsp;특정&nbsp;사용자&nbsp;환경에만&nbsp;저장하겠다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;max-age&nbsp;:&nbsp;캐시의&nbsp;유효시간을&nbsp;명시하겠다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Transfer-Encoding&nbsp;:&nbsp;Body&nbsp;내용&nbsp;자체&nbsp;압축&nbsp;방식을&nbsp;지정</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Content-Encoding&nbsp;:&nbsp;Body의&nbsp;리소스&nbsp;압축&nbsp;방식&nbsp;(Transfer-Encoding은&nbsp;Body&nbsp;자체이므로&nbsp;다름)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Content-type&nbsp;:&nbsp;Body의&nbsp;미디어&nbsp;타입&nbsp;ex)&nbsp;application/json,&nbsp;text/html</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Content-Length&nbsp;:&nbsp;Body의&nbsp;길이</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Content-language&nbsp;:&nbsp;Body를&nbsp;이해하는데&nbsp;가장&nbsp;적절한&nbsp;언어&nbsp;ex)&nbsp;ko</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Connection&nbsp;:&nbsp;클라이언트와&nbsp;서버의&nbsp;연결&nbsp;방식&nbsp;설정.&nbsp;HTTP/1.1은&nbsp;keep-alive로&nbsp;연결&nbsp;유지하는게&nbsp;디폴트&nbsp;입니다.</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+<br/>
+# HTTP의 흐름
+1. TCP연결을 연다.
+2. HTTP 메시지를 전송한다.
+3. 서버에 의해 전송된 응답을 읽는다.
+4. 연결을 닫거나 다른 요청들을 위해 재사용한다.
+
+## 참고
+- <a target="_blank" href="https://velog.io/@pm1100tm/HTTP%EC%9D%98-%ED%8A%B9%EC%A7%95-Request-%EC%99%80-Response">pm1100tm.log - HTTP의 특징, Request 와 Response</a>
+- <a target="_blank" href="https://surprisecomputer.tistory.com/54">늘 새롭게 - HTTP란 무엇인가?</a>
+- <a target="_blank" href="https://ohcodingdiary.tistory.com/5">나의 개발 일기 - HTTP Request/Response 메시지 구조</a>
+</script>
+
+<div class="viewer"></div></div>
+
+				</div>
+			</div>
+
+
+
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser">
+						<img src="img/eraser.png" alt="">
+					</span>
+					<span class="img-box chalks">
+						<img src="img/chalks.png" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
+
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>
+						</td>
+						<th class="sample_width">제목
+						</td>
+						<th>작성자
+						</td>
+						<th>작성일
+						</td>
+					</tr>
+				</thead>
+
+				<tbody><tr class="selected" onClick=location.href="article_detail_61.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>HTTP란</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2022-04-17일</span></td></tr><tr onClick=location.href="article_detail_52.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>MVC 패턴</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-12-06일</span></td></tr><tr onClick=location.href="article_detail_29.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 11</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-10일</span></td></tr><tr onClick=location.href="article_detail_27.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 10</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-09일</span></td></tr><tr onClick=location.href="article_detail_25.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 9</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-08일</span></td></tr><tr onClick=location.href="article_detail_24.html"><td class="articleList_num">🖋</td><td class="articleList_title"><span>컴퓨터활용능력 1급 - 8</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-08-08일</span></td></tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+			        this.page.url = 'https://blog.baobab612.com/article_detail_61.html';
+			        this.page.identifier = 'article_detail_61.html';
+			    };
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://baobabblog210721.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+	</div>
+
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
+
+</main>        <footer class="footer__cover flex flex-ai-c">
+
+            <!--  구글 애널리틱스 -->
+	
+            <section class="footer__icon">
+                <a href="https://github.com/HyeSeong123" target="_blank">
+                    <span class="icon-git"><i class="fab fa-github-square"></i></span>
+                </a>
+                <a href="https://www.instagram.com/baobab.0612/" target="_blank">
+                    <span class="icon-insta"><i class="fab fa-instagram-square"></i></span>
+                </a>
+                <a href="https://blog.naver.com/baobab0612" target="_blank">
+                    <span class="icon-blog"><i class="fab fa-blogger"></i></span>
+                </a>
+            </section>
+
+            <section class="footer__host flex flex-jc-end">
+                <div>
+                    <span>Copyright 2021 Baobab. All Right Reserved</span>
+                    <span>B a o b a b</span>
+                </div>
+            </section>
+
+        </footer>
+    </div>
+    
+    <script>
+	    $(window).on('load', function () {
+	    	$('.adsbygoogle').each(function () {
+	   			(adsbygoogle = window.adsbygoogle || []).push({});
+	    	});
+	    });
+	</script>
+</body>
+</html>

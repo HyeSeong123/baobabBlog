@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=G-1390PY4PW5"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-1390PY4PW5');
+</script>
+<!--  구글 애널리틱스 -->
+<script async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6509950454554885"
+	crossorigin="anonymous"></script>
+
+<!-- 구글 서치콘솔 -->
+
+<!-- 네이버 소유확인 -->
+<meta name="naver-site-verification"
+	content="940897f74ece01b807cc2353b484a9d9ad2d892a" />
+
+<title>전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편-바오밥 블로그</title>
+
+<meta charset="UTF-8">
+
+<!-- SEO 태그 -->
+<link rel="canonical" href="https://blog.baobab612.com" />
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, Server, DataBase, Mysql, Java, CentOS" />
+<meta name="description" content="전자정부프레임워크 프로젝트 DB 연동 mysql 2편" />
+<meta name="classification" content="전자정부프레임워크 프로젝트 DB 연동 mysql 2편" />
+
+<!-- OPENGRAPH -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편-바오밥 블로그" />
+<meta property="og:description" content="전자정부프레임워크 프로젝트 DB 연동 mysql 2편" />
+<meta property="og:image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+<meta property="og:url" content="https://blog.baobab612.com" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편" />
+<meta name="twitter:site" content="@전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편" />
+<meta name="twitter:creator" content="@전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편" />
+<meta name="twitter:image" content="https://blog.baobab612.com/img/seo_banner.jpg">
+<meta name="twitter:description" content="전자정부프레임워크 프로젝트 DB 연동 mysql 2편" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편-바오밥 블로그" />
+<meta itemprop="name" content="전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편" />
+<meta itemprop="description" content="전자정부프레임워크 프로젝트 DB 연동 mysql 2편" />
+<meta itemprop="image" content="https://blog.baobab612.com/img/seo_banner.jpg" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script
+	src="https://uicdn.toast.com/editor/2.5.2/toastui-editor-all.min.js"
+	defer></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet"
+	href="https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+	src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/1.0.0/toastui-editor-plugin-code-syntax-highlight.min.js"
+	defer></script>
+<!-- GSAP 플러그인 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+	rel="stylesheet">
+<!-- 구글 폰트 -->
+
+<link rel="icon" href="https://blog.baobab612.com/img/favicon.ico" />
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<link rel="stylesheet" href="main.css">
+<script src="app.js" defer></script>
+</head>
+
+<body>
+	<div class="body-content con-min-width">
+		
+		<header class="top-bar con height-100p">
+			<div class="flex flex-ai-c top-menu">
+				<section class="top-bar__logo flex flex-jc-c flex-ai-c height-100p">
+					<a href="index.html" class="logo flex flex-ai-c">
+						<span class="img-box logo_img">
+							<img src="img/logo.png" alt="이미지 첨부" />
+						</span>
+						<span class="logo__span logo__W">
+							W
+							<span class="logo__span logo__1 logo__hide">eb</span>
+						</span>
+
+						<span class="logo__span logo__P">
+							P
+							<span class="logo__span logo__2 logo__hide">rogram</span>
+						</span>
+
+						<span class="logo__span logo__B">
+							B
+							<span class="logo__span logo__3 logo__hide">log</span>
+						</span>
+
+					</a>
+				</section>
+
+				<div class="flex-grow-1"></div>
+				<!-- 탑바 PC 버전 -->
+				<div class="top-menu__menu top-menu__pc-menu flex height-100p">
+					<ul class="flex height-100p">
+						<li><a href="article_list_java_1.html">Web Programs</a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a href="article_list_mysql_1.html">DataBase</a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a href="article_list_centos_1.html">Server</a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a href="article_list_daily_1.html">Free</a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+					</ul>
+				</div>
+
+				<div class="hamburger__cover flex">
+					<section class="top-bar__hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</section>
+				</div>
+			</div>
+			<!-- 탑바 모바일 버전 -->
+			<div class="top-menu__menu top-menu__mobile-menu">
+				<ul class="flex flex-column">
+					<li><a style="cursor:pointer;"><span>Web Programs</span><span class="arrow-down"></span></a><ul><li><a href="article_list_java_1.html">Java</a></li><li><a href="article_list_js_1.html">JavaScript</a></li><li><a href="article_list_spring_1.html">Spring</a></li><li><a href="article_list_HC_1.html">HTML/CSS</a></li><li><a href="article_list_php_1.html">PHP</a></li></ul></li><li><a style="cursor:pointer;"><span>DataBase</span><span class="arrow-down"></span></a><ul><li><a href="article_list_mysql_1.html">Mysql</a></li><li><a href="article_list_oracle_1.html">Oracle</a></li></ul></li><li><a style="cursor:pointer;"><span>Server</span><span class="arrow-down"></span></a><ul><li><a href="article_list_centos_1.html">CentOs</a></li></ul></li><li><a style="cursor:pointer;"><span>Free</span><span class="arrow-down"></span></a><ul><li><a href="article_list_daily_1.html">Daily</a></li></ul></li>
+				</ul>
+			</div>
+		</header><main class="detail__main">
+
+	<section class="detail__main-cover flex">
+		<div class="blackBoard">
+			<div class="blackBoard-outLine">
+				<div class="blackBoard-inner flex flex-column">
+					<section class="numAndTitle flex">
+						<div class="detail__article-num">46.</div>
+						<div class="detail__article-title">전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편</div>
+					</section>
+					<div class="detail__article-regDate">21년09월15일</div>
+					<div class="detail__article-content"><script type="x-template">
+db를 출력해 보겠습니다.
+
+## 1. boardService interface 파일 생성
+### - 패키지도 같이 생성해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/1.PNG"></div>
+## 2. boardServiceImpl class 파일 생성
+### - 패키지도 같이 생성해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/2.PNG"></div>
+### - 만드시고 이미지의 코드처럼 적용시켜주세요
+## 3. HomeController 에서 db를 가져올 함수를 만들어줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/3.PNG"></div>
+## 4. getBoards()에서 ctrl + 1을 눌러 boardService에 함수를 create 해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/4.PNG"></div>
+## 5. boardServiceImpl에서도 추가해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/5.PNG"></div>
+## 6. 코드를 추가해줍니다.
+- <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@Service(<span style="color:#ffd500">"boardService"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">public</span>&nbsp;<span style="color:#ff3399">class</span>&nbsp;BoardServiceImpl&nbsp;<span style="color:#ff3399">implements</span>&nbsp;BoardService{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;@Resource(name<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"boardDAO"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">private</span>&nbsp;BoardDAO&nbsp;boardDAO;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;@Override</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">public</span>&nbsp;List<span style="color:#0086b3"></span><span style="color:#ff3399">&lt;</span>Map<span style="color:#0086b3"></span><span style="color:#ff3399">&gt;</span>&nbsp;getBoards()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;boardDAO.getBoards();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+## 7. BoardDAO 인터페이스를 생성해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/6.PNG"></div>
+## 8. BoardDAOImpl 클래스를 생성해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/7.PNG"></div>
+## 9. Board 클래스를 생성해줍니다. (패키지는 dto)
+### - 저는 mysql에 사진과 같이 생성해뒀기 때문에
+- <div class="img-box1"> <img src="img/게시물/46/8.PNG"></div>
+### - Board 클래스에서도 사진과 같이 썼습니다.
+- <div class="img-box1"> <img src="img/게시물/46/9.PNG"></div>
+## 10. 상단의 메뉴바에서 Source - Generate Getters and Setters를 눌러 getter setter를 생성해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/10.PNG"></div>
+## 11. src/main/resources - egovframework - sqlmap - mappers에 BoardMapper.xml을 생성해줍니다.
+### - 아까 Mapper("boardMapper")를 설정해 준 boardDAO의 경로를 <mapper namespace= 안에 적어줍니다.
+## 12. 저희가 실행하려던 함수인 getBoards를 적어줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/11.PNG"></div>
+## 13. HomeController에서 index.jsp로 보내주기 위해 코드를 추가해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/12.PNG"></div>
+## 14. index.jsp에서 값을 받을 준비를 해줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/13.PNG"></div>
+## 15. 서버를 실행시켜줍니다.
+- <div class="img-box1"> <img src="img/게시물/46/14.PNG"></div>
+- 완성!
+
+</script>
+
+<div class="viewer"></div></div>
+
+				</div>
+			</div>
+
+
+
+			<div class="blackBoard-bottom">
+				<div class="blackBoard-img flex flex-jc-end">
+					<span class="img-box eraser">
+						<img src="img/eraser.png" alt="">
+					</span>
+					<span class="img-box chalks">
+						<img src="img/chalks.png" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="blackBoard-shadow"></div>
+		</div>
+	</section>
+
+	<section class="article-list-box">
+		<div class="article-list-box__cover flex flex-column flex-ai-c">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>
+						</td>
+						<th class="sample_width">제목
+						</td>
+						<th>작성자
+						</td>
+						<th>작성일
+						</td>
+					</tr>
+				</thead>
+
+				<tbody><tr onClick=location.href="article_detail_53.html"><td class="articleList_num">🗒</td><td class="articleList_title"><span>로컬프로젝트 외부로 공유하기(전자정부)</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-12-23일</span></td></tr><tr onClick=location.href="article_detail_51.html"><td class="articleList_num">📖</td><td class="articleList_title"><span>전자정부프레임워크 콘솔창에 sql 결과 띄우기</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-11-18일</span></td></tr><tr class="selected" onClick=location.href="article_detail_46.html"><td class="articleList_num">📱</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 DB 연동 (mysql) 2편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-15일</span></td></tr><tr onClick=location.href="article_detail_45.html"><td class="articleList_num">💻</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 DB 연동 (mysql) 1편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-14일</span></td></tr><tr onClick=location.href="article_detail_44.html"><td class="articleList_num">✏</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 생성 2편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-14일</span></td></tr><tr onClick=location.href="article_detail_43.html"><td class="articleList_num">🖋</td><td class="articleList_title"><span>전자정부프레임워크 프로젝트 생성 1편</span></td><td class="articleList_writer"><span>방혜성</span></td><td class="articleList_regDate"><span>2021-09-13일</span></td></tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<div class="article-detail__comment">
+		<div id="disqus_thread"></div>
+		<script>
+				var disqus_config = function () {
+			        this.page.url = 'https://blog.baobab612.com/article_detail_46.html';
+			        this.page.identifier = 'article_detail_46.html';
+			    };
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://baobabblog210721.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+			Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+	</div>
+
+	<nav class="btn_up_box flex flex-ai-c flex-jc-c">
+		<div>
+			<i class="fas fa-chevron-up"></i>
+		</div>
+	</nav>
+
+</main>        <footer class="footer__cover flex flex-ai-c">
+
+            <!--  구글 애널리틱스 -->
+	
+            <section class="footer__icon">
+                <a href="https://github.com/HyeSeong123" target="_blank">
+                    <span class="icon-git"><i class="fab fa-github-square"></i></span>
+                </a>
+                <a href="https://www.instagram.com/baobab.0612/" target="_blank">
+                    <span class="icon-insta"><i class="fab fa-instagram-square"></i></span>
+                </a>
+                <a href="https://blog.naver.com/baobab0612" target="_blank">
+                    <span class="icon-blog"><i class="fab fa-blogger"></i></span>
+                </a>
+            </section>
+
+            <section class="footer__host flex flex-jc-end">
+                <div>
+                    <span>Copyright 2021 Baobab. All Right Reserved</span>
+                    <span>B a o b a b</span>
+                </div>
+            </section>
+
+        </footer>
+    </div>
+    
+    <script>
+	    $(window).on('load', function () {
+	    	$('.adsbygoogle').each(function () {
+	   			(adsbygoogle = window.adsbygoogle || []).push({});
+	    	});
+	    });
+	</script>
+</body>
+</html>
